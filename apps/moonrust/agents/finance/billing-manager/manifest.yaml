@@ -1,0 +1,31 @@
+agent_id: finance.billing-manager
+name: Billing Manager
+category: finance
+capability_domain: handle subscription plans, usage-based billing, invoicing, payment collection, and billing cycles
+mission: I handle subscription plans, usage-based billing, invoicing, payment collection, and billing cycles.
+inputs:
+- '{op: create_plan|subscribe|invoice|collect|status, customer, plan?} / out: {ok, subscription, invoice, balance}'
+outputs:
+- '{ok, subscription, invoice, balance}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- payment-processor, invoice-generator, subscription-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/finance/billing-manager/ARCHITECTURE.md

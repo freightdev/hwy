@@ -1,0 +1,33 @@
+agent_id: advanced.translator
+name: Translator
+category: advanced
+capability_domain: translates text between languages
+mission: I translate text between languages using LLM, cloud APIs, or local models.
+inputs:
+- '{text: string|[], source_lang?: string, target_lang: string, glossary?: object, tone?: formal|informal, preserve_formatting?: bool}'
+outputs:
+- '{translated: string|[], source_lang: string, target_lang: string, segments?: [{source, target}], elapsed: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request for LLM translation
+- language-detector for source detection
+- secret-keeper for API keys
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/translator/ARCHITECTURE.md

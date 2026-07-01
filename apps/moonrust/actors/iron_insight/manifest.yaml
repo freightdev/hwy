@@ -1,0 +1,33 @@
+actor_id: iron_insight
+name: Iron Insight
+category: hwy_actor
+ownership_domain: equipment intelligence, maintenance tracking, inspection history, vehicle health, trailer management, and asset awareness
+mission: What is the current condition of my iron, and what should I know about it?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Your truck is more than a vehicle
+- It is your livelihood
+- Iron Insight helps protect that livelihood by turning equipment history into actionable knowledge
+logbooks_written:
+- Equipment Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- purchase parts without approval
+depends_on:
+- TODO
+cannot_do:
+- Iron Insight does not repair equipment
+- CoDriver activates Iron Insight whenever equipment information is needed
+- It is one of the core free actors available to every driver because knowing the condition of your truck should never be a premium feature
+architecture_source: moonrust/actors/iron_insight/ARCHITECTURE.md

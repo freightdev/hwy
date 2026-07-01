@@ -1,0 +1,107 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-hwytms}
+      POSTGRES_USER: ${POSTGRES_USER:-hwy}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-hwy}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./dataset/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-hwy} -d ${POSTGRES_DB:-hwytms}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    env_file:
+      - ./configs/env/hwy.dev.env
+    environment:
+      DATABASE_URL: ${BACKEND_DATABASE_URL:-postgresql://hwy:hwy@db:5432/hwytms}
+      CORS_ORIGIN: ${CORS_ORIGIN:-http://localhost:5173,http://frontend:5173}
+      CODRIVER_RUNTIME_URL: ${CODRIVER_INTERNAL_URL:-http://codriver:8010}
+    ports:
+      - "${BACKEND_PORT:-18000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      codriver:
+        condition: service_started
+    volumes:
+      - ./backend:/app
+      - ./dataset:/data
+
+  codriver:
+    build:
+      context: .
+      dockerfile: Dockerfile.codriver
+    env_file:
+      - ./configs/env/hwy.dev.env
+    environment:
+      CODRIVER_STORAGE_DIR: ${CODRIVER_STORAGE_DIR:-/data/codriver}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.1}
+      OLLAMA_TIMEOUT: ${OLLAMA_TIMEOUT:-5}
+    ports:
+      - "8010:8010"
+    volumes:
+      - ./codriver:/app/codriver
+      - codriver_data:/data/codriver
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    env_file:
+      - ./configs/env/hwy.dev.env
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL:-http://localhost:18000/api/v1}
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+      - codriver
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/static:/app/static
+      - ./frontend/package.json:/app/package.json
+      - ./frontend/svelte.config.js:/app/svelte.config.js
+      - ./frontend/vite.config.js:/app/vite.config.js
+      - ./configs:/configs:ro
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+      - "127.0.0.1:8443:443"
+    volumes:
+      - ./infra/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - frontend
+      - backend
+      - codriver
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    restart: unless-stopped
+    command: tunnel --config /etc/cloudflared/config.yaml run
+    volumes:
+      - ./vault/hwy-credentials.json:/etc/cloudflared/credentials.json:ro
+      - ./infra/cloudflared/config.yaml:/etc/cloudflared/config.yaml:ro
+    depends_on:
+      - caddy
+
+volumes:
+  pgdata:
+  codriver_data:
+  caddy_data:
+  caddy_config:

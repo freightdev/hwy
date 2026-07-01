@@ -1,0 +1,31 @@
+agent_id: generic.sorter
+name: Sorter
+category: generic
+capability_domain: sorts data by specified criteria
+mission: I sort collections of data by one or more keys, in ascending or descending order.
+inputs:
+- '{data: [], keys: [{field, order?: asc|desc, type?: string}], locale?: string, stable?: bool, nulls?: first|last}'
+outputs:
+- '{data: [], sorted: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-validator for input validation
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/sorter/ARCHITECTURE.md

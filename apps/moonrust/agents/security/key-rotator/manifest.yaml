@@ -1,0 +1,31 @@
+agent_id: security.key-rotator
+name: Key Rotator
+category: security
+capability_domain: automatically rotate encryption keys, signing keys, and secrets
+mission: I automatically rotate encryption keys, signing keys, and secrets.
+inputs:
+- '{op: rotate|status|schedule, key_id} / out: {ok, key_id, new_key_id, rotated_at, re_encrypted}'
+outputs:
+- '{ok, key_id, new_key_id, rotated_at, re_encrypted}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- encryption-agent, secret-keeper, secret-syncer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/key-rotator/ARCHITECTURE.md

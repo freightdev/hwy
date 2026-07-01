@@ -1,0 +1,33 @@
+agent_id: specialized.llm-request
+name: Llm Request
+category: specialized
+capability_domain: sends prompts to Large Language Models
+mission: I send prompts to LLM providers (OpenAI, Anthropic, Ollama, etc.), handle streaming responses, manage conversation context, and apply system prompts.
+inputs:
+- '{prompt: string, system?: string, model?: string, stream?: bool, tools?: [], context?: [], max_tokens?: int, temperature?: float}'
+outputs:
+- '{response: string, tokens_used: int, model: string, finish_reason: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for API keys
+- rate-guard for API rate limits
+- token-counter for token accounting
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/llm-request/ARCHITECTURE.md

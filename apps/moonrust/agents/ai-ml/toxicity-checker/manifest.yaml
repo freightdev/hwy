@@ -1,0 +1,31 @@
+agent_id: ai-ml.toxicity-checker
+name: Toxicity Checker
+category: ai-ml
+capability_domain: detect hate speech, harassment, profanity, threats, and other toxic content in text
+mission: I detect hate speech, harassment, profanity, threats, and other toxic content in text.
+inputs:
+- '{text, categories?, threshold?} / out: {toxic: bool, scores: {toxicity, severe_toxicity, insult, threat, profanity}, flagged_segments}'
+outputs:
+- '{toxic: bool, scores: {toxicity, severe_toxicity, insult, threat, profanity}, flagged_segments}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, content-filter, bias-detector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/toxicity-checker/ARCHITECTURE.md

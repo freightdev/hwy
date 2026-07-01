@@ -1,0 +1,31 @@
+agent_id: data.data-importer
+name: Data Importer
+category: data
+capability_domain: connect to external data sources (APIs, databases, files, streams), extract data, and load into target systems
+mission: I connect to external data sources (APIs, databases, files, streams), extract data, and load into target systems.
+inputs:
+- '{source: {type, config}, target: {type, config}, mapping?, schedule?} / out: {ok, records_imported, duration, errors}'
+outputs:
+- '{ok, records_imported, duration, errors}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-exporter, data-transformer, database-query
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-importer/ARCHITECTURE.md

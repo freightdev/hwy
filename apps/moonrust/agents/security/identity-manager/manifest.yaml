@@ -1,0 +1,33 @@
+agent_id: security.identity-manager
+name: Identity Manager
+category: security
+capability_domain: create, verify, link, and federate user identities
+mission: I create, verify, link, and federate user identities.
+inputs:
+- '{op: create|verify|link|federate|deactivate, identity} / out: {ok, identity_id, provider, subject, status}'
+outputs:
+- '{ok, identity_id, provider, subject, status}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- sso-manager, token-manager, user-manager
+workers_needed:
+- TODO
+truth_rules:
+- I create, verify, link, and federate user identities. I support OAuth2, OIDC, SAML, LDAP identity providers
+- 'in: {op: create|verify|link|federate|deactivate, identity} / out: {ok, identity_id, provider, subject, status}'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/identity-manager/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: infra.proxy-manager
+name: Proxy Manager
+category: infra
+capability_domain: configure reverse proxy rules, URL rewriting, header manipulation, CORS policies, request/response transformation, and access control
+mission: I configure reverse proxy rules, URL rewriting, header manipulation, CORS policies, request/response transformation, and access control.
+inputs:
+- '{op: configure|route|health|block, proxy, rules?} / out: {ok, proxy_status, active_routes}'
+outputs:
+- '{ok, proxy_status, active_routes}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- load-balancer, certificate-manager, rate-guard
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/proxy-manager/ARCHITECTURE.md

@@ -1,0 +1,32 @@
+agent_id: ai-ml.model-ensemble
+name: Model Ensemble
+category: ai-ml
+capability_domain: combine predictions from multiple models using voting, averaging, stacking, or boosting techniques
+mission: I combine predictions from multiple models using voting, averaging, stacking, or boosting techniques.
+inputs:
+- '{predictions: [{model, score, confidence}], method?} / out: {ensemble_score, confidence, contributions, method}'
+outputs:
+- '{ensemble_score, confidence, contributions, method}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- model-servicer, resource-optimizer, decision-engine
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {predictions: [{model, score, confidence}], method?} / out: {ensemble_score, confidence, contributions, method}'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/model-ensemble/ARCHITECTURE.md

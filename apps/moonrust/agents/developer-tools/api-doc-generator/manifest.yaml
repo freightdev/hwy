@@ -1,0 +1,31 @@
+agent_id: developer-tools.api-doc-generator
+name: Api Doc Generator
+category: developer-tools
+capability_domain: parse OpenAPI, gRPC protos, or code annotations and generate interactive API documentation
+mission: I parse OpenAPI, gRPC protos, or code annotations and generate interactive API documentation.
+inputs:
+- '{spec, format?, output?, theme?} / out: {files: [{path, content}], endpoints: int, models: int}'
+outputs:
+- '{files: [{path, content}], endpoints: int, models: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- template-engine, file-manager, document-parser
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/api-doc-generator/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: business.retention-analyzer
+name: Retention Analyzer
+category: business
+capability_domain: measure user retention curves, calculate churn rates, identify retention patterns, and suggest improvements
+mission: I measure user retention curves, calculate churn rates, identify retention patterns, and suggest improvements.
+inputs:
+- '{op: retention|churn|predict, data, period?} / out: {retention: [{period, users, percent}], churn_rate, predicted_churn?, recommendations}'
+outputs:
+- '{retention: [{period, users, percent}], churn_rate, predicted_churn?, recommendations}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cohort-analyzer, user-analytics, forecaster
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/business/retention-analyzer/ARCHITECTURE.md

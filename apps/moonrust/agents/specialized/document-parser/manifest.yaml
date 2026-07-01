@@ -1,0 +1,32 @@
+agent_id: specialized.document-parser
+name: Document Parser
+category: specialized
+capability_domain: parses and extracts content from documents
+mission: I parse PDF, DOCX, HTML, Markdown, and plain text documents.
+inputs:
+- '{source: string|bytes, format: string, options?: {extract_images, extract_tables, ocr, max_pages}}'
+outputs:
+- '{text: string, metadata: object, pages?: int, tables?: [], images?: [], structure?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for reading document files
+- data-extractor for structured extraction
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/document-parser/ARCHITECTURE.md

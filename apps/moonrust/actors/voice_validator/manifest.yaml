@@ -1,0 +1,33 @@
+actor_id: voice_validator
+name: Voice Validator
+category: hwy_actor
+ownership_domain: voice authenticity, speech pattern validation, actor output verification, anti-impersonation checks, and audio/text behavior matching
+mission: Is this voice or message really from who it claims to be?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- A voice is not trusted because it sounds familiar
+- A response is not trusted because it says the right name
+- Every spoken or generated output must be validated when trust matters
+logbooks_written:
+- Validation Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required when:'
+depends_on:
+- TODO
+cannot_do:
+- “This does not match Packet Pilot’s normal output pattern.”
+- It never says “verified” unless verification evidence exists
+architecture_source: moonrust/actors/voice_validator/ARCHITECTURE.md

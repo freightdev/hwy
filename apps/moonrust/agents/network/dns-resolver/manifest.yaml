@@ -1,0 +1,32 @@
+agent_id: network.dns-resolver
+name: Dns Resolver
+category: network
+capability_domain: perform DNS lookups (A, AAAA, MX, CNAME, NS, TXT, SOA), test resolution time, verify DNSSEC
+mission: I perform DNS lookups (A, AAAA, MX, CNAME, NS, TXT, SOA), test resolution time, verify DNSSEC.
+inputs:
+- '{query, type?, resolver?, dnssec?, trace?} / out: {answers: [{name, type, ttl, value}], time, dnssec_valid?}'
+outputs:
+- '{answers: [{name, type, ttl, value}], time, dnssec_valid?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- dns-manager, network-manager
+workers_needed:
+- TODO
+truth_rules:
+- I perform DNS lookups (A, AAAA, MX, CNAME, NS, TXT, SOA), test resolution time, verify DNSSEC
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/dns-resolver/ARCHITECTURE.md

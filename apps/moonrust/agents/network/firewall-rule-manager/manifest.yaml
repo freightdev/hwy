@@ -1,0 +1,31 @@
+agent_id: network.firewall-rule-manager
+name: Firewall Rule Manager
+category: network
+capability_domain: analyze, optimize, and validate firewall rules
+mission: I analyze, optimize, and validate firewall rules.
+inputs:
+- '{op: analyze|optimize|audit|validate|convert, rules} / out: {issues, redundant, shadowed, conflicts, gaps}'
+outputs:
+- '{issues, redundant, shadowed, conflicts, gaps}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- firewall-manager, security-header-checker, audit-recorder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/firewall-rule-manager/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: testing.stub-generator
+name: Stub Generator
+category: testing
+capability_domain: create stub code from interfaces, type definitions, or API specs with configurable return values
+mission: I create stub code from interfaces, type definitions, or API specs with configurable return values.
+inputs:
+- '{interface, language?, returns?} / out: {stub: {files: [{path, content}], methods: int}}'
+outputs:
+- '{stub: {files: [{path, content}], methods: int}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- mock-creator, test-runner, code-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/stub-generator/ARCHITECTURE.md

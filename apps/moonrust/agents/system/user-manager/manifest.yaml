@@ -1,0 +1,31 @@
+agent_id: system.user-manager
+name: User Manager
+category: system
+capability_domain: create, modify, delete users and groups
+mission: I create, modify, delete users and groups.
+inputs:
+- '{op: create|modify|delete|list|lock|unlock, username} / out: {ok, user: {uid, gid, groups, home, shell}}'
+outputs:
+- '{ok, user: {uid, gid, groups, home, shell}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- permission-manager, secret-keeper, audit-recorder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/user-manager/ARCHITECTURE.md

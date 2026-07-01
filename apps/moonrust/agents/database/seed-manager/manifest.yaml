@@ -1,0 +1,31 @@
+agent_id: database.seed-manager
+name: Seed Manager
+category: database
+capability_domain: create, load, and manage seed data for development, testing, and demo environments
+mission: I create, load, and manage seed data for development, testing, and demo environments.
+inputs:
+- '{op: seed|truncate|generate|status, database} / out: {ok, seeded, truncated, generated}'
+outputs:
+- '{ok, seeded, truncated, generated}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, data-generator, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/seed-manager/ARCHITECTURE.md

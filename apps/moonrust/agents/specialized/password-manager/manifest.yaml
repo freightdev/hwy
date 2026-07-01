@@ -1,0 +1,32 @@
+agent_id: specialized.password-manager
+name: Password Manager
+category: specialized
+capability_domain: generates and evaluates passwords
+mission: I generate strong passwords with configurable complexity, evaluate password strength, detect common patterns, and check against compromised password databases.
+inputs:
+- TODO
+outputs:
+- '{passwords?: [], score?: float, strength?: weak|fair|strong|very-strong, crack_time?: string, breached?: bool, suggestions?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- hasher for password hashing
+- http-client for breach DB checking
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/password-manager/ARCHITECTURE.md

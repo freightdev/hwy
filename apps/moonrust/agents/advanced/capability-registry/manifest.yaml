@@ -1,0 +1,33 @@
+agent_id: advanced.capability-registry
+name: Capability Registry
+category: advanced
+capability_domain: maintains a registry of all agent capabilities
+mission: I discover, register, query, and monitor agent capabilities across the system.
+inputs:
+- '{op: register|query|unregister|health, agent?: string, capabilities?: [], query?: {capability, constraints?}}'
+outputs:
+- '{agents: [{name, capabilities, status, version}], compatible?: [], registry_size: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- health-prober for agent health
+- knowledge-gleaner for capability documentation
+- config-loader for registry config
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/capability-registry/ARCHITECTURE.md

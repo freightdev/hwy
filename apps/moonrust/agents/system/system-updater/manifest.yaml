@@ -1,0 +1,31 @@
+agent_id: system.system-updater
+name: System Updater
+category: system
+capability_domain: check for available updates, apply security patches, manage package repositories, and schedule update windows
+mission: I check for available updates, apply security patches, manage package repositories, and schedule update windows.
+inputs:
+- '{op: check|update|upgrade|history|rollback, packages?} / out: {ok, updates_available, updates_applied, reboot_required}'
+outputs:
+- '{ok, updates_available, updates_applied, reboot_required}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- process-manager, notification-dispatcher, config-loader
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/system-updater/ARCHITECTURE.md

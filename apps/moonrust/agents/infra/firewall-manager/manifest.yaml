@@ -1,0 +1,31 @@
+agent_id: infra.firewall-manager
+name: Firewall Manager
+category: infra
+capability_domain: configure iptables/nftables, cloud firewall rules, security groups, and network ACLs
+mission: I configure iptables/nftables, cloud firewall rules, security groups, and network ACLs.
+inputs:
+- '{op: add|remove|list|status, rule?} / out: {ok, rules, active, default_policy}'
+outputs:
+- '{ok, rules, active, default_policy}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- network-manager, intrusion-detector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/firewall-manager/ARCHITECTURE.md

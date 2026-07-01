@@ -1,0 +1,44 @@
+actor_id: jackknife_jailer
+name: Jackknife Jailer
+category: hwy_actor
+ownership_domain: reinforcement, overflow support, workload recovery, and temporary actor assistance
+mission: Who needs a hand right now?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Jackknife Jailer does not replace other actors
+- Jackknife Jailer reinforces them
+- When Packet Pilot is overloaded, Jack helps Packet Pilot
+- When Cargo Connect is overloaded, Jack helps Cargo Connect
+- When Whisper Witness is overloaded, Jack helps Whisper Witness
+- The original actor remains the owner of the work
+logbooks_written:
+- Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- needs human review
+- Human Review Requirements
+- 'Human review is required when Jack''s borrowed task involves:'
+depends_on:
+- TODO
+cannot_do:
+- Jackknife Jailer does not own a primary business domain
+- Jackknife Jailer does not replace other actors
+- Jack does not take over the road
+- Jack does not invent his own rules
+- Jack should not be the first actor called
+- Jack does not become the owner of the packet
+- Jack does not keep permanent business memory from borrowed work
+- He does not create his own independent version of the truth
+- Jack does not replace them
+architecture_source: moonrust/actors/jackknife_jailer/ARCHITECTURE.md

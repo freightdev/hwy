@@ -1,0 +1,31 @@
+agent_id: finance.ledger-manager
+name: Ledger Manager
+category: finance
+capability_domain: record journal entries, manage accounts, reconcile transactions, and generate trial balances
+mission: I record journal entries, manage accounts, reconcile transactions, and generate trial balances.
+inputs:
+- '{op: entry|reconcile|balance|report, account, amount, type?} / out: {ok, entry_id, accounts: [{name, balance, type}]}'
+outputs:
+- '{ok, entry_id, accounts: [{name, balance, type}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- payment-processor, expense-tracker, audit-recorder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/finance/ledger-manager/ARCHITECTURE.md

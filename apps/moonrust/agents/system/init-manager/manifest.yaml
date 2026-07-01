@@ -1,0 +1,31 @@
+agent_id: system.init-manager
+name: Init Manager
+category: system
+capability_domain: configure boot targets, manage init scripts, handle runlevels, and manage startup/shutdown ordering
+mission: I configure boot targets, manage init scripts, handle runlevels, and manage startup/shutdown ordering.
+inputs:
+- '{op: set-default|get-default|list|enable|disable, target?} / out: {ok, default_target, services}'
+outputs:
+- '{ok, default_target, services}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- service-manager, process-manager, system-updater
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/init-manager/ARCHITECTURE.md

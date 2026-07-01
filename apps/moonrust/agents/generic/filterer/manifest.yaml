@@ -1,0 +1,32 @@
+agent_id: generic.filterer
+name: Filterer
+category: generic
+capability_domain: filters data based on conditions
+mission: I filter collections using predicate expressions, SQL-like WHERE clauses, or custom filter functions.
+inputs:
+- '{data: [], conditions: object|string, mode?: and|or, limit?: int}'
+outputs:
+- '{data: [], total: int, filtered: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-validator for condition validation
+- sorter for post-sorting
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/filterer/ARCHITECTURE.md

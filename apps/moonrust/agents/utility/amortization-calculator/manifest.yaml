@@ -1,0 +1,31 @@
+agent_id: utility.amortization-calculator
+name: Amortization Calculator
+category: utility
+capability_domain: generate amortization schedules with payment breakdown, interest, principal, and balance over time
+mission: I generate amortization schedules with payment breakdown, interest, principal, and balance over time.
+inputs:
+- '{loan_amount, rate, term, payment_frequency?} / out: {schedule: [{period, payment, interest, principal, balance}], summary}'
+outputs:
+- '{schedule: [{period, payment, interest, principal, balance}], summary}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- interest-calculator, math-evaluator, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/amortization-calculator/ARCHITECTURE.md

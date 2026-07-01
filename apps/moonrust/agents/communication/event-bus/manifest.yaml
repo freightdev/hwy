@@ -1,0 +1,31 @@
+agent_id: communication.event-bus
+name: Event Bus
+category: communication
+capability_domain: publish and subscribe to events, route events to subscribers, manage event schemas, and guarantee delivery
+mission: I publish and subscribe to events, route events to subscribers, manage event schemas, and guarantee delivery.
+inputs:
+- '{op: publish|subscribe|unsubscribe|emit, event, data} / out: {ok, event_id, subscribers_notified}'
+outputs:
+- '{ok, event_id, subscribers_notified}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- message-queue-producer, message-queue-consumer, audit-recorder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/event-bus/ARCHITECTURE.md

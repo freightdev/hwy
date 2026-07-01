@@ -1,0 +1,31 @@
+agent_id: utility.interest-calculator
+name: Interest Calculator
+category: utility
+capability_domain: compute simple, compound, and amortizing interest
+mission: I compute simple, compound, and amortizing interest.
+inputs:
+- '{op: simple|compound|amortization, principal, rate, time, compound_period?} / out: {interest, total, schedule?, effective_rate}'
+outputs:
+- '{interest, total, schedule?, effective_rate}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- math-evaluator, amortization-calculator, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/interest-calculator/ARCHITECTURE.md

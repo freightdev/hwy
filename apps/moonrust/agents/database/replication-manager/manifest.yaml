@@ -1,0 +1,31 @@
+agent_id: database.replication-manager
+name: Replication Manager
+category: database
+capability_domain: configure, monitor, and manage replication streams
+mission: I configure, monitor, and manage replication streams.
+inputs:
+- '{op: configure|status|failover|resync|lag, source} / out: {ok, source, replicas [{name, lag, status}], topology}'
+outputs:
+- '{ok, source, replicas [{name, lag, status}], topology}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, health-prober, backup-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/replication-manager/ARCHITECTURE.md

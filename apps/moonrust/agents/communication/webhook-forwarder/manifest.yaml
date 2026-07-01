@@ -1,0 +1,31 @@
+agent_id: communication.webhook-forwarder
+name: Webhook Forwarder
+category: communication
+capability_domain: receive webhooks and forward them to multiple registered endpoints with transformation and retry
+mission: I receive webhooks and forward them to multiple registered endpoints with transformation and retry.
+inputs:
+- '{op: register|forward|transform, source, destinations} / out: {ok, forwarded, failed, results}'
+outputs:
+- '{ok, forwarded, failed, results}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- webhook-handler, http-client, queue-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/webhook-forwarder/ARCHITECTURE.md

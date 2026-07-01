@@ -1,0 +1,31 @@
+agent_id: developer-tools.commit-formatter
+name: Commit Formatter
+category: developer-tools
+capability_domain: enforce commit message conventions (Conventional Commits, gitmoji), validate format, and suggest improvements
+mission: I enforce commit message conventions (Conventional Commits, gitmoji), validate format, and suggest improvements.
+inputs:
+- '{message, repo?, style?} / out: {formatted, valid, issues, suggestions}'
+outputs:
+- '{formatted, valid, issues, suggestions}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- git-hook-manager, changelog-generator, release-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/commit-formatter/ARCHITECTURE.md

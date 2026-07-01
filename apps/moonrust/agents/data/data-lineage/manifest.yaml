@@ -1,0 +1,31 @@
+agent_id: data.data-lineage
+name: Data Lineage
+category: data
+capability_domain: trace data flow through pipelines, capture transformations, track source-to-destination lineage, and visualize dependencies
+mission: I trace data flow through pipelines, capture transformations, track source-to-destination lineage, and visualize dependencies.
+inputs:
+- '{op: track|query|visualize|impact, dataset?} / out: {lineage: {upstream: [{source, transform}], downstream: [{target, transform}]}}'
+outputs:
+- '{lineage: {upstream: [{source, transform}], downstream: [{target, transform}]}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-pipeline, data-cataloger, knowledge-gleaner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-lineage/ARCHITECTURE.md

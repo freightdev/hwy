@@ -1,0 +1,31 @@
+agent_id: network.ping-agent
+name: Ping Agent
+category: network
+capability_domain: send ICMP echo requests to hosts, measure RTT, packet loss, and jitter
+mission: I send ICMP echo requests to hosts, measure RTT, packet loss, and jitter.
+inputs:
+- '{target, count?, interval?, timeout?, size?} / out: {ok, stats: {sent, received, loss_percent, rtt_min, rtt_avg}}'
+outputs:
+- '{ok, stats: {sent, received, loss_percent, rtt_min, rtt_avg}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- network-manager, latency-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/ping-agent/ARCHITECTURE.md

@@ -1,0 +1,40 @@
+actor_id: whisper_witness
+name: Whisper Witness
+category: hwy_actor
+ownership_domain: live call assistance, transcription, call intelligence, negotiation memory, and conversation-to-logbook capture
+mission: What is being said right now, what does it mean for this load, and what should be remembered?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Whisper Witness does not own the call
+- The Load Logbook owns the call history when the call belongs to a load
+- If the call does not belong to a load yet, Whisper Witness creates a call record that may later attach to a Load, Broker, Driver, Company, or Contact Logbook
+logbooks_written:
+- Load Logbook
+- Contact Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- send messages without approval
+depends_on:
+- TODO
+cannot_do:
+- Whisper Witness does not negotiate for the user
+- Whisper Witness does not make business decisions
+- Whisper Witness does not own the call
+- If the call does not belong to a load yet, Whisper Witness creates a call record that may later attach to a Load, Broker, Driver, Company, or Contact Logbook
+- Whisper Witness must never speak to the broker unless the user explicitly allows it
+- Whisper Witness does not decide the rate
+- Broker name does not match email domain
+- A driver should not automatically see dispatcher-only negotiation notes unless shared
+- A dispatcher should not automatically see driver-private notes unless permitted
+architecture_source: moonrust/actors/whisper_witness/ARCHITECTURE.md

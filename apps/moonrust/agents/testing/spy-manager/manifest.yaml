@@ -1,0 +1,33 @@
+agent_id: testing.spy-manager
+name: Spy Manager
+category: testing
+capability_domain: create spies that record call history, parameters, and return values for test verification
+mission: I create spies that record call history, parameters, and return values for test verification.
+inputs:
+- '{op: create|record|verify|reset, target, methods?} / out: {ok, calls: [{method, args, kwargs, result, timestamp}], matched: bool}'
+outputs:
+- '{ok, calls: [{method, args, kwargs, result, timestamp}], matched: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- mock-creator, test-runner, stub-generator
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {op: create|record|verify|reset, target, methods?} / out: {ok, calls: [{method, args, kwargs, result, timestamp}], matched: bool}'
+- 'record_calls: track all calls, verify_order, call_count, time_travel, async_support'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/spy-manager/ARCHITECTURE.md

@@ -1,0 +1,9 @@
+-- Add device tracking fields to users table
+ALTER TABLE users ADD COLUMN IF NOT EXISTS device_id VARCHAR(255) DEFAULT '';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS location_lat DOUBLE PRECISION;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS location_lng DOUBLE PRECISION;
+ALTER TABLE users ADD COLUMN IF NOT EXISTS user_agent VARCHAR(500) DEFAULT '';
+ALTER TABLE users ADD COLUMN IF NOT EXISTS ip_address VARCHAR(45) DEFAULT '';
+
+-- Add show_mock_data flag to companies table
+ALTER TABLE companies ADD COLUMN IF NOT EXISTS show_mock_data BOOLEAN DEFAULT TRUE;

@@ -1,0 +1,31 @@
+agent_id: infra.dns-manager
+name: Dns Manager
+category: infra
+capability_domain: create, update, delete DNS records across providers
+mission: I create, update, delete DNS records across providers.
+inputs:
+- '{op: create|update|delete|resolve, zone, record?} / out: {ok, records, resolved?}'
+outputs:
+- '{ok, records, resolved?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- load-balancer, certificate-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/dns-manager/ARCHITECTURE.md

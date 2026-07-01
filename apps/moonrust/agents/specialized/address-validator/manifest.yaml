@@ -1,0 +1,35 @@
+agent_id: specialized.address-validator
+name: Address Validator
+category: specialized
+capability_domain: validates and standardizes postal addresses
+mission: I validate address format, verify address existence, standardize to postal formats, and provide address completion suggestions.
+inputs:
+- '{address: string|object, country?: string, provider?: string, autocomplete?: bool}'
+outputs:
+- '{valid: bool, standardized: object, components: {street, city, state, zip, country}, confidence: float, suggestions?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- geo-coder for geographic verification
+- secret-keeper for provider keys
+- cache-operator for validation cache
+workers_needed:
+- TODO
+truth_rules:
+- I validate address format, verify address existence, standardize to postal formats, and provide address completion suggestions. I support multiple countries and address formats
+- 'out: {valid: bool, standardized: object, components: {street, city, state, zip, country}, confidence: float, suggestions?: []}'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/address-validator/ARCHITECTURE.md

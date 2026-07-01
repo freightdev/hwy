@@ -1,0 +1,31 @@
+agent_id: data.data-anonymizer
+name: Data Anonymizer
+category: data
+capability_domain: mask, redact, tokenize, or generalize PII and sensitive data while preserving utility
+mission: I mask, redact, tokenize, or generalize PII and sensitive data while preserving utility.
+inputs:
+- '{data, rules?, method?} / out: {data, transformations: [{field, method, description}], risk_score}'
+outputs:
+- '{data, transformations: [{field, method, description}], risk_score}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-transformer, encryption-agent, secret-keeper
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-anonymizer/ARCHITECTURE.md

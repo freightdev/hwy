@@ -1,0 +1,33 @@
+agent_id: specialized.notification-dispatcher
+name: Notification Dispatcher
+category: specialized
+capability_domain: dispatches notifications across multiple channels
+mission: I send push notifications, SMS, in-app alerts, webhook callbacks, and desktop notifications.
+inputs:
+- '{channels: [], title: string, body: string, priority?: low|normal|high, target: string|object, template?: string}'
+outputs:
+- '{ok: bool, deliveries: [{channel, status, id}], failed: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- email-sender for email notifications
+- http-client for webhooks
+- template-engine for message templates
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/notification-dispatcher/ARCHITECTURE.md

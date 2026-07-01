@@ -1,0 +1,37 @@
+actor_id: night_nexus
+name: Night Nexus
+category: hwy_actor
+ownership_domain: overnight operations, shift continuity, after-hours monitoring, overnight dispatch support, and intelligent handoffs between business shifts
+mission: What needs to stay moving while everyone else is asleep?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Freight never sleeps
+- The highway never closes
+- Someone should always be watching
+logbooks_written:
+- Shift Logbook
+- Overnight Shift Logbook
+- Load Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+depends_on:
+- TODO
+cannot_do:
+- Night Nexus becomes the active operations actor whenever the primary dispatch team is offline or outside normal business hours
+- Night Nexus does not replace the daytime actors
+- Freight never sleeps
+- The highway never closes
+- 'Whenever possible it answers from:'
+architecture_source: moonrust/actors/night_nexus/ARCHITECTURE.md

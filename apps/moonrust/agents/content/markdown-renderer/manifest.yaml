@@ -1,0 +1,31 @@
+agent_id: content.markdown-renderer
+name: Markdown Renderer
+category: content
+capability_domain: convert Markdown to HTML, PDF, or plain text
+mission: I convert Markdown to HTML, PDF, or plain text.
+inputs:
+- '{source, format?, extensions?, theme?} / out: {output, format, toc?, metadata?}'
+outputs:
+- '{output, format, toc?, metadata?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- template-engine, file-manager, code-formatter
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/content/markdown-renderer/ARCHITECTURE.md

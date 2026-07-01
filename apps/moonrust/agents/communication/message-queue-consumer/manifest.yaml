@@ -1,0 +1,31 @@
+agent_id: communication.message-queue-consumer
+name: Message Queue Consumer
+category: communication
+capability_domain: subscribe to queues, process messages with handlers, manage offsets, handle retries/DLQs
+mission: I subscribe to queues, process messages with handlers, manage offsets, handle retries/DLQs.
+inputs:
+- '{op: subscribe|process|pause|resume|status, topic} / out: {ok, messages_processed, failures, lag}'
+outputs:
+- '{ok, messages_processed, failures, lag}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- message-queue-producer, dead-letter-queue, metrics-collector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/message-queue-consumer/ARCHITECTURE.md

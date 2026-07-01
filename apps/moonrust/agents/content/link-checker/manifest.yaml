@@ -1,0 +1,32 @@
+agent_id: content.link-checker
+name: Link Checker
+category: content
+capability_domain: scan documents for URLs, verify they resolve correctly, detect broken links, and report status
+mission: I scan documents for URLs, verify they resolve correctly, detect broken links, and report status.
+inputs:
+- '{source, recursive?, timeout?, concurrency?} / out: {checked: int, broken: [{url, status, error}], valid: int, redirects: int}'
+outputs:
+- '{checked: int, broken: [{url, status, error}], valid: int, redirects: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- http-client, document-parser, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- I scan documents for URLs, verify they resolve correctly, detect broken links, and report status
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/content/link-checker/ARCHITECTURE.md

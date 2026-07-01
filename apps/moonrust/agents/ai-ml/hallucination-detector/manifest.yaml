@@ -1,0 +1,33 @@
+agent_id: ai-ml.hallucination-detector
+name: Hallucination Detector
+category: ai-ml
+capability_domain: check LLM responses against source context, knowledge bases, and factual databases for accuracy
+mission: I check LLM responses against source context, knowledge bases, and factual databases for accuracy.
+inputs:
+- '{response, context?, sources?, claim_verification?} / out: {hallucinations: [{claim, verified, confidence, evidence}], score, safe}'
+outputs:
+- '{hallucinations: [{claim, verified, confidence, evidence}], score, safe}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, knowledge-gleaner, response-validator
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {response, context?, sources?, claim_verification?} / out: {hallucinations: [{claim, verified, confidence, evidence}], score, safe}'
+- verification_method, confidence_threshold, cross_check_count, use_knowledge_base
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/hallucination-detector/ARCHITECTURE.md

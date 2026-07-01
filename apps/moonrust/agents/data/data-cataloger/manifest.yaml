@@ -1,0 +1,31 @@
+agent_id: data.data-cataloger
+name: Data Cataloger
+category: data
+capability_domain: scan data sources, extract schema and metadata, maintain a searchable data catalog, and track data lineage
+mission: I scan data sources, extract schema and metadata, maintain a searchable data catalog, and track data lineage.
+inputs:
+- '{op: scan|catalog|search|lineage, source?} / out: {catalog: [{name, type, schema, stats, tags, owner}], lineage: object}'
+outputs:
+- '{catalog: [{name, type, schema, stats, tags, owner}], lineage: object}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-profiler, schema-validator, knowledge-gleaner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-cataloger/ARCHITECTURE.md

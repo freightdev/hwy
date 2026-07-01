@@ -1,0 +1,31 @@
+agent_id: security.encryption-agent
+name: Encryption Agent
+category: security
+capability_domain: encrypt/decrypt using AES, ChaCha20, RSA, ECC
+mission: I encrypt/decrypt using AES, ChaCha20, RSA, ECC.
+inputs:
+- '{op: encrypt|decrypt|generate_key|rotate, data, algorithm?} / out: {ok, result?, key_id?, iv?, tag?}'
+outputs:
+- '{ok, result?, key_id?, iv?, tag?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper, hasher, key-rotator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/encryption-agent/ARCHITECTURE.md

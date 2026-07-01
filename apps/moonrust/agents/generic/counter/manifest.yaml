@@ -1,0 +1,32 @@
+agent_id: generic.counter
+name: Counter
+category: generic
+capability_domain: counts and tallies events
+mission: I increment, decrement, reset, and query counters.
+inputs:
+- '{op: increment|decrement|reset|get|list, name: string, value?: int, tags?: object}'
+outputs:
+- '{name: string, value: int, prev_value?: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cache-operator for counter state
+- file-manager for persistence
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/counter/ARCHITECTURE.md

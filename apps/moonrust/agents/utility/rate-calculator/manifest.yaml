@@ -1,0 +1,31 @@
+agent_id: utility.rate-calculator
+name: Rate Calculator
+category: utility
+capability_domain: compute rates (per-second, per-minute, per-hour), ratios, percentages, growth rates, and running averages
+mission: I compute rates (per-second, per-minute, per-hour), ratios, percentages, growth rates, and running averages.
+inputs:
+- '{op: rate|ratio|percent|growth|moving_avg, values, window?} / out: {result, formula, breakdown}'
+outputs:
+- '{result, formula, breakdown}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- counter, timer, math-evaluator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/rate-calculator/ARCHITECTURE.md

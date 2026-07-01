@@ -1,0 +1,37 @@
+actor_id: fuel_factor
+name: Fuel Factor
+category: hwy_actor
+ownership_domain: fuel intelligence, fuel savings, route fuel planning, fuel price awareness, mileage optimization, and operational cost reduction
+mission: How can I save money on this trip without making my job harder?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Fuel is one of the largest operating expenses in trucking
+- Every dollar saved at the pump is another dollar that stays in the driver's pocket
+- Fuel Factor exists to help drivers win that battle
+logbooks_written:
+- Equipment Logbook
+- Fuel Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- TODO
+depends_on:
+- TODO
+cannot_do:
+- Fuel Factor cannot eliminate fuel costs
+- Fuel prices should include timestamps whenever available
+- Fuel Factor does not reroute unnecessarily for minimal savings
+- CoDriver activates Fuel Factor whenever fuel costs, trip planning, or operating efficiency are discussed
+- Fuel Factor is free because smarter fueling should not be a premium feature
+- 'Whether it saves five dollars or five thousand dollars over the life of a truck, its purpose never changes:'
+architecture_source: moonrust/actors/fuel_factor/ARCHITECTURE.md

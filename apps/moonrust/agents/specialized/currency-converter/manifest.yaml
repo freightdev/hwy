@@ -1,0 +1,33 @@
+agent_id: specialized.currency-converter
+name: Currency Converter
+category: specialized
+capability_domain: converts currencies and fetches exchange rates
+mission: I convert amounts between currencies using live or cached exchange rates.
+inputs:
+- '{amount: float, from: string, to: string, date?: string, provider?: string}'
+outputs:
+- '{amount: float, from: {currency, amount}, to: {currency, amount}, rate: float, timestamp: string, provider: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for API keys
+- cache-operator for rate caching
+- http-client for rate fetching
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/currency-converter/ARCHITECTURE.md

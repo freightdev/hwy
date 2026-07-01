@@ -1,0 +1,31 @@
+agent_id: data.data-sampler
+name: Data Sampler
+category: data
+capability_domain: extract representative samples using random, stratified, systematic, or reservoir sampling methods
+mission: I extract representative samples using random, stratified, systematic, or reservoir sampling methods.
+inputs:
+- '{data, size?, method?, seed?, stratify_by?} / out: {sample, metadata: {method, fraction, original_size, sample_size}}'
+outputs:
+- '{sample, metadata: {method, fraction, original_size, sample_size}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-profiler, data-validator, data-quality-checker
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-sampler/ARCHITECTURE.md

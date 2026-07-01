@@ -1,0 +1,31 @@
+agent_id: specialized.unit-converter
+name: Unit Converter
+category: specialized
+capability_domain: converts between measurement units
+mission: I convert values between units of length, mass, volume, temperature, speed, pressure, energy, and more.
+inputs:
+- '{value: float, from: string, to: string, category?: length|mass|volume|temp|speed|pressure|energy}'
+outputs:
+- '{value: float, from: {value, unit}, to: {value, unit}, conversion_factor: float, category: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- config-loader for unit definitions
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/unit-converter/ARCHITECTURE.md

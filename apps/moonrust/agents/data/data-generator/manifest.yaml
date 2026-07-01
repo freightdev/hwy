@@ -1,0 +1,31 @@
+agent_id: data.data-generator
+name: Data Generator
+category: data
+capability_domain: create realistic synthetic data using schemas, factories, distributions, and AI-based generation
+mission: I create realistic synthetic data using schemas, factories, distributions, and AI-based generation.
+inputs:
+- '{schema, count?, rules?, format?} / out: {data, generated: int, files?: [{path, format, size}]}'
+outputs:
+- '{data, generated: int, files?: [{path, format, size}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-validator, seed-manager, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-generator/ARCHITECTURE.md

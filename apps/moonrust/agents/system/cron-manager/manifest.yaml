@@ -1,0 +1,31 @@
+agent_id: system.cron-manager
+name: Cron Manager
+category: system
+capability_domain: create, update, remove, and monitor cron jobs
+mission: I create, update, remove, and monitor cron jobs.
+inputs:
+- '{op: add|remove|list|pause|resume, name?, schedule?} / out: {ok, jobs: [{name, schedule, command, next_run}]}'
+outputs:
+- '{ok, jobs: [{name, schedule, command, next_run}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- scheduler, notification-dispatcher, process-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/cron-manager/ARCHITECTURE.md

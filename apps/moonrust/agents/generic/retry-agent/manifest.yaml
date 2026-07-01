@@ -1,0 +1,32 @@
+agent_id: generic.retry-agent
+name: Retry Agent
+category: generic
+capability_domain: retries failed operations with backoff
+mission: I wrap operations with retry logic using exponential backoff, jitter, and configurable retry counts.
+inputs:
+- '{operation: object, max_retries?: int, backoff?: fixed|exponential|linear, base_delay?: int, max_delay?: int, jitter?: bool, retryable_errors?: []}'
+outputs:
+- '{ok: bool, result?: any, attempts: int, total_delay: int, errors: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- circuit-breaker for circuit state
+- logger for retry logging
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/retry-agent/ARCHITECTURE.md

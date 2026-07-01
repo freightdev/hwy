@@ -1,0 +1,34 @@
+agent_id: advanced.workflow-orchestrator
+name: Workflow Orchestrator
+category: advanced
+capability_domain: orchestrates multi-step workflows across other agents
+mission: I define, execute, and monitor workflows as directed acyclic graphs (DAGs) of agent calls.
+inputs:
+- '{op: define|execute|status|cancel|resume, workflow: string|object, input?: object, options?: {timeout, retry, on_error}}'
+outputs:
+- '{ok: bool, run_id: string, status: string, steps: [{agent, status, result, duration}], error?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- All registered agents for step execution
+- state-coordinator for distributed state
+- scheduler for scheduled workflows
+- logger for execution logs
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/workflow-orchestrator/ARCHITECTURE.md

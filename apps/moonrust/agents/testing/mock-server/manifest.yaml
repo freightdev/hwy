@@ -1,0 +1,32 @@
+agent_id: testing.mock-server
+name: Mock Server
+category: testing
+capability_domain: start, configure, and manage mock HTTP servers that simulate API responses for integration testing
+mission: I start, configure, and manage mock HTTP servers that simulate API responses for integration testing.
+inputs:
+- '{op: start|stop|config|expect|verify, routes?, expectations?} / out: {ok, server: {port, routes, calls}, verified: bool}'
+outputs:
+- '{ok, server: {port, routes, calls}, verified: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- mock-creator, integration-tester, http-client
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {op: start|stop|config|expect|verify, routes?, expectations?} / out: {ok, server: {port, routes, calls}, verified: bool}'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/mock-server/ARCHITECTURE.md

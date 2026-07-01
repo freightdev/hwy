@@ -1,0 +1,37 @@
+actor_id: cargo_connect
+name: Cargo Connect
+category: hwy_actor
+ownership_domain: freight discovery, load intelligence, shipper discovery, broker discovery, and opportunity tracking
+mission: What freight is available, worth looking at, and connected to the right driver, lane, equipment, and business goal?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Cargo Connect does not own the load
+- The Load Logbook owns the load
+- Cargo Connect creates load leads, enriches them, monitors them, and writes updates into the Load Logbook
+logbooks_written:
+- Load Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- book a load without approval
+depends_on:
+- TODO
+cannot_do:
+- Cargo Connect does not make business decisions for the dispatcher or driver
+- Cargo Connect does not own the load
+- Cargo Connect should never fake missing information
+- If it does not know, it marks the field as unknown
+- It does not tell the user what to accept
+- A lead should not silently disappear
+- Cargo Connect does not own final load truth
+architecture_source: moonrust/actors/cargo_connect/ARCHITECTURE.md

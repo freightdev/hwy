@@ -1,0 +1,31 @@
+agent_id: scientific.regression-analyzer
+name: Regression Analyzer
+category: scientific
+capability_domain: fit and evaluate regression models (linear, logistic, polynomial, multiple) and diagnose model quality
+mission: I fit and evaluate regression models (linear, logistic, polynomial, multiple) and diagnose model quality.
+inputs:
+- '{data, formula?, type?, predictors, target} / out: {model: {type, coefficients, r_squared, adj_r_squared, p_value}, diagnostics}'
+outputs:
+- '{model: {type, coefficients, r_squared, adj_r_squared, p_value}, diagnostics}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- stats-calculator, hypothesis-tester, forecaster
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/scientific/regression-analyzer/ARCHITECTURE.md

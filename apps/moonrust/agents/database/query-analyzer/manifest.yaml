@@ -1,0 +1,31 @@
+agent_id: database.query-analyzer
+name: Query Analyzer
+category: database
+capability_domain: capture and analyze query execution plans, identify slow queries, detect N+1 patterns
+mission: I capture and analyze query execution plans, identify slow queries, detect N+1 patterns.
+inputs:
+- '{op: analyze|explain|profile|capture, database} / out: {queries, slowest, recommendations, plans}'
+outputs:
+- '{queries, slowest, recommendations, plans}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, index-optimizer, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/query-analyzer/ARCHITECTURE.md

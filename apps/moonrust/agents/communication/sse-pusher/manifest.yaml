@@ -1,0 +1,31 @@
+agent_id: communication.sse-pusher
+name: Sse Pusher
+category: communication
+capability_domain: establish SSE streams to clients, push events, manage reconnection, and handle event IDs
+mission: I establish SSE streams to clients, push events, manage reconnection, and handle event IDs.
+inputs:
+- '{client_id, event, data, id?, retry?} / out: {ok, client_id, event, queued, connected}'
+outputs:
+- '{ok, client_id, event, queued, connected}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- event-bus, connection-pooler, cache-operator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/sse-pusher/ARCHITECTURE.md

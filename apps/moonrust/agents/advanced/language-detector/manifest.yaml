@@ -1,0 +1,35 @@
+agent_id: advanced.language-detector
+name: Language Detector
+category: advanced
+capability_domain: detects the language of text
+mission: I detect natural language from text using statistical models, neural networks, or LLM.
+inputs:
+- '{text: string, candidates?: [string], min_confidence?: float, detailed?: bool}'
+outputs:
+- '{language: string, code: string, confidence: float, probabilities: [{lang, code, prob}], script: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- config-loader for model configuration
+- llm-request for LLM-based detection
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {text: string, candidates?: [string], min_confidence?: float, detailed?: bool}'
+- 'out: {language: string, code: string, confidence: float, probabilities: [{lang, code, prob}], script: string}'
+- 'min_confidence: minimum confidence threshold'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/language-detector/ARCHITECTURE.md

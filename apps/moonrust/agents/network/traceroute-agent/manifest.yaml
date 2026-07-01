@@ -1,0 +1,31 @@
+agent_id: network.traceroute-agent
+name: Traceroute Agent
+category: network
+capability_domain: discover network paths using traceroute, measure per-hop latency, detect routing changes, and map topology
+mission: I discover network paths using traceroute, measure per-hop latency, detect routing changes, and map topology.
+inputs:
+- '{target, max_hops?, timeout?, method?} / out: {hops: [{hop, host, ip, rtt1, rtt2}], total_hops}'
+outputs:
+- '{hops: [{hop, host, ip, rtt1, rtt2}], total_hops}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- dns-manager, network-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/traceroute-agent/ARCHITECTURE.md

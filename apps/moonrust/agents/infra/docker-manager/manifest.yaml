@@ -1,0 +1,31 @@
+agent_id: infra.docker-manager
+name: Docker Manager
+category: infra
+capability_domain: create, start, stop, remove containers
+mission: I create, start, stop, remove containers.
+inputs:
+- '{op: build|run|stop|exec|logs|compose, image?, container?, options?} / out: {ok, container_id?, status?, logs?}'
+outputs:
+- '{ok, container_id?, status?, logs?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- config-loader, image-builder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/docker-manager/ARCHITECTURE.md

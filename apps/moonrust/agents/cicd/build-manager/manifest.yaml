@@ -1,0 +1,31 @@
+agent_id: cicd.build-manager
+name: Build Manager
+category: cicd
+capability_domain: compile source code, run build tools, manage dependencies, and produce build artifacts
+mission: I compile source code, run build tools, manage dependencies, and produce build artifacts.
+inputs:
+- '{language?, source?, command?, output?} / out: {ok, artifact_path?, size, duration}'
+outputs:
+- '{ok, artifact_path?, size, duration}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- pipeline-runner, artifact-storer, dependency-updater
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/cicd/build-manager/ARCHITECTURE.md

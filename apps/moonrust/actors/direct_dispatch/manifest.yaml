@@ -1,0 +1,51 @@
+actor_id: direct_dispatch
+name: Direct Dispatch
+category: hwy_actor
+ownership_domain: actor orchestration, task delegation, execution routing, workflow coordination, and operational dispatch
+mission: Who should perform this work, and in what order?
+allowed_callers:
+- TODO
+allowed_callees:
+- auto_assist
+- cargo_connect
+- error_echo
+- fuel_factor
+- ghost_guard
+- jackknife_jailer
+- key_keeper
+- legal_logger
+- memory_mark
+- night_nexus
+- packet_pilot
+- quick_quote
+- radar_ranch
+- secret_safe
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- The right work
+- The right actor
+- The right time
+- The right order
+logbooks_written:
+- Dispatch Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is recommended when:'
+depends_on:
+- TODO
+cannot_do:
+- CoDriver should not spend time manually coordinating dozens of actors
+- Dispatch work simultaneously whenever possible
+- 'Packet Pilot cannot sign paperwork until:'
+- Operations continue whenever possible
+- authorization cannot be resolved
+- execution dependencies cannot be satisfied
+architecture_source: moonrust/actors/direct_dispatch/ARCHITECTURE.md

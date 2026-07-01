@@ -1,0 +1,32 @@
+agent_id: generic.debouncer
+name: Debouncer
+category: generic
+capability_domain: debounces and throttles event streams
+mission: I debounce rapid events, throttle high-frequency calls, and coalesce redundant operations.
+inputs:
+- '{key: string, event: any, window_ms?: int, mode?: debounce|throttle|coalesce, leading?: bool, trailing?: bool}'
+outputs:
+- '{ok: bool, state: string, timer: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- timer for timer management
+- cache-operator for debounce state
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/debouncer/ARCHITECTURE.md

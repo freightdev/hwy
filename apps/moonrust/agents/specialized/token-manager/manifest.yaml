@@ -1,0 +1,35 @@
+agent_id: specialized.token-manager
+name: Token Manager
+category: specialized
+capability_domain: manages JWT and OAuth tokens
+mission: I create, verify, decode, and refresh tokens.
+inputs:
+- '{op: create|verify|decode|refresh|revoke, token?: string, payload?: object, secret?: string, algorithm?: string, expiry?: int}'
+outputs:
+- '{ok: bool, token?: string, payload?: object, expires_at?: string, valid?: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for signing secrets
+- cache-operator for token blacklist
+- audit-recorder for token operations
+workers_needed:
+- TODO
+truth_rules:
+- I create, verify, decode, and refresh tokens. I support JWT, OAuth2, SAML, and custom token formats. I handle token storage, rotation, and revocation
+- 'in: {op: create|verify|decode|refresh|revoke, token?: string, payload?: object, secret?: string, algorithm?: string, expiry?: int}'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/token-manager/ARCHITECTURE.md

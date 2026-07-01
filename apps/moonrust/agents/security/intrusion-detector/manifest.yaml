@@ -1,0 +1,31 @@
+agent_id: security.intrusion-detector
+name: Intrusion Detector
+category: security
+capability_domain: analyze network traffic, logs, and system calls for intrusion patterns using signature and anomaly methods
+mission: I analyze network traffic, logs, and system calls for intrusion patterns using signature and anomaly methods.
+inputs:
+- '{op: monitor|analyze|status|rules, source?} / out: {alerts, stats: {packets_analyzed, alerts_triggered}}'
+outputs:
+- '{alerts, stats: {packets_analyzed, alerts_triggered}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- packet-capturer, anomaly-detector, notification-dispatcher
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/intrusion-detector/ARCHITECTURE.md

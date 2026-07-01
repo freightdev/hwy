@@ -1,0 +1,31 @@
+agent_id: scientific.hypothesis-tester
+name: Hypothesis Tester
+category: scientific
+capability_domain: run hypothesis tests (t-test, chi-square, ANOVA, Mann-Whitney, etc.) and interpret results
+mission: I run hypothesis tests (t-test, chi-square, ANOVA, Mann-Whitney, etc.) and interpret results.
+inputs:
+- '{data, groups?, test?, alpha?, hypotheses?} / out: {test: {name, statistic, p_value, significant, effect_size}, interpretation}'
+outputs:
+- '{test: {name, statistic, p_value, significant, effect_size}, interpretation}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- stats-calculator, distribution-fitter, regression-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/scientific/hypothesis-tester/ARCHITECTURE.md

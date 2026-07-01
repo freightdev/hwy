@@ -1,0 +1,31 @@
+agent_id: ai-ml.prompt-engineer
+name: Prompt Engineer
+category: ai-ml
+capability_domain: design prompts with context, examples, instructions, and output formatting
+mission: I design prompts with context, examples, instructions, and output formatting.
+inputs:
+- '{op: design|optimize|test|version, task} / out: {prompt, variants, optimal, metrics}'
+outputs:
+- '{prompt, variants, optimal, metrics}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, response-validator, token-counter
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/prompt-engineer/ARCHITECTURE.md

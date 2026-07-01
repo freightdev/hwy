@@ -1,0 +1,31 @@
+agent_id: infra.node-provisioner
+name: Node Provisioner
+category: infra
+capability_domain: provision new nodes with OS installation, package setup, configuration, and application deployment
+mission: I provision new nodes with OS installation, package setup, configuration, and application deployment.
+inputs:
+- '{op: provision|bootstrap|deprovision|status, node} / out: {ok, node_id, ip, status}'
+outputs:
+- '{ok, node_id, ip, status}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cluster-manager, dns-manager, config-map-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/node-provisioner/ARCHITECTURE.md

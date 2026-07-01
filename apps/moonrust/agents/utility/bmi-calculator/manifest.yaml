@@ -1,0 +1,31 @@
+agent_id: utility.bmi-calculator
+name: Bmi Calculator
+category: utility
+capability_domain: compute BMI from height and weight, interpret results, and provide health category classification
+mission: I compute BMI from height and weight, interpret results, and provide health category classification.
+inputs:
+- '{weight, height, units?} / out: {bmi, category, healthy_range, risk_level}'
+outputs:
+- '{bmi, category, healthy_range, risk_level}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- unit-converter, math-evaluator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/bmi-calculator/ARCHITECTURE.md

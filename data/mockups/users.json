@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "company_id": 1,
+    "name": "Jesse Conley",
+    "email": "jesse@conleylogistics.com",
+    "phone": "(214) 555-0100",
+    "role": "Owner",
+    "avatar": "",
+    "is_primary": true
+  },
+  {
+    "id": 2,
+    "company_id": 1,
+    "name": "Mike Johnson",
+    "email": "mike.j@conleylogistics.com",
+    "phone": "(214) 555-0101",
+    "role": "Dispatcher",
+    "avatar": "",
+    "is_primary": false
+  },
+  {
+    "id": 3,
+    "company_id": 1,
+    "name": "Sarah Williams",
+    "email": "sarah.w@conleylogistics.com",
+    "phone": "(214) 555-0102",
+    "role": "Dispatcher",
+    "avatar": "",
+    "is_primary": false
+  }
+]

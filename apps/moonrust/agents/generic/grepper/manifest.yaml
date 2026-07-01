@@ -1,0 +1,31 @@
+agent_id: generic.grepper
+name: Grepper
+category: generic
+capability_domain: searches text using patterns
+mission: I search files and text using regex, glob, and fixed-string patterns.
+inputs:
+- '{pattern: string, source: string|[], regex?: bool, glob?: string, context?: int, max_matches?: int, recursive?: bool}'
+outputs:
+- '{matches: [{file?, line, column, content, context?}], total: int, elapsed: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for reading files
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/grepper/ARCHITECTURE.md

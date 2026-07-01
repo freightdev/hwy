@@ -1,0 +1,31 @@
+agent_id: devops.resource-tagger
+name: Resource Tagger
+category: devops
+capability_domain: apply, update, remove, and audit tags across cloud resources
+mission: I apply, update, remove, and audit tags across cloud resources.
+inputs:
+- '{op: tag|untag|audit|enforce|report, resources?} / out: {ok, tagged, skipped, violations, compliance_percent}'
+outputs:
+- '{ok, tagged, skipped, violations, compliance_percent}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cloud-cost-analyzer, terraform-runner, compliance-auditor
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/devops/resource-tagger/ARCHITECTURE.md

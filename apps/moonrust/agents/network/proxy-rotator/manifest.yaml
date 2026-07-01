@@ -1,0 +1,31 @@
+agent_id: network.proxy-rotator
+name: Proxy Rotator
+category: network
+capability_domain: manage a pool of proxies, rotate on schedule or on failure, validate proxy health, track usage
+mission: I manage a pool of proxies, rotate on schedule or on failure, validate proxy health, track usage.
+inputs:
+- '{op: next|current|add|remove|validate|status, proxies?} / out: {ok, proxy, pool_stats}'
+outputs:
+- '{ok, proxy, pool_stats}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- http-client, health-prober, web-scraper
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/proxy-rotator/ARCHITECTURE.md

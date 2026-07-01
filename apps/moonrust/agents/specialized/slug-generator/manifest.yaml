@@ -1,0 +1,31 @@
+agent_id: specialized.slug-generator
+name: Slug Generator
+category: specialized
+capability_domain: generates URL-safe slugs from text
+mission: I convert text into URL-friendly slugs with configurable separators, transliteration, stop word removal, and uniqueness tracking.
+inputs:
+- '{text: string, separator?: string, max_length?: int, lowercase?: bool, transliterate?: bool, unique?: bool}'
+outputs:
+- '{slug: string, original: string, truncated: bool, unique: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cache-operator for uniqueness tracking
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/slug-generator/ARCHITECTURE.md

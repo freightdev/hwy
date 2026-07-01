@@ -1,0 +1,31 @@
+agent_id: communication.rpc-caller
+name: Rpc Caller
+category: communication
+capability_domain: call RPC endpoints via gRPC, JSON-RPC, XML-RPC, or custom protocols
+mission: I call RPC endpoints via gRPC, JSON-RPC, XML-RPC, or custom protocols.
+inputs:
+- '{service, method, params, protocol?} / out: {ok, result, elapsed, protocol, peer}'
+outputs:
+- '{ok, result, elapsed, protocol, peer}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- connection-pooler, load-balancer, service-mesh
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/rpc-caller/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: security.csrf-protector
+name: Csrf Protector
+category: security
+capability_domain: generate, validate, and rotate CSRF tokens
+mission: I generate, validate, and rotate CSRF tokens.
+inputs:
+- '{op: generate|validate|rotate, token?, request?} / out: {ok, token?, valid?, reason?}'
+outputs:
+- '{ok, token?, valid?, reason?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- session-manager, token-manager, xss-detector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/csrf-protector/ARCHITECTURE.md

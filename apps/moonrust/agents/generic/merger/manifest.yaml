@@ -1,0 +1,31 @@
+agent_id: generic.merger
+name: Merger
+category: generic
+capability_domain: merges multiple inputs into one coherent output
+mission: I merge data from multiple sources using strategies like deep-merge, replace, concat, or custom resolvers.
+inputs:
+- '{sources: [any], strategy?: deep|replace|concat|custom, conflict_resolution?: ours|theirs|manual}'
+outputs:
+- '{result: any, conflicts?: [{path, ours, theirs}], merged: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- diff-engine for conflict detection
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/merger/ARCHITECTURE.md

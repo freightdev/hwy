@@ -1,0 +1,33 @@
+{
+  email admin@hwytms.com
+  auto_https disable_redirects
+}
+
+:80 {
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "SAMEORIGIN"
+    Referrer-Policy "strict-origin-when-cross-origin"
+    -Server
+  }
+
+  @api host api.hwytms.com
+  handle @api {
+    reverse_proxy backend:8000
+  }
+
+  @codriver host codriver.hwytms.com
+  handle @codriver {
+    reverse_proxy codriver:8010
+  }
+
+  @apipath path /api/*
+  handle @apipath {
+    reverse_proxy backend:8000
+  }
+
+  handle {
+    reverse_proxy frontend:5173
+  }
+}

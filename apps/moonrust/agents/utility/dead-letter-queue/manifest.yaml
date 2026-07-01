@@ -1,0 +1,31 @@
+agent_id: utility.dead-letter-queue
+name: Dead Letter Queue
+category: utility
+capability_domain: store messages that failed processing after retries, support inspection, replay, and lifecycle management
+mission: I store messages that failed processing after retries, support inspection, replay, and lifecycle management.
+inputs:
+- '{op: store|inspect|replay|purge|status, message?} / out: {ok, dlq_size, messages: [{id, source, error, timestamp}], replayed}'
+outputs:
+- '{ok, dlq_size, messages: [{id, source, error, timestamp}], replayed}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- retry-queue, message-queue-consumer, notification-dispatcher
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/dead-letter-queue/ARCHITECTURE.md

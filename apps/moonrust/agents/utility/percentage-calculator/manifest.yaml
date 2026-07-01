@@ -1,0 +1,31 @@
+agent_id: utility.percentage-calculator
+name: Percentage Calculator
+category: utility
+capability_domain: compute percentages, percentage change, percentage points, proportions, and distributions
+mission: I compute percentages, percentage change, percentage points, proportions, and distributions.
+inputs:
+- '{op: of|change|point|distribution, value, total?, from?, to?} / out: {result, formula, interpretation}'
+outputs:
+- '{result, formula, interpretation}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- rate-calculator, math-evaluator, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/percentage-calculator/ARCHITECTURE.md

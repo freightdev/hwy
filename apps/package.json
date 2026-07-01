@@ -1,0 +1,18 @@
+{
+  "name": "hwy-workspace",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "frontend:dev": "npm --prefix frontend run dev -- --host 0.0.0.0",
+    "frontend:build": "npm --prefix frontend run build",
+    "frontend:preview": "npm --prefix frontend run preview",
+    "test:e2e": "cd frontend && npx playwright test --config ../configs/testing/playwright.config.js",
+    "test:e2e:routing": "cd frontend && npx playwright test --config ../configs/testing/playwright.config.js tests/routing.spec.js",
+    "test:e2e:product": "cd frontend && npx playwright test --config ../configs/testing/playwright.config.js tests/product-auth-admin.spec.js"
+  },
+  "workspaces": [
+    "frontend",
+    "packages/*"
+  ]
+}

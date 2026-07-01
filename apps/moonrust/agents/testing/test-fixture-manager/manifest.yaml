@@ -1,0 +1,31 @@
+agent_id: testing.test-fixture-manager
+name: Test Fixture Manager
+category: testing
+capability_domain: create, load, and clean up test fixtures
+mission: I create, load, and clean up test fixtures.
+inputs:
+- '{op: create|load|cleanup|factory, fixtures?, scope?} / out: {ok, fixtures: [{name, type, size, scope}], loaded: int}'
+outputs:
+- '{ok, fixtures: [{name, type, size, scope}], loaded: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- seed-manager, data-generator, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/test-fixture-manager/ARCHITECTURE.md

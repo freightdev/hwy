@@ -1,0 +1,31 @@
+agent_id: content.html-sanitizer
+name: Html Sanitizer
+category: content
+capability_domain: clean HTML by removing dangerous tags, attributes, and scripts while preserving safe content
+mission: I clean HTML by removing dangerous tags, attributes, and scripts while preserving safe content.
+inputs:
+- '{html, policy?, config?} / out: {sanitized, original_size, clean_size, removed: [{tag, count}]}'
+outputs:
+- '{sanitized, original_size, clean_size, removed: [{tag, count}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- xss-detector, content-filter, slug-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/content/html-sanitizer/ARCHITECTURE.md

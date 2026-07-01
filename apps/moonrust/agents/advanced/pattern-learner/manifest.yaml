@@ -1,0 +1,36 @@
+agent_id: advanced.pattern-learner
+name: Pattern Learner
+category: advanced
+capability_domain: learns patterns from historical data
+mission: I analyze historical data to discover recurring patterns, correlations, sequences, and rules.
+inputs:
+- '{op: learn|query|forget, data?: [{features, outcome?, timestamp}], pattern_type?: sequence|association|temporal|rule, min_support?: float, min_confidence?: float}'
+outputs:
+- '{patterns: [{id, type, description, support, confidence, lift}], model_ref?: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query for historical data
+- anomaly-detector for pattern validation
+- resource-optimizer for pattern application
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {op: learn|query|forget, data?: [{features, outcome?, timestamp}], pattern_type?: sequence|association|temporal|rule, min_support?: float, min_confidence?: float}'
+- 'out: {patterns: [{id, type, description, support, confidence, lift}], model_ref?: string}'
+- 'min_confidence: minimum confidence threshold'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/pattern-learner/ARCHITECTURE.md

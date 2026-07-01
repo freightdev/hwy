@@ -1,0 +1,31 @@
+agent_id: devops.sla-tracker
+name: Sla Tracker
+category: devops
+capability_domain: monitor SLI metrics, compute SLO compliance, track error budgets, and report SLA attainment
+mission: I monitor SLI metrics, compute SLO compliance, track error budgets, and report SLA attainment.
+inputs:
+- '{op: track|report|budget|alert, services} / out: {services: [{name, slis, slo, error_budget}], overall}'
+outputs:
+- '{services: [{name, slis, slo, error_budget}], overall}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- metrics-collector, health-prober, notification-dispatcher
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/devops/sla-tracker/ARCHITECTURE.md

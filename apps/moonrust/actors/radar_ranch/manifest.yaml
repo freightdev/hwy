@@ -1,0 +1,37 @@
+actor_id: radar_ranch
+name: Radar Ranch
+category: hwy_actor
+ownership_domain: external signal collection, lane intelligence, rate history, weather monitoring, traffic monitoring, market awareness, and long-term operational intelligence
+mission: What is happening around this freight, this lane, this truck, this market, and this route over time?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Radar Ranch does not just answer the moment
+- Radar Ranch remembers the pattern
+- A single rate is useful
+- A year of rates is intelligence
+- A single storm alert is useful
+- A history of weather disruptions on a lane is intelligence
+logbooks_written:
+- Load Logbook
+- Ranch Logbook
+reports_created:
+- Route Report
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required when:'
+depends_on:
+- TODO
+cannot_do:
+- Radar Ranch does not just answer the moment
+- Radar Ranch does not treat every signal equally
+architecture_source: moonrust/actors/radar_ranch/ARCHITECTURE.md

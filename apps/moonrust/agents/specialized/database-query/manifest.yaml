@@ -1,0 +1,33 @@
+agent_id: specialized.database-query
+name: Database Query
+category: specialized
+capability_domain: executes database queries safely
+mission: I execute SQL and NoSQL queries with parameterized inputs, connection pooling, transaction support, and result streaming.
+inputs:
+- '{connection: string, query: string, params?: [], options?: {transaction, timeout, max_rows}}'
+outputs:
+- '{rows?: [], affected?: int, elapsed: int, error?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for connection secrets
+- audit-recorder for query audit logging
+- rate-guard for query rate limits
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/database-query/ARCHITECTURE.md

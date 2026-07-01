@@ -1,0 +1,33 @@
+agent_id: specialized.email-sender
+name: Email Sender
+category: specialized
+capability_domain: sends emails via SMTP or email providers
+mission: I send plain-text and HTML emails with attachments, inline images, and headers.
+inputs:
+- '{to: string|[], subject: string, body: string, format?: text|html, from?: string, attachments?: [], cc?: [], bcc?: []}'
+outputs:
+- '{ok: bool, message_id?: string, provider: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for credentials
+- template-engine for rendering email templates
+- rate-guard for send rate limits
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/email-sender/ARCHITECTURE.md

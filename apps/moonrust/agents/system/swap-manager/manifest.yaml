@@ -1,0 +1,31 @@
+agent_id: system.swap-manager
+name: Swap Manager
+category: system
+capability_domain: create, enable, disable, and monitor swap files and partitions
+mission: I create, enable, disable, and monitor swap files and partitions.
+inputs:
+- '{op: create|enable|disable|resize|status, path?} / out: {ok, total, used, free, files}'
+outputs:
+- '{ok, total, used, free, files}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- memory-monitor, disk-cleaner, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/swap-manager/ARCHITECTURE.md

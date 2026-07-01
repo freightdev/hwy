@@ -1,0 +1,40 @@
+actor_id: oversize_overseer
+name: Oversize Overseer
+category: hwy_actor
+ownership_domain: oversized and overweight load planning, permit awareness, route compliance, escort coordination, equipment verification, and regulatory guidance
+mission: Can this load legally and safely move from origin to destination?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Oversize freight is different
+- The margin for error is smaller
+- Safety is non-negotiable
+- Compliance is non-negotiable
+- Planning is non-negotiable
+logbooks_written:
+- Oversize Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required whenever:'
+depends_on:
+- TODO
+cannot_do:
+- Oversize Overseer activates whenever a Load is identified as oversized, overweight, over-dimensional, or requiring special transportation rules
+- Oversize Overseer tracks permit status but does not issue permits
+- Oversize Overseer never presents estimated information as confirmed fact
+- CoDriver activates Oversize Overseer automatically whenever a Load appears to require oversize or overweight planning
+- official requirements cannot be verified
+- Oversize Overseer assists with planning but does not replace professional judgment or official regulatory approval
+- Once Oversize Overseer is attached to a Load, oversize compliance cannot be bypassed
+architecture_source: moonrust/actors/oversize_overseer/ARCHITECTURE.md

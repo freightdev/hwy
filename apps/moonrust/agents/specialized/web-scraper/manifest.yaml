@@ -1,0 +1,33 @@
+agent_id: specialized.web-scraper
+name: Web Scraper
+category: specialized
+capability_domain: scrapes content from web pages
+mission: I fetch web pages, parse HTML, extract structured content, handle JavaScript rendering, manage cookies and sessions, and respect robots.txt.
+inputs:
+- '{url: string, selectors?: object, wait_for?: string, javascript?: bool, paginate?: bool, max_pages?: int}'
+outputs:
+- '{data: object|[], pages_scraped: int, elapsed: int, errors?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- http-client for page fetching
+- document-parser for HTML parsing
+- rate-guard for request rate limits
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/web-scraper/ARCHITECTURE.md

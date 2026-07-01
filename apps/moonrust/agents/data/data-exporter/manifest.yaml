@@ -1,0 +1,31 @@
+agent_id: data.data-exporter
+name: Data Exporter
+category: data
+capability_domain: extract data from sources and export to files, databases, APIs, or cloud storage in various formats
+mission: I extract data from sources and export to files, databases, APIs, or cloud storage in various formats.
+inputs:
+- '{source, target: {type, config, format}, query?, schedule?} / out: {ok, records_exported, files: [{path, size}], duration}'
+outputs:
+- '{ok, records_exported, files: [{path, size}], duration}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-importer, data-transformer, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-exporter/ARCHITECTURE.md

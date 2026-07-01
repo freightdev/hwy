@@ -1,0 +1,31 @@
+agent_id: scientific.distribution-fitter
+name: Distribution Fitter
+category: scientific
+capability_domain: find the best-fitting probability distribution for a dataset using MLE, method of moments, and goodness-of-fit tests
+mission: I find the best-fitting probability distribution for a dataset using MLE, method of moments, and goodness-of-fit tests.
+inputs:
+- '{data, candidates?, method?} / out: {best_fit: {name, params, llh, bic, aic}, candidates: [{name, params, score}]}'
+outputs:
+- '{best_fit: {name, params, llh, bic, aic}, candidates: [{name, params, score}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- stats-calculator, math-evaluator, regression-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/scientific/distribution-fitter/ARCHITECTURE.md

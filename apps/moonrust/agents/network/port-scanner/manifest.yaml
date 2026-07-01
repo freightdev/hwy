@@ -1,0 +1,31 @@
+agent_id: network.port-scanner
+name: Port Scanner
+category: network
+capability_domain: scan TCP and UDP ports, detect open/closed/filtered states, identify services by banner grabbing
+mission: I scan TCP and UDP ports, detect open/closed/filtered states, identify services by banner grabbing.
+inputs:
+- '{target, ports?, protocol?, timeout?, syn_scan?} / out: {target, open_ports: [{port, protocol, service}]}'
+outputs:
+- '{target, open_ports: [{port, protocol, service}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- firewall-manager, network-manager, vulnerability-scanner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/port-scanner/ARCHITECTURE.md

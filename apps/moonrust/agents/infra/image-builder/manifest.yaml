@@ -1,0 +1,31 @@
+agent_id: infra.image-builder
+name: Image Builder
+category: infra
+capability_domain: build container images with caching, multi-stage builds, build args, and tagging
+mission: I build container images with caching, multi-stage builds, build args, and tagging.
+inputs:
+- '{op: build|push|tag|inspect, path?, dockerfile?, tag, registry?} / out: {ok, image_id, tags, size, layers}'
+outputs:
+- '{ok, image_id, tags, size, layers}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- docker-manager, secret-keeper
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/image-builder/ARCHITECTURE.md

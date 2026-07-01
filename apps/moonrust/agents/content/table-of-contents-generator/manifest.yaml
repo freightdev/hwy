@@ -1,0 +1,31 @@
+agent_id: content.table-of-contents-generator
+name: Table Of Contents Generator
+category: content
+capability_domain: extract headings, build hierarchical TOC, generate anchor links, and format for navigation
+mission: I extract headings, build hierarchical TOC, generate anchor links, and format for navigation.
+inputs:
+- '{document, format?, max_depth?, numbering?} / out: {toc: [{level, title, anchor, children}], format, entries}'
+outputs:
+- '{toc: [{level, title, anchor, children}], format, entries}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- markdown-renderer, document-parser, html-sanitizer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/content/table-of-contents-generator/ARCHITECTURE.md

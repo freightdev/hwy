@@ -1,0 +1,31 @@
+agent_id: system.cpu-profiler
+name: Cpu Profiler
+category: system
+capability_domain: sample CPU usage per process, detect high-utilization processes, profile hotspots, and generate flame graphs
+mission: I sample CPU usage per process, detect high-utilization processes, profile hotspots, and generate flame graphs.
+inputs:
+- '{op: profile|status|report, pid?, duration?} / out: {status, top_processes, profile_path?, samples}'
+outputs:
+- '{status, top_processes, profile_path?, samples}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- process-manager, report-generator, memory-monitor
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/cpu-profiler/ARCHITECTURE.md

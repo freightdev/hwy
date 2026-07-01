@@ -1,0 +1,33 @@
+actor_id: key_keeper
+name: Key Keeper
+category: hwy_actor
+ownership_domain: authorization management, capability mapping, actor relationships, permission graphs, access policies, and communication routing
+mission: Does this identity possess the key required to perform this action?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Identity proves who you are
+- Keys prove what you're allowed to do
+logbooks_written:
+- Key Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required when:'
+depends_on:
+- TODO
+cannot_do:
+- Company A cannot access Company B
+- Dispatcher A cannot modify Dispatcher B's Loads
+- Without Key Keeper, authority cannot be proven
+architecture_source: moonrust/actors/key_keeper/ARCHITECTURE.md

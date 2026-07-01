@@ -1,0 +1,33 @@
+agent_id: cicd.canary-analyzer
+name: Canary Analyzer
+category: cicd
+capability_domain: compare canary vs baseline metrics, detect regressions, and recommend promote or rollback
+mission: I compare canary vs baseline metrics, detect regressions, and recommend promote or rollback.
+inputs:
+- '{canary: {version, endpoint}, baseline} / out: {decision, confidence, metrics_comparison}'
+outputs:
+- '{decision, confidence, metrics_comparison}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- deployment-agent, metrics-collector, anomaly-detector
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {canary: {version, endpoint}, baseline} / out: {decision, confidence, metrics_comparison}'
+- comparison_window, threshold, min_observation_time, confidence_level, auto_promote
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/cicd/canary-analyzer/ARCHITECTURE.md

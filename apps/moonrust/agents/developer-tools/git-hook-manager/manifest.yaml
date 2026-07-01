@@ -1,0 +1,31 @@
+agent_id: developer-tools.git-hook-manager
+name: Git Hook Manager
+category: developer-tools
+capability_domain: install, update, and manage git hooks for commit-msg, pre-commit, pre-push, and other events
+mission: I install, update, and manage git hooks for commit-msg, pre-commit, pre-push, and other events.
+inputs:
+- '{op: install|update|remove|list|run, hooks?, repo?} / out: {ok, hooks: [{name, type, enabled, script}]}'
+outputs:
+- '{ok, hooks: [{name, type, enabled, script}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- commit-formatter, code-linter, test-runner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/git-hook-manager/ARCHITECTURE.md

@@ -1,0 +1,36 @@
+actor_id: memory_mark
+name: Memory Mark
+category: hwy_actor
+ownership_domain: memory management, memory validation, prompt injection defense, context sanitization, knowledge staging, and trusted memory operations
+mission: Can I safely remember this?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Not everything should become memory
+- Not everything should enter context
+- Every piece of information must earn trust before it reaches CoDriver or another actor
+logbooks_written:
+- Load Logbook
+- Driver Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- TODO
+depends_on:
+- TODO
+cannot_do:
+- The attack never reaches CoDriver
+- They are never silently destroyed
+- These categories are never merged
+- CoDriver asks Memory Mark whenever information comes from an untrusted source
+- Memory should never be trusted automatically
+architecture_source: moonrust/actors/memory_mark/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: network.bandwidth-monitor
+name: Bandwidth Monitor
+category: network
+capability_domain: measure bandwidth usage per interface, protocol, or process
+mission: I measure bandwidth usage per interface, protocol, or process.
+inputs:
+- '{op: monitor|status|report, interfaces?} / out: {interfaces: [{name, rx_bytes, tx_bytes, rx_rate}], total}'
+outputs:
+- '{interfaces: [{name, rx_bytes, tx_bytes, rx_rate}], total}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- network-manager, metrics-collector, notification-dispatcher
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/bandwidth-monitor/ARCHITECTURE.md

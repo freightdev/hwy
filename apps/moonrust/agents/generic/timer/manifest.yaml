@@ -1,0 +1,32 @@
+agent_id: generic.timer
+name: Timer
+category: generic
+capability_domain: measures and manages time
+mission: I start, stop, lap, and query timers.
+inputs:
+- '{op: start|stop|lap|pause|resume|remaining, name: string, duration?: int, type?: stopwatch|countdown|interval, callback?: object}'
+outputs:
+- '{name: string, elapsed: int, remaining?: int, laps?: [int], running: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- scheduler for timer-based triggers
+- notification-dispatcher for timer callbacks
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/timer/ARCHITECTURE.md

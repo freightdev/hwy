@@ -1,0 +1,40 @@
+actor_id: auto_assist
+name: Auto Assist
+category: hwy_actor
+ownership_domain: operational assistance, shared automation, background task execution, repetitive work delegation, and reusable workflow support
+mission: How can I make this actor's job easier?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- If a task is repetitive
+- Automate it
+- If a task is shared
+- Centralize it
+- If a task helps everyone
+- Auto Assist owns it
+logbooks_written:
+- Update Logbook
+- Automation Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- TODO
+depends_on:
+- TODO
+cannot_do:
+- Unlike Jackknife Jailer, Auto Assist never becomes another actor
+- Execute work that does not require immediate human attention
+- Auto Assist never performs hidden work
+- Auto Assist never replaces an actor
+- Auto Assist never does
+- The two actors complement one another but never overlap
+architecture_source: moonrust/actors/auto_assist/ARCHITECTURE.md

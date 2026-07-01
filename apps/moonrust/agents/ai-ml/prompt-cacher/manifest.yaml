@@ -1,0 +1,31 @@
+agent_id: ai-ml.prompt-cacher
+name: Prompt Cacher
+category: ai-ml
+capability_domain: cache LLM responses keyed by prompt, model, and params
+mission: I cache LLM responses keyed by prompt, model, and params.
+inputs:
+- '{op: get|set|invalidate, prompt, model?} / out: {hit, response?, cache_key, age?}'
+outputs:
+- '{hit, response?, cache_key, age?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, text-embedder, cache-operator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/prompt-cacher/ARCHITECTURE.md

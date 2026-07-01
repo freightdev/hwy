@@ -1,0 +1,31 @@
+agent_id: ai-ml.context-builder
+name: Context Builder
+category: ai-ml
+capability_domain: assemble prompt context from multiple sources, manage token budgets, and prioritize content
+mission: I assemble prompt context from multiple sources, manage token budgets, and prioritize content.
+inputs:
+- '{items: [{type, content, priority, tokens}], max_tokens} / out: {context, tokens_used, items_included}'
+outputs:
+- '{context, tokens_used, items_included}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, token-counter, rag-retriever
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/context-builder/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: devops.environment-manager
+name: Environment Manager
+category: devops
+capability_domain: provision, configure, and tear down environments
+mission: I provision, configure, and tear down environments.
+inputs:
+- '{op: create|destroy|promote|clone|status, name} / out: {ok, environment: {name, status, services}}'
+outputs:
+- '{ok, environment: {name, status, services}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- terraform-runner, kubernetes-manager, health-prober
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/devops/environment-manager/ARCHITECTURE.md

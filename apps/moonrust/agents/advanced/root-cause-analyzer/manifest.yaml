@@ -1,0 +1,35 @@
+agent_id: advanced.root-cause-analyzer
+name: Root Cause Analyzer
+category: advanced
+capability_domain: analyzes failures to determine root causes
+mission: I analyze error logs, metrics, dependency graphs, and event chains to identify root causes of failures.
+inputs:
+- '{incident: {time, service, error?, context?}, data: {logs?, metrics?, traces?, dependencies?}, method?: ft|dependency|causal|ml}'
+outputs:
+- '{root_causes: [{cause, confidence, evidence, path}], impact: {services_affected, severity}, timeline: [{event, time}], recommendation: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- impact-analyzer for impact assessment
+- anomaly-detector for anomaly correlation
+- dependency-resolver for dependency mapping
+workers_needed:
+- TODO
+truth_rules:
+- 'out: {root_causes: [{cause, confidence, evidence, path}], impact: {services_affected, severity}, timeline: [{event, time}], recommendation: string}'
+- 'confidence_threshold: minimum cause confidence'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/root-cause-analyzer/ARCHITECTURE.md

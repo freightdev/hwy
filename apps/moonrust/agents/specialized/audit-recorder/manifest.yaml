@@ -1,0 +1,32 @@
+agent_id: specialized.audit-recorder
+name: Audit Recorder
+category: specialized
+capability_domain: records audit trail events
+mission: I record immutable audit events with timestamps, actor identity, action details, and resource references.
+inputs:
+- '{event: string, actor: string, action: string, resource: string, details?: object, severity?: info|warn|error|critical}'
+outputs:
+- '{ok: bool, event_id: string, timestamp: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query for database-backed storage
+- file-manager for file-backed storage
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/audit-recorder/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: system.service-manager
+name: Service Manager
+category: system
+capability_domain: install, enable, disable, start, stop services using systemd, init.d, or custom service managers
+mission: I install, enable, disable, start, stop services using systemd, init.d, or custom service managers.
+inputs:
+- '{op: install|remove|enable|disable|start|stop|restart|status, name} / out: {ok, status, enabled, active}'
+outputs:
+- '{ok, status, enabled, active}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- process-manager, log-rotator, health-prober
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/service-manager/ARCHITECTURE.md

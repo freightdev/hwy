@@ -1,0 +1,31 @@
+agent_id: network.routing-table-manager
+name: Routing Table Manager
+category: network
+capability_domain: add, remove, and modify routing entries
+mission: I add, remove, and modify routing entries.
+inputs:
+- '{op: add|remove|modify|show|flush, route?} / out: {ok, routes, tables}'
+outputs:
+- '{ok, routes, tables}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- network-manager, ip-manager, firewall-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/routing-table-manager/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: system.process-manager
+name: Process Manager
+category: system
+capability_domain: start, stop, restart, and monitor processes
+mission: I start, stop, restart, and monitor processes.
+inputs:
+- '{op: start|stop|restart|status|list, name?} / out: {ok, pid?, status, memory?, cpu?}'
+outputs:
+- '{ok, pid?, status, memory?, cpu?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- service-manager, logger, health-prober
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/process-manager/ARCHITECTURE.md

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "INV-2025-1068",
+    "company_id": 1,
+    "broker_id": 1,
+    "load_id": "L10025",
+    "broker_name": "Landstar",
+    "amount": "$4,250.00",
+    "amount_cents": 425000,
+    "status": "Paid",
+    "date": "2025-05-25",
+    "due_date": "2025-06-24"
+  },
+  {
+    "id": "INV-2025-1065",
+    "company_id": 1,
+    "broker_id": 2,
+    "load_id": "L10026",
+    "broker_name": "TQL",
+    "amount": "$3,850.00",
+    "amount_cents": 385000,
+    "status": "Paid",
+    "date": "2025-05-22",
+    "due_date": "2025-06-21"
+  },
+  {
+    "id": "INV-2025-1064",
+    "company_id": 1,
+    "broker_id": 8,
+    "load_id": "L10027",
+    "broker_name": "Coyote Logistics",
+    "amount": "$2,790.00",
+    "amount_cents": 279000,
+    "status": "Sent",
+    "date": "2025-05-20",
+    "due_date": "2025-06-19"
+  },
+  {
+    "id": "INV-2025-1063",
+    "company_id": 1,
+    "broker_id": 3,
+    "load_id": "L10028",
+    "broker_name": "DAT Freight & Analytics",
+    "amount": "$1,860.00",
+    "amount_cents": 186000,
+    "status": "Overdue",
+    "date": "2025-05-10",
+    "due_date": "2025-06-09"
+  },
+  {
+    "id": "INV-2025-1062",
+    "company_id": 1,
+    "broker_id": 5,
+    "load_id": "L10029",
+    "broker_name": "CH Robinson",
+    "amount": "$3,100.00",
+    "amount_cents": 310000,
+    "status": "Paid",
+    "date": "2025-05-08",
+    "due_date": "2025-06-07"
+  },
+  {
+    "id": "INV-2025-1061",
+    "company_id": 1,
+    "broker_id": 2,
+    "load_id": null,
+    "broker_name": "TQL",
+    "amount": "$2,450.00",
+    "amount_cents": 245000,
+    "status": "Paid",
+    "date": "2025-05-05",
+    "due_date": "2025-06-04"
+  }
+]

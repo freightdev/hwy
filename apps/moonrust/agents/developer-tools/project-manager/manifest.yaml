@@ -1,0 +1,31 @@
+agent_id: developer-tools.project-manager
+name: Project Manager
+category: developer-tools
+capability_domain: track milestones, manage tasks, monitor progress, generate status reports, and coordinate teams
+mission: I track milestones, manage tasks, monitor progress, generate status reports, and coordinate teams.
+inputs:
+- '{op: create_milestone|track|report|config, project, items?} / out: {ok, project: {progress, milestones, tasks, risks}}'
+outputs:
+- '{ok, project: {progress, milestones, tasks, risks}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- task-estimator, sprint-planner, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/project-manager/ARCHITECTURE.md

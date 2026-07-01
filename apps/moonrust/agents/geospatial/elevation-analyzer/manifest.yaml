@@ -1,0 +1,31 @@
+agent_id: geospatial.elevation-analyzer
+name: Elevation Analyzer
+category: geospatial
+capability_domain: fetch and analyze elevation data, compute slope, aspect, terrain profiles, and line-of-sight
+mission: I fetch and analyze elevation data, compute slope, aspect, terrain profiles, and line-of-sight.
+inputs:
+- '{op: elevation|profile|slope|los, points: [{lat, lng}], source?} / out: {elevations: [{lat, lng, elevation}], profile: {distance, gain, loss}}'
+outputs:
+- '{elevations: [{lat, lng, elevation}], profile: {distance, gain, loss}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- geo-coder, map-renderer, spatial-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/geospatial/elevation-analyzer/ARCHITECTURE.md

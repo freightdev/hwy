@@ -1,0 +1,33 @@
+agent_id: advanced.test-generator
+name: Test Generator
+category: advanced
+capability_domain: generates tests from code and specifications
+mission: I analyze source code, API specs, and behavioral descriptions to generate unit tests, integration tests, and end-to-end tests.
+inputs:
+- '{source: string|[], type?: unit|integration|e2e, framework?: string, coverage_target?: float, mocks?: bool}'
+outputs:
+- '{tests: [{path, content, type, coverage}], test_count: int, estimated_coverage: float, warnings: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request for test generation
+- file-manager for file operations
+- code-formatter for test formatting
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/test-generator/ARCHITECTURE.md

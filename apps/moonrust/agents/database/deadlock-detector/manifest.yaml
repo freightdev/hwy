@@ -1,0 +1,31 @@
+agent_id: database.deadlock-detector
+name: Deadlock Detector
+category: database
+capability_domain: monitor for deadlock events, analyze deadlock graphs, identify problematic transactions
+mission: I monitor for deadlock events, analyze deadlock graphs, identify problematic transactions.
+inputs:
+- '{op: monitor|analyze|resolve, database} / out: {deadlocks, patterns, recommendations}'
+outputs:
+- '{deadlocks, patterns, recommendations}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, query-analyzer, notification-dispatcher
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/deadlock-detector/ARCHITECTURE.md

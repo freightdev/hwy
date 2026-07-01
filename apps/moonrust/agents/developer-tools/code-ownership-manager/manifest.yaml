@@ -1,0 +1,31 @@
+agent_id: developer-tools.code-ownership-manager
+name: Code Ownership Manager
+category: developer-tools
+capability_domain: track code ownership via CODEOWNERS files, suggest reviewers, manage maintenance responsibilities
+mission: I track code ownership via CODEOWNERS files, suggest reviewers, manage maintenance responsibilities.
+inputs:
+- '{op: suggest|audit|assign|report, repo, file?} / out: {ok, owners: [{pattern, owners}], suggestions: [{file, suggested_owners}]}'
+outputs:
+- '{ok, owners: [{pattern, owners}], suggestions: [{file, suggested_owners}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- git-hook-manager, code-reviewer, project-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/code-ownership-manager/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: network.subnet-calculator
+name: Subnet Calculator
+category: network
+capability_domain: compute subnet masks, network addresses, broadcast addresses, usable hosts, and supernet/subnet relationships
+mission: I compute subnet masks, network addresses, broadcast addresses, usable hosts, and supernet/subnet relationships.
+inputs:
+- '{network, cidr?, mask?, op?} / out: {network, cidr, mask, network_addr, broadcast, usable_hosts}'
+outputs:
+- '{network, cidr, mask, network_addr, broadcast, usable_hosts}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- ip-manager, network-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/subnet-calculator/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: scientific.correlation-analyzer
+name: Correlation Analyzer
+category: scientific
+capability_domain: compute correlation matrices (Pearson, Spearman, Kendall), detect multicollinearity, and visualize relationships
+mission: I compute correlation matrices (Pearson, Spearman, Kendall), detect multicollinearity, and visualize relationships.
+inputs:
+- '{data, method?, variables?, threshold?} / out: {correlation_matrix, pairs: [{var1, var2, r, p, significant}], multicollinearity?}'
+outputs:
+- '{correlation_matrix, pairs: [{var1, var2, r, p, significant}], multicollinearity?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- stats-calculator, regression-analyzer, data-profiler
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/scientific/correlation-analyzer/ARCHITECTURE.md

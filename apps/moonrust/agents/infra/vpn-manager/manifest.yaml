@@ -1,0 +1,31 @@
+agent_id: infra.vpn-manager
+name: Vpn Manager
+category: infra
+capability_domain: configure and manage VPN tunnels (WireGuard, OpenVPN, IPSec), client certificates, routing, and access policies
+mission: I configure and manage VPN tunnels (WireGuard, OpenVPN, IPSec), client certificates, routing, and access policies.
+inputs:
+- '{op: connect|disconnect|status|configure, peer} / out: {ok, status, interface, bytes_sent, bytes_recv}'
+outputs:
+- '{ok, status, interface, bytes_sent, bytes_recv}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- network-manager, secret-keeper, firewall-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/vpn-manager/ARCHITECTURE.md

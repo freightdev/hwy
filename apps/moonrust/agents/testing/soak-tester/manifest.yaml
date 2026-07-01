@@ -1,0 +1,31 @@
+agent_id: testing.soak-tester
+name: Soak Tester
+category: testing
+capability_domain: run sustained load over extended periods to detect memory leaks, resource exhaustion, and degradation
+mission: I run sustained load over extended periods to detect memory leaks, resource exhaustion, and degradation.
+inputs:
+- '{target, load?, duration?, interval?, metrics?} / out: {results: {throughput_trend, memory_trend, leak_detected}, passed: bool}'
+outputs:
+- '{results: {throughput_trend, memory_trend, leak_detected}, passed: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- performance-tester, memory-monitor, metrics-collector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/soak-tester/ARCHITECTURE.md

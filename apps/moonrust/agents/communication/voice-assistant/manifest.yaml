@@ -1,0 +1,31 @@
+agent_id: communication.voice-assistant
+name: Voice Assistant
+category: communication
+capability_domain: handle speech-to-text, natural language understanding, text-to-speech, and voice interaction management
+mission: I handle speech-to-text, natural language understanding, text-to-speech, and voice interaction management.
+inputs:
+- '{op: listen|speak|process, audio?, text?} / out: {ok, transcript?, response?, audio?}'
+outputs:
+- '{ok, transcript?, response?, audio?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, chat-bot, intent-classifier
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/voice-assistant/ARCHITECTURE.md

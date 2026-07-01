@@ -1,0 +1,36 @@
+actor_id: ghost_guard
+name: Ghost Guard
+category: hwy_actor
+ownership_domain: actor oversight, behavioral monitoring, execution auditing, policy enforcement, integrity verification, and post-execution investigation
+mission: Did every actor behave exactly as it was supposed to?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Trust should be earned
+- Verification should be continuous
+- Every actor is accountable
+- No actor is above observation
+logbooks_written:
+- Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is recommended when:'
+depends_on:
+- TODO
+cannot_do:
+- Ghost Guard does not perform business work
+- Ghost Guard does not punish actors
+- Ghost Guard never assumes malicious intent without evidence
+- Ghost Guard requests official Logbooks from Legal Logger whenever an actor finishes significant work
+architecture_source: moonrust/actors/ghost_guard/ARCHITECTURE.md

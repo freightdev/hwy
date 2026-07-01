@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "company_id": 1,
+    "name": "Insurance Certificate",
+    "category": "Insurance",
+    "expiry": "2025-06-15",
+    "status": "Valid",
+    "icon": "🛡️",
+    "size": "245 KB",
+    "file_url": null
+  },
+  {
+    "id": 2,
+    "company_id": 1,
+    "name": "Cargo Insurance",
+    "category": "Insurance",
+    "expiry": "2025-06-15",
+    "status": "Valid",
+    "icon": "🛡️",
+    "size": "198 KB",
+    "file_url": null
+  },
+  {
+    "id": 3,
+    "company_id": 1,
+    "name": "BMC-84 Insurance",
+    "category": "Insurance",
+    "expiry": "2025-06-15",
+    "status": "Valid",
+    "icon": "🛡️",
+    "size": "312 KB",
+    "file_url": null
+  },
+  {
+    "id": 4,
+    "company_id": 1,
+    "name": "Operating Authority",
+    "category": "Authority & Compliance",
+    "expiry": null,
+    "status": "Valid",
+    "icon": "⚖️",
+    "size": "89 KB",
+    "file_url": null
+  },
+  {
+    "id": 5,
+    "company_id": 1,
+    "name": "Safety Policy Manual",
+    "category": "Safety & Policies",
+    "expiry": "2025-05-01",
+    "status": "Valid",
+    "icon": "⚠️",
+    "size": "1.2 MB",
+    "file_url": null
+  },
+  {
+    "id": 6,
+    "company_id": 1,
+    "name": "Driver Handbook",
+    "category": "Safety & Policies",
+    "expiry": "2025-04-12",
+    "status": "Valid",
+    "icon": "📖",
+    "size": "892 KB",
+    "file_url": null
+  },
+  {
+    "id": 7,
+    "company_id": 1,
+    "name": "IFTA License",
+    "category": "Permits & Licenses",
+    "expiry": "2025-12-31",
+    "status": "Valid",
+    "icon": "📋",
+    "size": "124 KB",
+    "file_url": null
+  },
+  {
+    "id": 8,
+    "company_id": 1,
+    "name": "IRP Registration",
+    "category": "Permits & Licenses",
+    "expiry": "2025-12-31",
+    "status": "Valid",
+    "icon": "📋",
+    "size": "234 KB",
+    "file_url": null
+  },
+  {
+    "id": 9,
+    "company_id": 1,
+    "name": "Landstar Contract",
+    "category": "Contracts",
+    "expiry": null,
+    "status": "Active",
+    "icon": "📝",
+    "size": "456 KB",
+    "file_url": null
+  },
+  {
+    "id": 10,
+    "company_id": 1,
+    "name": "W-9 Form",
+    "category": "Tax & Finance",
+    "expiry": "2025-01-05",
+    "status": "Valid",
+    "icon": "💰",
+    "size": "67 KB",
+    "file_url": null
+  }
+]

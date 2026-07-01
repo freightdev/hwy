@@ -1,0 +1,42 @@
+actor_id: zone_zipper
+name: Zone Zipper
+category: hwy_actor
+ownership_domain: workspace orchestration, operational indexing, fleet awareness, workload organization, and real-time operational visibility
+mission: What is happening across my operation right now?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- You cannot manage what you cannot see
+- Every load
+- Every driver
+- Every dispatcher
+- Every truck
+- Every actor
+- Every task
+- Every zone
+- Should be discoverable instantly
+logbooks_written:
+- Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is recommended when:'
+depends_on:
+- TODO
+cannot_do:
+- Zone Zipper does not perform the work
+- You cannot manage what you cannot see
+- A dispatcher should never have to search five different screens to understand what is happening
+- Zone Zipper never fabricates operational status
+- priorities cannot be automatically resolved
+architecture_source: moonrust/actors/zone_zipper/ARCHITECTURE.md

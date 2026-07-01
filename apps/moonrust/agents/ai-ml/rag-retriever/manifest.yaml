@@ -1,0 +1,31 @@
+agent_id: ai-ml.rag-retriever
+name: Rag Retriever
+category: ai-ml
+capability_domain: retrieve relevant documents, chunks, or embeddings from vector stores or hybrid search
+mission: I retrieve relevant documents, chunks, or embeddings from vector stores or hybrid search.
+inputs:
+- '{query, top_k?, sources?, filters?} / out: {chunks: [{id, text, score, source, metadata}], total}'
+outputs:
+- '{chunks: [{id, text, score, source, metadata}], total}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- text-embedder, knowledge-gleaner, context-builder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/rag-retriever/ARCHITECTURE.md

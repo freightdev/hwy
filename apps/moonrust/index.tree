@@ -1,0 +1,283 @@
+.
+├── apps
+│   ├── api
+│   ├── cli
+│   ├── desktop
+│   ├── email
+│   ├── mobile
+│   └── web
+├── Cargo.toml
+├── .config
+│   ├── defualt
+│   ├── development
+│   ├── production
+│   ├── staging
+│   └── testing
+├── crates
+│   ├── ai
+│   ├── app
+│   │   └── .gitkeep
+│   ├── config
+│   ├── core
+│   │   └── .gitkeep
+│   ├── engine
+│   │   └── .gitkeep
+│   ├── logger
+│   ├── mark
+│   ├── marker
+│   ├── planner
+│   ├── runtime
+│   ├── storage
+│   ├── system
+│   │   └── .gitkeep
+│   ├── telemetry
+│   ├── types
+│   │   └── .gitkeep
+│   ├── ui
+│   │   └── .gitkeep
+│   ├── utils
+│   └── workflow
+├── docs
+│   ├── API.md
+│   ├── ARCHITECTURE.md
+│   ├── CONSEPTS.md
+│   ├── MARKERS.md
+│   ├── MARKS.md
+│   ├── TUTORIALS.md
+│   └── WORKFLOWS.md
+├── domains
+│   ├── dyerevents.com
+│   │   └── .gitkeep
+│   ├── hwydriver.com
+│   │   └── .gitkeep
+│   ├── hwytms.com
+│   │   └── .gitkeep
+│   ├── hwytrucking.com
+│   │   ├── ARCHITECTURE.md
+│   │   └── .gitkeep
+│   ├── magicmarker.dev
+│   │   └── .gitkeep
+│   ├── markatear.com
+│   │   └── .gitkeep
+│   ├── nabrith.com
+│   │   └── .gitkeep
+│   └── trakapay.app
+│       └── .gitkeep
+├── examples
+├── index.tree
+├── knowledge
+│   ├── documents
+│   ├── examples
+│   ├── flows
+│   ├── marker
+│   ├── playbooks
+│   ├── policies
+│   └── prompts
+├── markers
+│   ├── aspot.mrkr
+│   │   ├── actors
+│   │   │   └── .gitkeep
+│   │   ├── ARCHITECTURE.md
+│   │   ├── Cargo.toml
+│   │   ├── marks
+│   │   │   ├── BOOTSTRAP.mrk
+│   │   │   ├── IDENTITY.mrk
+│   │   │   ├── PERSONA.mrk
+│   │   │   ├── SKILLS.mrk
+│   │   │   └── TOOLS.mrk
+│   │   └── src
+│   │       └── main.rs
+│   ├── codriver.mrkr
+│   │   ├── actors
+│   │   │   ├── auto_assist
+│   │   │   ├── big_bear
+│   │   │   ├── cargo_connect
+│   │   │   ├── direct_dispatch
+│   │   │   ├── error_echo
+│   │   │   ├── fuel_factor
+│   │   │   ├── ghost_guard
+│   │   │   ├── highway_helper
+│   │   │   ├── iron_insight
+│   │   │   ├── jackknife_jailer
+│   │   │   ├── key_keeper
+│   │   │   ├── legal_logger
+│   │   │   ├── memory_mark
+│   │   │   ├── night_nexus
+│   │   │   ├── oversize_overseer
+│   │   │   ├── packet_pilot
+│   │   │   ├── quick_quote
+│   │   │   ├── radar_ranch
+│   │   │   ├── secret_safe
+│   │   │   ├── trucker_tales
+│   │   │   ├── unit_usage
+│   │   │   ├── voice_validator
+│   │   │   ├── whisper_witness
+│   │   │   ├── xeno_xeno
+│   │   │   ├── yes_yes
+│   │   │   └── zone_zipper
+│   │   ├── ARCHITECTURE.md
+│   │   ├── Cargo.toml
+│   │   ├── marks
+│   │   │   ├── BOOTSTRAP.mrk
+│   │   │   ├── IDENTITY.mrk
+│   │   │   ├── PERSONA.mrk
+│   │   │   ├── SKILLS.mrk
+│   │   │   └── TOOLS.mrk
+│   │   └── src
+│   │       └── main.rs
+│   ├── jester.mrkr
+│   │   ├── actors
+│   │   │   └── .gitkeep
+│   │   ├── ARCHITECTURE.md
+│   │   ├── Cargo.toml
+│   │   ├── marks
+│   │   │   ├── BOOTSTRAP.mrk
+│   │   │   ├── IDENTITY.mrk
+│   │   │   ├── PERSONA.mrk
+│   │   │   ├── SKILLS.mrk
+│   │   │   └── TOOLS.mrk
+│   │   └── src
+│   │       └── main.rs
+│   ├── nabrith.mrkr
+│   │   ├── actors
+│   │   │   └── .gitkeep
+│   │   ├── ARCHITECTURE.md
+│   │   ├── Cargo.toml
+│   │   ├── marks
+│   │   │   ├── BOOTSTRAP.mrk
+│   │   │   ├── IDENTITY.mrk
+│   │   │   ├── PERSONA.mrk
+│   │   │   ├── SKILLS.mrk
+│   │   │   └── TOOLS.mrk
+│   │   └── src
+│   │       └── main.rs
+│   ├── wolfblood.mrkr
+│   │   ├── actors
+│   │   │   └── .gitkeep
+│   │   ├── ARCHITECTURE.md
+│   │   ├── Cargo.toml
+│   │   ├── marks
+│   │   │   ├── BOOTSTRAP.mrk
+│   │   │   ├── IDENTITY.mrk
+│   │   │   ├── PERSONA.mrk
+│   │   │   ├── SKILLS.mrk
+│   │   │   └── TOOLS.mrk
+│   │   └── src
+│   │       └── main.rs
+│   └── yarddog.mrkr
+│       ├── actors
+│       │   └── .gitkeep
+│       ├── ARCHIECTURE.md
+│       ├── Cargo.toml
+│       ├── marks
+│       │   ├── BOOTSTRAP.mrk
+│       │   ├── IDENTITY.mrk
+│       │   ├── PERSONA.mrk
+│       │   ├── SKILLS.mrk
+│       │   └── TOOLS.mrk
+│       └── src
+│           └── main.rs
+├── pluggins
+│   ├── dropbox
+│   ├── eld
+│   ├── gmail
+│   ├── google-driver
+│   ├── motive
+│   ├── outlook
+│   ├── samsara
+│   ├── stripe
+│   ├── tms
+│   └── twilio
+├── protocols
+│   ├── mark
+│   ├── marker
+│   ├── packet
+│   ├── profile
+│   ├── transport
+│   └── workflow
+├── scripts
+├── .sdk
+│   ├── c
+│   ├── c++
+│   ├── flutter
+│   ├── haskell
+│   ├── javascript
+│   ├── php
+│   ├── python
+│   ├── rust
+│   ├── typescript
+│   └── zig
+├── services
+│   ├── auth
+│   ├── browser
+│   ├── cache
+│   ├── email
+│   ├── embeddings
+│   ├── llm
+│   ├── mpc
+│   ├── permissions
+│   ├── profiles
+│   ├── queue
+│   ├── rag
+│   ├── scheduler
+│   ├── search
+│   └── storage
+├── spots
+│   ├── aflow.spot
+│   │   ├── board
+│   │   │   └── .gitkeep
+│   │   ├── Cargo.toml
+│   │   ├── crates
+│   │   │   └── .gitkeep
+│   │   └── runtime
+│   │       └── .gitkeep
+│   ├── dropa.spot
+│   │   ├── board
+│   │   │   └── .gitkeep
+│   │   ├── Cargo.toml
+│   │   ├── crates
+│   │   │   └── .gitkeep
+│   │   └── runtime
+│   │       └── .gitkeep
+│   ├── infra.spot
+│   │   ├── board
+│   │   │   └── .gitkeep
+│   │   ├── Cargo.toml
+│   │   ├── crates
+│   │   │   └── .gitkeep
+│   │   └── runtime
+│   │       └── .gitkeep
+│   ├── jesta.spot
+│   │   ├── board
+│   │   │   └── .gitkeep
+│   │   ├── Cargo.toml
+│   │   ├── crates
+│   │   │   └── .gitkeep
+│   │   └── runtime
+│   │       └── .gitkeep
+│   ├── keepa.spot
+│   │   ├── board
+│   │   │   └── .gitkeep
+│   │   ├── Cargo.toml
+│   │   ├── crates
+│   │   │   └── .gitkeep
+│   │   └── runtime
+│   │       └── .gitkeep
+│   ├── marka.spot
+│   │   ├── board
+│   │   │   └── .gitkeep
+│   │   ├── Cargo.toml
+│   │   ├── crates
+│   │   │   └── .gitkeep
+│   │   └── runtime
+│   │       └── .gitkeep
+│   └── viewa.spot
+│       ├── board
+│       │   └── .gitkeep
+│       ├── Cargo.toml
+│       ├── crates
+│       └── runtime
+│           └── .gitkeep
+└── tests
+
+177 directories, 104 files

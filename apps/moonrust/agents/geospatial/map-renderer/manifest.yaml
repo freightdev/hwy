@@ -1,0 +1,31 @@
+agent_id: geospatial.map-renderer
+name: Map Renderer
+category: geospatial
+capability_domain: generate map images, tiles, and interactive maps from geographic data with custom styles and markers
+mission: I generate map images, tiles, and interactive maps from geographic data with custom styles and markers.
+inputs:
+- '{op: render|tile|static|interactive, center, zoom, layers?} / out: {format, size, url?, tile_count?}'
+outputs:
+- '{format, size, url?, tile_count?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- geo-coder, spatial-indexer, route-planner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/geospatial/map-renderer/ARCHITECTURE.md

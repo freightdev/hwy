@@ -1,0 +1,31 @@
+agent_id: system.mount-manager
+name: Mount Manager
+category: system
+capability_domain: mount and unmount filesystems, manage fstab entries, handle network filesystems (NFS, SMB), and monitor mount status
+mission: I mount and unmount filesystems, manage fstab entries, handle network filesystems (NFS, SMB), and monitor mount status.
+inputs:
+- '{op: mount|unmount|remount|status|fstab, device?} / out: {ok, mounts: [{device, mount_point, fs_type}]}'
+outputs:
+- '{ok, mounts: [{device, mount_point, fs_type}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- volume-manager, disk-cleaner, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/mount-manager/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: generic.diff-engine
+name: Diff Engine
+category: generic
+capability_domain: computes differences between data structures
+mission: I compare two inputs (files, strings, objects) and produce a structured diff.
+inputs:
+- '{source: any, target: any, format?: string, context?: int, algorithm?: myers|histogram|patience}'
+outputs:
+- '{diffs: [{type, value?, oldStart?, oldLines?, newStart?, newLines?}], stats: {insertions, deletions, changes}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for reading files
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/diff-engine/ARCHITECTURE.md

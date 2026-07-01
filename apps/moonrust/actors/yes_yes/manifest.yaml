@@ -1,0 +1,36 @@
+actor_id: yes_yes
+name: Yes Yes
+category: hwy_actor
+ownership_domain: delegated approvals, repetitive confirmation handling, workflow continuation, and execution acknowledgment
+mission: Has CoDriver already decided this?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Never ask the same question twice
+- If the decision has already been made
+- Keep moving
+logbooks_written:
+- TODO
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required if:'
+depends_on:
+- TODO
+cannot_do:
+- Never ask the same question twice
+- Yes Yes never creates authority
+- Most users never know it exists
+- Yes Yes does not answer
+- Yes Yes never makes decisions
+architecture_source: moonrust/actors/yes_yes/ARCHITECTURE.md

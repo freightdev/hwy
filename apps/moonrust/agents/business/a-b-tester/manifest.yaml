@@ -1,0 +1,32 @@
+agent_id: business.a-b-tester
+name: A B Tester
+category: business
+capability_domain: design, run, and analyze A/B tests
+mission: I design, run, and analyze A/B tests.
+inputs:
+- '{op: create|assign|record|analyze, experiment, variant?, metric?} / out: {ok, experiment: {variants, results, significant, winner}}'
+outputs:
+- '{ok, experiment: {variants, results, significant, winner}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- feature-flag-manager, metrics-collector, stats-calculator
+workers_needed:
+- TODO
+truth_rules:
+- 'confidence_level: 0.95, min_sample_size, traffic_split, method: frequentist|bayesian, sequential_testing'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/business/a-b-tester/ARCHITECTURE.md

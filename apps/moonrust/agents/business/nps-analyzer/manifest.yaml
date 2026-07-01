@@ -1,0 +1,31 @@
+agent_id: business.nps-analyzer
+name: Nps Analyzer
+category: business
+capability_domain: compute NPS, analyze verbatim responses, detect trends, and recommend improvements based on feedback
+mission: I compute NPS, analyze verbatim responses, detect trends, and recommend improvements based on feedback.
+inputs:
+- '{responses: [{score, reason?, customer?}], segment?} / out: {nps: {score, promoters, passives, detractors, trends}, themes: [{theme, frequency, sentiment}]}'
+outputs:
+- '{nps: {score, promoters, passives, detractors, trends}, themes: [{theme, frequency, sentiment}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- sentiment-analyzer, user-analytics, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/business/nps-analyzer/ARCHITECTURE.md

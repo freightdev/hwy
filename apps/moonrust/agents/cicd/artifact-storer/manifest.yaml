@@ -1,0 +1,31 @@
+agent_id: cicd.artifact-storer
+name: Artifact Storer
+category: cicd
+capability_domain: store build artifacts with metadata, manage retention policies, support versioning, and provide signed URLs
+mission: I store build artifacts with metadata, manage retention policies, support versioning, and provide signed URLs.
+inputs:
+- '{op: store|retrieve|list|delete|prune, artifact} / out: {ok, artifact_id, url?, size, version}'
+outputs:
+- '{ok, artifact_id, url?, size, version}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager, hasher, encryption-agent
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/cicd/artifact-storer/ARCHITECTURE.md

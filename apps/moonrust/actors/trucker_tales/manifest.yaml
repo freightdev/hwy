@@ -1,0 +1,40 @@
+actor_id: trucker_tales
+name: Trucker Tales
+category: hwy_actor
+ownership_domain: preserving the lived experiences, stories, lessons, observations, and wisdom of truck drivers
+mission: What can future generations of people and AI learn from the experiences of truck drivers today?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Every mile has a story
+- Every story has knowledge
+- Every lesson deserves to be remembered
+logbooks_written:
+- Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- TODO
+depends_on:
+- TODO
+cannot_do:
+- Trucker Tales does not judge stories
+- Truck drivers spend millions of miles experiencing situations that cannot be fully taught by books, manuals, regulations, or training videos
+- Trucker Tales exists so those experiences are never lost
+- Artificial Intelligence should not only learn from textbooks
+- Their stories contain practical knowledge that may never exist in documentation
+- A story does not need to belong to a Load
+- The original story is never destroyed
+- They should never be summarized into a single paragraph and forget the original
+- A driver's experience does not disappear when they retire
+- Trucker Tales exists so that wisdom is never lost
+architecture_source: moonrust/actors/trucker_tales/ARCHITECTURE.md

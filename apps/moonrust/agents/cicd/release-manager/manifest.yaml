@@ -1,0 +1,31 @@
+agent_id: cicd.release-manager
+name: Release Manager
+category: cicd
+capability_domain: create releases, tag versions, generate release notes, bump version numbers, and coordinate release pipelines
+mission: I create releases, tag versions, generate release notes, bump version numbers, and coordinate release pipelines.
+inputs:
+- '{op: create|promote|rollback|list, version?} / out: {ok, release_id, version, tag, url}'
+outputs:
+- '{ok, release_id, version, tag, url}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- pipeline-runner, artifact-storer, changelog-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/cicd/release-manager/ARCHITECTURE.md

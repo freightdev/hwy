@@ -1,0 +1,32 @@
+agent_id: generic.config-loader
+name: Config Loader
+category: generic
+capability_domain: loads and merges configuration
+mission: I load configuration from files (JSON, YAML, TOML), environment variables, CLI arguments, and remote sources.
+inputs:
+- '{op: load|reload|get|set, sources?: [], path?: string, schema?: object}'
+outputs:
+- '{config: object, source: string, valid: bool, errors?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for reading config files
+- data-validator for schema validation
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/config-loader/ARCHITECTURE.md

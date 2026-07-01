@@ -1,0 +1,33 @@
+agent_id: specialized.otp-generator
+name: Otp Generator
+category: specialized
+capability_domain: generates one-time passwords
+mission: I generate TOTP (time-based), HOTP (HMAC-based), and recovery codes.
+inputs:
+- '{op: generate|verify|recovery, secret?: string, digits?: int, period?: int, algorithm?: sha1|sha256|sha512, counter?: int, type?: totp|hotp}'
+outputs:
+- '{otp?: string, valid?: bool, remaining?: int, secret?: string, recovery_codes?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for OTP secrets
+- timer for TOTP time management
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {op: generate|verify|recovery, secret?: string, digits?: int, period?: int, algorithm?: sha1|sha256|sha512, counter?: int, type?: totp|hotp}'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/otp-generator/ARCHITECTURE.md

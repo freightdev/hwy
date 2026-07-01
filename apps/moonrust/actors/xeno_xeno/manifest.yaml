@@ -1,0 +1,41 @@
+actor_id: xeno_xeno
+name: Xeno Xeno
+category: hwy_actor
+ownership_domain: understanding foreign, unknown, unfamiliar, or unconventional information
+mission: What am I looking at, and how can I help the rest of the system understand it?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Unknown does not mean unusable
+- Unknown means it has not yet been understood
+logbooks_written:
+- TODO
+reports_created:
+- Understanding Report
+human_review_required_for:
+- recommend human review
+- Requires Human Review
+- Human Review Requirements
+- 'Human review is recommended when:'
+depends_on:
+- TODO
+cannot_do:
+- When CoDriver or another actor encounters something it does not understand, Xeno Xeno is activated
+- Xeno Xeno does not assume understanding
+- Unknown does not mean unusable
+- Actors discover information they have never seen before
+- Xeno Xeno never claims certainty when uncertainty exists
+- CoDriver activates Xeno Xeno whenever it encounters something unfamiliar
+- '"I''ve never seen this document."'
+- handwriting cannot be confidently interpreted
+- Xeno Xeno does not exist because the world speaks one language
+architecture_source: moonrust/actors/xeno_xeno/ARCHITECTURE.md

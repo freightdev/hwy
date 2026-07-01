@@ -1,0 +1,33 @@
+agent_id: advanced.compliance-auditor
+name: Compliance Auditor
+category: advanced
+capability_domain: audits system behavior for compliance
+mission: I check system behavior, configurations, and data handling against regulatory requirements (GDPR, SOC2, HIPAA, PCI-DSS).
+inputs:
+- '{op: audit|check|report, standards: [], scope: string, since?: string, until?: string}'
+outputs:
+- '{compliant: bool, standards: [{name, compliant, violations: [{rule, severity, evidence}]}], score: float, recommendations: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- audit-recorder for audit events
+- policy-enforcer for policy checks
+- report-generator for compliance reports
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/compliance-auditor/ARCHITECTURE.md

@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: ./backend
+    network_mode: host
+    environment:
+      DATABASE_URL: postgresql://hwy:hwy@localhost:5432/hwytms
+      CORS_ORIGIN: https://hwytms.com
+      DEBUG: "false"
+    restart: unless-stopped
+    volumes:
+      - ./data:/data

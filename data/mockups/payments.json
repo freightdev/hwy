@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "company_id": 1,
+    "from_broker": "Landstar",
+    "broker_id": 1,
+    "amount": "+$4,250",
+    "amount_cents": 425000,
+    "date": "2025-05-26",
+    "method": "ACH",
+    "status": "Received",
+    "invoice_id": "INV-2025-1068"
+  },
+  {
+    "id": 2,
+    "company_id": 1,
+    "from_broker": "TQL",
+    "broker_id": 2,
+    "amount": "+$3,850",
+    "amount_cents": 385000,
+    "date": "2025-05-23",
+    "method": "ACH",
+    "status": "Received",
+    "invoice_id": "INV-2025-1065"
+  },
+  {
+    "id": 3,
+    "company_id": 1,
+    "from_broker": "CH Robinson",
+    "broker_id": 5,
+    "amount": "+$3,100",
+    "amount_cents": 310000,
+    "date": "2025-05-09",
+    "method": "Wire",
+    "status": "Received",
+    "invoice_id": "INV-2025-1062"
+  },
+  {
+    "id": 4,
+    "company_id": 1,
+    "from_broker": "TQL",
+    "broker_id": 2,
+    "amount": "+$2,450",
+    "amount_cents": 245000,
+    "date": "2025-05-06",
+    "method": "ACH",
+    "status": "Received",
+    "invoice_id": "INV-2025-1061"
+  }
+]

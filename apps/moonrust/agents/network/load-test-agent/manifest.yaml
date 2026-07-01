@@ -1,0 +1,31 @@
+agent_id: network.load-test-agent
+name: Load Test Agent
+category: network
+capability_domain: generate configurable network traffic to stress test services, measure capacity, find breaking points
+mission: I generate configurable network traffic to stress test services, measure capacity, find breaking points.
+inputs:
+- '{target, protocol?, concurrency?, rate?, duration?} / out: {requests, successes, failures, throughput, latency}'
+outputs:
+- '{requests, successes, failures, throughput, latency}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- http-client, latency-analyzer, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/load-test-agent/ARCHITECTURE.md

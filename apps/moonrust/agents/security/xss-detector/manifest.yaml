@@ -1,0 +1,31 @@
+agent_id: security.xss-detector
+name: Xss Detector
+category: security
+capability_domain: scan input, output, and stored data for XSS vectors
+mission: I scan input, output, and stored data for XSS vectors.
+inputs:
+- '{op: scan|sanitize|encode|validate, data} / out: {safe, sanitized?, issues, encoding?}'
+outputs:
+- '{safe, sanitized?, issues, encoding?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- html-sanitizer, content-filter, csrf-protector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/xss-detector/ARCHITECTURE.md

@@ -1,0 +1,32 @@
+agent_id: specialized.excel-handler
+name: Excel Handler
+category: specialized
+capability_domain: reads and writes Excel files
+mission: I create and parse Excel (.xlsx, .xls) workbooks with multiple sheets, cell formatting, formulas, charts, pivot tables, and conditional formatting.
+inputs:
+- '{op: read|write|update, path: string, sheets?: [{name, data, options?}], options?: {formulas, styling, charts}}'
+outputs:
+- '{path?: string, sheets: [{name, rows, cols}], ok: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for file operations
+- data-transformer for data conversion
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/excel-handler/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: devops.cloud-cost-analyzer
+name: Cloud Cost Analyzer
+category: devops
+capability_domain: track cloud spending, identify cost-saving opportunities, generate cost reports, and recommend right-sizing
+mission: I track cloud spending, identify cost-saving opportunities, generate cost reports, and recommend right-sizing.
+inputs:
+- '{op: analyze|forecast|recommend|report, provider?} / out: {costs, trends, savings, forecast, budget_status}'
+outputs:
+- '{costs, trends, savings, forecast, budget_status}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- metrics-collector, forecaster, resource-tagger
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/devops/cloud-cost-analyzer/ARCHITECTURE.md

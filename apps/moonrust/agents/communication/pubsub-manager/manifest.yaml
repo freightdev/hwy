@@ -1,0 +1,31 @@
+agent_id: communication.pubsub-manager
+name: Pubsub Manager
+category: communication
+capability_domain: create, list, delete topics and subscriptions
+mission: I create, list, delete topics and subscriptions.
+inputs:
+- '{op: create|delete|list|info|modify, topic} / out: {ok, topics, subscriptions}'
+outputs:
+- '{ok, topics, subscriptions}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- event-bus, message-queue-producer, schema-validator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/pubsub-manager/ARCHITECTURE.md

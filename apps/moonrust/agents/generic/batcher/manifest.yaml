@@ -1,0 +1,31 @@
+agent_id: generic.batcher
+name: Batcher
+category: generic
+capability_domain: splits data into batches
+mission: I divide large datasets into smaller batches by size, count, or custom grouping logic.
+inputs:
+- '{data: [], batch_size?: int, max_batches?: int, strategy?: sequential|round-robin|custom, group_by?: string}'
+outputs:
+- '{batches: [[]], count: int, sizes: [int]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- streamer for streaming large datasets
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/batcher/ARCHITECTURE.md

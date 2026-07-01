@@ -1,0 +1,31 @@
+agent_id: system.disk-cleaner
+name: Disk Cleaner
+category: system
+capability_domain: scan directories for temporary files, old caches, stale artifacts, and large unused files
+mission: I scan directories for temporary files, old caches, stale artifacts, and large unused files.
+inputs:
+- '{op: scan|cleanup|schedule|status, paths?} / out: {ok, scanned, candidates, freed_bytes}'
+outputs:
+- '{ok, scanned, candidates, freed_bytes}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager, log-rotator, cache-operator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/disk-cleaner/ARCHITECTURE.md

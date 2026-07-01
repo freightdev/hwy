@@ -1,0 +1,32 @@
+agent_id: generic.streamer
+name: Streamer
+category: generic
+capability_domain: processes data streams
+mission: I read, write, and transform data streams with backpressure, chunking, and flow control.
+inputs:
+- '{op: read|write|pipe|transform, source: object, dest?: object, chunk_size?: int, encoding?: string, transform?: {type, options?}}'
+outputs:
+- '{ok: bool, bytes_processed: int, elapsed: int, error?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for file streams
+- batcher for batch processing
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/streamer/ARCHITECTURE.md

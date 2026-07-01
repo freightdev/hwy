@@ -1,0 +1,31 @@
+agent_id: data.data-pipeline
+name: Data Pipeline
+category: data
+capability_domain: define and execute DAG-based data pipelines with extraction, transformation, loading, and validation stages
+mission: I define and execute DAG-based data pipelines with extraction, transformation, loading, and validation stages.
+inputs:
+- '{op: define|execute|monitor|schedule, pipeline: {stages, dag}} / out: {ok, run_id, stages: [{name, status, duration, rows}], status}'
+outputs:
+- '{ok, run_id, stages: [{name, status, duration, rows}], status}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-importer, data-transformer, data-exporter
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-pipeline/ARCHITECTURE.md

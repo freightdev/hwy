@@ -1,0 +1,31 @@
+agent_id: business.pricing-engine
+name: Pricing Engine
+category: business
+capability_domain: compute prices based on cost-plus, competitive, dynamic, or value-based pricing models with rules and tiers
+mission: I compute prices based on cost-plus, competitive, dynamic, or value-based pricing models with rules and tiers.
+inputs:
+- '{op: calculate|optimize|compare, product, customer?, quantity?} / out: {price, breakdown, tiers?, competitor_comparison?}'
+outputs:
+- '{price, breakdown, tiers?, competitor_comparison?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- discount-calculator, rate-calculator, market-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/business/pricing-engine/ARCHITECTURE.md

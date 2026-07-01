@@ -1,0 +1,31 @@
+agent_id: utility.progress-tracker
+name: Progress Tracker
+category: utility
+capability_domain: report progress, ETA, and completion percentage for batch jobs, downloads, and processing pipelines
+mission: I report progress, ETA, and completion percentage for batch jobs, downloads, and processing pipelines.
+inputs:
+- '{op: start|update|complete|status, task, total?, current?} / out: {task, percent, eta, elapsed, speed}'
+outputs:
+- '{task, percent, eta, elapsed, speed}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- notification-dispatcher, task-timer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/progress-tracker/ARCHITECTURE.md

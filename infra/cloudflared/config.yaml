@@ -1,0 +1,13 @@
+tunnel: 40893419-33c7-4a42-b463-82f920bc7488
+credentials-file: /etc/cloudflared/credentials.json
+
+ingress:
+  - hostname: hwytms.com
+    service: http://hwy-caddy-1:80
+  - hostname: www.hwytms.com
+    service: http://hwy-caddy-1:80
+  - hostname: api.hwytms.com
+    service: http://hwy-caddy-1:80
+  - hostname: codriver.hwytms.com
+    service: http://hwy-caddy-1:80
+  - service: http_status:404

@@ -1,0 +1,35 @@
+actor_id: error_echo
+name: Error Echo
+category: hwy_actor
+ownership_domain: error handling, failure recovery, exception analysis, operational continuity, incident reporting, and intelligent debugging
+mission: How do we keep working while this problem gets solved?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Operations first
+- Investigation second
+- Keep the business moving
+logbooks_written:
+- Error Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review
+- Awaiting Human Review
+depends_on:
+- TODO
+cannot_do:
+- Error Echo does not investigate the root cause
+- Keep workflows moving whenever possible
+- Failed work is never forgotten
+- It catches failures, preserves evidence, restores operations whenever possible, and intelligently escalates difficult problems to advanced reasoning models when necessary
+architecture_source: moonrust/actors/error_echo/ARCHITECTURE.md

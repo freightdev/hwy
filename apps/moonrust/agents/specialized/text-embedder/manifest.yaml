@@ -1,0 +1,33 @@
+agent_id: specialized.text-embedder
+name: Text Embedder
+category: specialized
+capability_domain: generates vector embeddings from text
+mission: I convert text into dense vector embeddings using models from OpenAI, Cohere, Sentence Transformers, or local ONNX models.
+inputs:
+- '{text: string|[], model?: string, dimensions?: int, normalize?: bool}'
+outputs:
+- '{embeddings: [[float]], model: string, dimensions: int, tokens_used: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cache-operator for embedding caching
+- secret-keeper for API keys
+- rate-guard for API rate limits
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/text-embedder/ARCHITECTURE.md

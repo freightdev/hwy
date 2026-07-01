@@ -1,0 +1,31 @@
+agent_id: testing.stress-tester
+name: Stress Tester
+category: testing
+capability_domain: apply increasing load to find system breaking points, saturation thresholds, and failure modes
+mission: I apply increasing load to find system breaking points, saturation thresholds, and failure modes.
+inputs:
+- '{target, start_load?, max_load?, step?, duration?} / out: {breakpoint, max_throughput, saturation_curve, failure_mode, recommendations}'
+outputs:
+- '{breakpoint, max_throughput, saturation_curve, failure_mode, recommendations}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- performance-tester, load-test-agent, latency-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/stress-tester/ARCHITECTURE.md

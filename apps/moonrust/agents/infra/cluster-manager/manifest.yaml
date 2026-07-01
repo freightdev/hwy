@@ -1,0 +1,31 @@
+agent_id: infra.cluster-manager
+name: Cluster Manager
+category: infra
+capability_domain: provision, scale, upgrade, and decommission cluster nodes
+mission: I provision, scale, upgrade, and decommission cluster nodes.
+inputs:
+- '{op: scale|upgrade|provision|decommission|health, cluster} / out: {ok, cluster_status, nodes, version}'
+outputs:
+- '{ok, cluster_status, nodes, version}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- kubernetes-manager, load-balancer, scaling-agent
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/cluster-manager/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: security.forensics-collector
+name: Forensics Collector
+category: security
+capability_domain: collect system state, memory dumps, disk images, logs, network connections, and process information
+mission: I collect system state, memory dumps, disk images, logs, network connections, and process information.
+inputs:
+- '{op: collect|acquire|package|chain-of-custody, target} / out: {ok, collection_id, evidence, chain_of_custody}'
+outputs:
+- '{ok, collection_id, evidence, chain_of_custody}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager, hasher, incident-responder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/forensics-collector/ARCHITECTURE.md

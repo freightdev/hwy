@@ -1,0 +1,31 @@
+agent_id: devops.secret-injector
+name: Secret Injector
+category: devops
+capability_domain: retrieve secrets from vaults and inject them into applications, config files, and environment variables
+mission: I retrieve secrets from vaults and inject them into applications, config files, and environment variables.
+inputs:
+- '{op: inject|eject|validate|template, target} / out: {ok, injected, skipped, resolved}'
+outputs:
+- '{ok, injected, skipped, resolved}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper, template-engine, config-map-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/devops/secret-injector/ARCHITECTURE.md

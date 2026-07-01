@@ -1,0 +1,31 @@
+agent_id: database.migration-runner
+name: Migration Runner
+category: database
+capability_domain: create, apply, rollback, and version database migrations
+mission: I create, apply, rollback, and version database migrations.
+inputs:
+- '{op: create|up|down|status|redo|reset, migrations?} / out: {ok, current_version, applied, pending}'
+outputs:
+- '{ok, current_version, applied, pending}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, backup-manager, schema-validator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/migration-runner/ARCHITECTURE.md

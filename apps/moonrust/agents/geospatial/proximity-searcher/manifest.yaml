@@ -1,0 +1,31 @@
+agent_id: geospatial.proximity-searcher
+name: Proximity Searcher
+category: geospatial
+capability_domain: find locations, places, and entities near a given point within a radius, ranked by distance and relevance
+mission: I find locations, places, and entities near a given point within a radius, ranked by distance and relevance.
+inputs:
+- '{lat, lng, radius?, type?, limit?, filters?} / out: {results: [{name, lat, lng, distance, type, metadata}], total}'
+outputs:
+- '{results: [{name, lat, lng, distance, type, metadata}], total}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- spatial-indexer, geo-coder, map-renderer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/geospatial/proximity-searcher/ARCHITECTURE.md

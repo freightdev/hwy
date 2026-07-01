@@ -1,0 +1,32 @@
+agent_id: database.restore-agent
+name: Restore Agent
+category: database
+capability_domain: restore from backup archives, validate integrity before restore, handle point-in-time recovery
+mission: I restore from backup archives, validate integrity before restore, handle point-in-time recovery.
+inputs:
+- '{backup_id?, target, type?} / out: {ok, backup_id, target, restore_time, recovered, verified}'
+outputs:
+- '{ok, backup_id, target, restore_time, recovered, verified}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- backup-manager, database-query, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- validate_before, verify_after, pitr_enabled, restore_location
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/restore-agent/ARCHITECTURE.md

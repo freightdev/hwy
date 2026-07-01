@@ -1,0 +1,31 @@
+agent_id: infra.secret-syncer
+name: Secret Syncer
+category: infra
+capability_domain: sync secrets between vaults, clouds, and clusters
+mission: I sync secrets between vaults, clouds, and clusters.
+inputs:
+- '{op: sync|compare|validate|map, sources, targets} / out: {ok, synced, conflicts, skipped}'
+outputs:
+- '{ok, synced, conflicts, skipped}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper, config-map-manager, encryption-agent
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/secret-syncer/ARCHITECTURE.md

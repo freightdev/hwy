@@ -1,0 +1,31 @@
+agent_id: developer-tools.code-linter
+name: Code Linter
+category: developer-tools
+capability_domain: detect code style violations, potential bugs, and anti-patterns using language-specific linters
+mission: I detect code style violations, potential bugs, and anti-patterns using language-specific linters.
+inputs:
+- '{source, language?, config?, fix?} / out: {issues: [{severity, line, message, rule}], fixed, elapsed}'
+outputs:
+- '{issues: [{severity, line, message, rule}], fixed, elapsed}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- code-formatter, code-quality-checker, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/code-linter/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: database.connection-manager
+name: Connection Manager
+category: database
+capability_domain: configure connection strings, pool sizes, timeouts, SSL settings, and proxy connections
+mission: I configure connection strings, pool sizes, timeouts, SSL settings, and proxy connections.
+inputs:
+- '{op: configure|pool|test|monitor, database?} / out: {ok, connection, test, pools}'
+outputs:
+- '{ok, connection, test, pools}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, connection-pooler, health-prober
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/connection-manager/ARCHITECTURE.md

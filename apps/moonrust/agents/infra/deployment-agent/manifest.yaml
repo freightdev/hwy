@@ -1,0 +1,31 @@
+agent_id: infra.deployment-agent
+name: Deployment Agent
+category: infra
+capability_domain: orchestrate rolling deployments, blue-green deployments, canary releases, and rollbacks
+mission: I orchestrate rolling deployments, blue-green deployments, canary releases, and rollbacks.
+inputs:
+- '{op: deploy|rollback|promote|status, environment, version, strategy?} / out: {ok, deployment_id, status, url?}'
+outputs:
+- '{ok, deployment_id, status, url?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- kubernetes-manager, load-balancer, health-prober
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/deployment-agent/ARCHITECTURE.md

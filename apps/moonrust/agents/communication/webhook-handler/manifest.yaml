@@ -1,0 +1,31 @@
+agent_id: communication.webhook-handler
+name: Webhook Handler
+category: communication
+capability_domain: receive webhooks from external services, validate signatures, parse payloads, and route to handlers
+mission: I receive webhooks from external services, validate signatures, parse payloads, and route to handlers.
+inputs:
+- '{op: register|receive|validate|process, webhook} / out: {ok, webhook_id, source, event, handled}'
+outputs:
+- '{ok, webhook_id, source, event, handled}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- http-client, secret-keeper, audit-recorder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/webhook-handler/ARCHITECTURE.md

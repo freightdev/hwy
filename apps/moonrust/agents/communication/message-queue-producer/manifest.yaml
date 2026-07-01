@@ -1,0 +1,31 @@
+agent_id: communication.message-queue-producer
+name: Message Queue Producer
+category: communication
+capability_domain: publish messages to queues and topics (RabbitMQ, Kafka, SQS, NATS)
+mission: I publish messages to queues and topics (RabbitMQ, Kafka, SQS, NATS).
+inputs:
+- '{topic, message, key?, headers?, partition?} / out: {ok, message_id, partition?, offset?}'
+outputs:
+- '{ok, message_id, partition?, offset?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- event-bus, batcher, connection-pooler
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/communication/message-queue-producer/ARCHITECTURE.md

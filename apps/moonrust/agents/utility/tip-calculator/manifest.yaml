@@ -1,0 +1,31 @@
+agent_id: utility.tip-calculator
+name: Tip Calculator
+category: utility
+capability_domain: compute tips at various percentages, split bills among people, and handle tax and discount adjustments
+mission: I compute tips at various percentages, split bills among people, and handle tax and discount adjustments.
+inputs:
+- '{bill_amount, tip_percent?, split?, tax?, discount?} / out: {tip_amount, total, per_person, breakdown}'
+outputs:
+- '{tip_amount, total, per_person, breakdown}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- percentage-calculator, currency-converter, math-evaluator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/utility/tip-calculator/ARCHITECTURE.md

@@ -1,0 +1,31 @@
+agent_id: ai-ml.token-counter
+name: Token Counter
+category: ai-ml
+capability_domain: count tokens for various model tokenizers and estimate costs across requests
+mission: I count tokens for various model tokenizers and estimate costs across requests.
+inputs:
+- '{text, model?, encoding?} / out: {tokens, characters, model, encoding, estimated_cost}'
+outputs:
+- '{tokens, characters, model, encoding, estimated_cost}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, prompt-engineer, cost-tracker
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/token-counter/ARCHITECTURE.md

@@ -1,0 +1,32 @@
+agent_id: specialized.csv-handler
+name: Csv Handler
+category: specialized
+capability_domain: reads, writes, and processes CSV files
+mission: I parse and generate CSV data with configurable delimiters, quoting, escaping, and headers.
+inputs:
+- '{op: parse|generate|transform|validate, data: any, options?: {delimiter, quote, escape, headers, encoding}}'
+outputs:
+- '{rows?: [], headers?: [], count: int, errors?: [], warnings?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- file-manager for file operations
+- data-validator for row validation
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/csv-handler/ARCHITECTURE.md

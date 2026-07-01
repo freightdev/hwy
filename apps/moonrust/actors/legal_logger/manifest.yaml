@@ -1,0 +1,41 @@
+actor_id: legal_logger
+name: Legal Logger
+category: hwy_actor
+ownership_domain: compliance history, authority verification, audit logging, chain of custody, evidence preservation, and legal event tracking
+mission: Can we prove what happened?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Legal Logger never changes history
+- History is append-only
+- Corrections create new entries
+- Nothing is silently overwritten
+- Every important business event should be traceable
+logbooks_written:
+- Every Logbook
+- Load Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required for:'
+depends_on:
+- TODO
+cannot_do:
+- Legal Logger does not provide legal advice
+- Legal Logger never changes history
+- Legal Logger does not create signatures
+- It does not resolve them
+- Legal Logger never performs investigations
+- These are never mixed together
+- CoDriver activates Legal Logger whenever an action has legal, contractual, compliance, or audit significance
+architecture_source: moonrust/actors/legal_logger/ARCHITECTURE.md

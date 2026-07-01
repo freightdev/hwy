@@ -1,0 +1,31 @@
+agent_id: network.connection-pooler
+name: Connection Pooler
+category: network
+capability_domain: create, maintain, and recycle connection pools for databases, services, and APIs
+mission: I create, maintain, and recycle connection pools for databases, services, and APIs.
+inputs:
+- '{op: acquire|release|status|configure, pool} / out: {ok, connection?, pool_status: {active, idle, waiting}}'
+outputs:
+- '{ok, connection?, pool_status: {active, idle, waiting}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, http-client, health-prober
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/connection-pooler/ARCHITECTURE.md

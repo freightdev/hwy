@@ -1,0 +1,31 @@
+agent_id: security.sso-manager
+name: Sso Manager
+category: security
+capability_domain: configure SSO providers, manage service provider metadata, handle SAML/OIDC assertions, and manage session federation
+mission: I configure SSO providers, manage service provider metadata, handle SAML/OIDC assertions, and manage session federation.
+inputs:
+- '{op: configure|metadata|assert|session, provider} / out: {ok, metadata_url?, entity_id, sso_url}'
+outputs:
+- '{ok, metadata_url?, entity_id, sso_url}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- identity-manager, token-manager, certificate-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/security/sso-manager/ARCHITECTURE.md

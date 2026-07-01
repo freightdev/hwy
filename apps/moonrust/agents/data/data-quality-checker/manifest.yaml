@@ -1,0 +1,31 @@
+agent_id: data.data-quality-checker
+name: Data Quality Checker
+category: data
+capability_domain: validate data for completeness, accuracy, consistency, timeliness, and uniqueness based on defined rules
+mission: I validate data for completeness, accuracy, consistency, timeliness, and uniqueness based on defined rules.
+inputs:
+- '{data, rules?, severity?} / out: {score, checks: [{name, passed, failed, details}], dimensions: {completeness, accuracy, consistency}}'
+outputs:
+- '{score, checks: [{name, passed, failed, details}], dimensions: {completeness, accuracy, consistency}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-validator, data-profiler, data-pipeline
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-quality-checker/ARCHITECTURE.md

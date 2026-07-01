@@ -1,0 +1,32 @@
+agent_id: generic.http-client
+name: Http Client
+category: generic
+capability_domain: makes HTTP requests to external services
+mission: I send HTTP/HTTPS requests with support for methods, headers, bodies, timeouts, redirects, retries, and authentication.
+inputs:
+- '{method: string, url: string, headers?: object, body?: any, params?: object, timeout?: int, retry?: int}'
+outputs:
+- '{status: int, headers: object, body: any, elapsed: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- secret-keeper for API keys and tokens
+- rate-guard for rate limiting
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/http-client/ARCHITECTURE.md

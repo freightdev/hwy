@@ -1,0 +1,31 @@
+agent_id: specialized.encoding-agent
+name: Encoding Agent
+category: specialized
+capability_domain: encodes and decodes data
+mission: I encode and decode data in Base64, Base64URL, Hex, URL encoding, quoted-printable, ASCII85, and Base32.
+inputs:
+- '{op: encode|decode, data: string|bytes, encoding: string, charset?: string}'
+outputs:
+- '{result: string, original_size: int, result_size: int, encoding: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- No internal dependencies
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/encoding-agent/ARCHITECTURE.md

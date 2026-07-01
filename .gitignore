@@ -1,0 +1,29 @@
+# Local/dev secrets and runtime state
+vault/
+.env
+.env.*
+configs/env/*.env
+!configs/env/*.env.example
+backend/.env
+backend/.env.*
+vault/*.json
+.codriver-dev/
+*.jsonl
+flow_profiles.json
+execution_reports.jsonl
+flow_reports.jsonl
+logbook.jsonl
+
+# Dependencies/builds
+node_modules/
+frontend/node_modules/
+.venv/
+.svelte-kit/
+frontend/.svelte-kit/
+build/
+frontend/build/
+test-results/
+frontend/test-results/
+__pycache__/
+*.pyc
+.pytest_cache/

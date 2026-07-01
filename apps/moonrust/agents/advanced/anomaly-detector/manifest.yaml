@@ -1,0 +1,33 @@
+agent_id: advanced.anomaly-detector
+name: Anomaly Detector
+category: advanced
+capability_domain: detects anomalies in data and behavior patterns
+mission: I analyze metric streams, log patterns, and behavioral data to detect outliers, spikes, trend shifts, and unusual patterns.
+inputs:
+- '{op: analyze|train|detect, data: [{value, timestamp, tags?}], method?: string, sensitivity?: float, baseline?: object}'
+outputs:
+- '{anomalies: [{timestamp, value, score, severity, explanation}], baseline: object, method: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- metrics-collector for metric data
+- pattern-learner for ML model training
+- notification-dispatcher for alerting
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/anomaly-detector/ARCHITECTURE.md

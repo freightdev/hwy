@@ -1,0 +1,32 @@
+agent_id: testing.mock-creator
+name: Mock Creator
+category: testing
+capability_domain: generate mocks, stubs, fakes, and spies for services, APIs, and databases used in tests
+mission: I generate mocks, stubs, fakes, and spies for services, APIs, and databases used in tests.
+inputs:
+- '{interface, type?: mock|stub|fake|spy, language?, behavior?} / out: {mock: {code, file, dependencies}, usage_example}'
+outputs:
+- '{mock: {code, file, dependencies}, usage_example}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- test-runner, stub-generator, spy-manager
+workers_needed:
+- TODO
+truth_rules:
+- 'type, framework: unittest|mockito|jest-mock, auto_mock_all, return_defaults, verify_calls'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/testing/mock-creator/ARCHITECTURE.md

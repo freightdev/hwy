@@ -1,0 +1,32 @@
+agent_id: specialized.metrics-collector
+name: Metrics Collector
+category: specialized
+capability_domain: collects and emits metrics
+mission: I collect counters, gauges, histograms, and timers from running agents and services.
+inputs:
+- '{op: record|query|flush, name: string, value?: float, tags?: object, type?: counter|gauge|histogram|timer}'
+outputs:
+- '{ok: bool, metrics?: [{name, value, tags, timestamp}], summary?: object}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query for metric storage queries
+- config-loader for metric definitions
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/metrics-collector/ARCHITECTURE.md

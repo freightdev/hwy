@@ -1,0 +1,31 @@
+agent_id: system.kernel-manager
+name: Kernel Manager
+category: system
+capability_domain: configure sysctl parameters, load/unload kernel modules, manage kernel boot parameters, and handle kernel upgrades
+mission: I configure sysctl parameters, load/unload kernel modules, manage kernel boot parameters, and handle kernel upgrades.
+inputs:
+- '{op: param|module|sysctl|info, action, name?} / out: {ok, params?, modules?, kernel}'
+outputs:
+- '{ok, params?, modules?, kernel}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- system-updater, config-loader, audit-recorder
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/system/kernel-manager/ARCHITECTURE.md

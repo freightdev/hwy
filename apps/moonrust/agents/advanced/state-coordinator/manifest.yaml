@@ -1,0 +1,33 @@
+agent_id: advanced.state-coordinator
+name: State Coordinator
+category: advanced
+capability_domain: coordinates distributed state across agents
+mission: I manage distributed state using consensus protocols, leases, and distributed locks.
+inputs:
+- '{op: lock|unlock|read|write|watch|elect, key: string, value?: any, ttl?: int, consistency?: strong|eventual}'
+outputs:
+- '{ok: bool, value?: any, leader?: string, members?: [], lock_held?: bool}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cache-operator for state caching
+- health-prober for cluster health
+- config-loader for cluster config
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/state-coordinator/ARCHITECTURE.md

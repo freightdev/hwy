@@ -1,0 +1,33 @@
+agent_id: specialized.health-prober
+name: Health Prober
+category: specialized
+capability_domain: checks the health of services and endpoints
+mission: I probe services via HTTP, TCP, ICMP, or custom checks and report their health status.
+inputs:
+- '{op: check|watch|status, targets?: [{type, target, interval?}], timeout?: int}'
+outputs:
+- '{overall: healthy|degraded|down, checks: [{target, status, latency, last_error, last_ok}], timestamp: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- http-client for HTTP checks
+- notification-dispatcher for alerting
+- metrics-collector for health metrics
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/health-prober/ARCHITECTURE.md

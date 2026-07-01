@@ -1,0 +1,31 @@
+agent_id: content.spell-checker
+name: Spell Checker
+category: content
+capability_domain: detect misspelled words, suggest corrections, and manage custom dictionaries
+mission: I detect misspelled words, suggest corrections, and manage custom dictionaries.
+inputs:
+- '{text, language?, dictionary?, ignore?} / out: {misspellings: [{word, suggestions, context}], checked: int, custom_dict}'
+outputs:
+- '{misspellings: [{word, suggestions, context}], checked: int, custom_dict}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- grammar-checker, file-manager, config-loader
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/content/spell-checker/ARCHITECTURE.md

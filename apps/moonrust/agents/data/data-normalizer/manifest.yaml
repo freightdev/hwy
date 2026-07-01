@@ -1,0 +1,31 @@
+agent_id: data.data-normalizer
+name: Data Normalizer
+category: data
+capability_domain: normalize data to standard formats, scales, and schemas
+mission: I normalize data to standard formats, scales, and schemas.
+inputs:
+- '{data, schema?, methods?, on_error?} / out: {data, transforms: [{column, method, params}], changes: int}'
+outputs:
+- '{data, transforms: [{column, method, params}], changes: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-transformer, data-validator, data-profiler
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/data/data-normalizer/ARCHITECTURE.md

@@ -1,0 +1,33 @@
+agent_id: developer-tools.task-estimator
+name: Task Estimator
+category: developer-tools
+capability_domain: analyze task descriptions and estimate effort using historical data, complexity analysis, and expert rules
+mission: I analyze task descriptions and estimate effort using historical data, complexity analysis, and expert rules.
+inputs:
+- '{task, type?, historical?} / out: {estimates: {optimistic, likely, pessimistic, expected}, confidence, unit}'
+outputs:
+- '{estimates: {optimistic, likely, pessimistic, expected}, confidence, unit}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- sprint-planner, pattern-learner, forecaster
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {task, type?, historical?} / out: {estimates: {optimistic, likely, pessimistic, expected}, confidence, unit}'
+- 'method: three-point|analogy|parametric|ml, confidence_threshold, unit: hours|points, calibration'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/developer-tools/task-estimator/ARCHITECTURE.md

@@ -1,0 +1,33 @@
+agent_id: generic.report-generator
+name: Report Generator
+category: generic
+capability_domain: generates reports in multiple output formats
+mission: I take structured data and a report definition, then produce formatted reports in HTML, PDF, Markdown, CSV, or JSON.
+inputs:
+- '{data: any, definition: {title, sections: [], format, template?}, output: string}'
+outputs:
+- '{path: string, format: string, size: int, pages?: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- template-engine for rendering report templates
+- file-manager for writing output
+- Chart rendering libraries
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/report-generator/ARCHITECTURE.md

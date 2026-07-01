@@ -1,0 +1,31 @@
+agent_id: cicd.coverage-analyzer
+name: Coverage Analyzer
+category: cicd
+capability_domain: parse coverage reports from multiple tools, compute line/branch/function coverage, track coverage trends, and enforce coverage gates
+mission: I parse coverage reports from multiple tools, compute line/branch/function coverage, track coverage trends, and enforce coverage gates.
+inputs:
+- '{source, format?, threshold?, compare_to?} / out: {coverage: {lines, branches, functions}, gate_passed}'
+outputs:
+- '{coverage: {lines, branches, functions}, gate_passed}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- test-runner, report-generator, pipeline-runner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/cicd/coverage-analyzer/ARCHITECTURE.md

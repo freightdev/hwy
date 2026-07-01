@@ -1,0 +1,31 @@
+agent_id: cicd.changelog-generator
+name: Changelog Generator
+category: cicd
+capability_domain: analyze git log, parse conventional commits, group changes by type, and generate formatted changelogs
+mission: I analyze git log, parse conventional commits, group changes by type, and generate formatted changelogs.
+inputs:
+- '{op: generate, from?, to?, format?} / out: {changelog, entries: [{version, date, changes}]}'
+outputs:
+- '{changelog, entries: [{version, date, changes}]}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- release-manager, git-hook-manager, file-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/cicd/changelog-generator/ARCHITECTURE.md

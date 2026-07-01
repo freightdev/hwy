@@ -1,0 +1,32 @@
+agent_id: generic.scheduler
+name: Scheduler
+category: generic
+capability_domain: schedules and triggers recurring tasks
+mission: I manage cron-like schedules, interval-based triggers, one-time delayed tasks, and calendar-based schedules.
+inputs:
+- '{op: schedule|cancel|list|pause|resume, id?: string, schedule?: string|object, action?: object}'
+outputs:
+- '{ok: bool, id?: string, next_run?: string, entries?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- workflow-orchestrator for executing scheduled actions
+- logger for recording execution history
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/scheduler/ARCHITECTURE.md

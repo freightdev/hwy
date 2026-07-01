@@ -1,0 +1,41 @@
+actor_id: secret_safe
+name: Secret Safe
+category: hwy_actor
+ownership_domain: identity verification, secret management, credential protection, zero trust enforcement, secure authorization, and protected data access
+mission: Can this identity be trusted with this information, at this moment, for this purpose?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Ownership does not grant access
+- Identity grants access
+- Every request must be verified
+- Every permission must be earned
+- Every secret must remain protected until trust has been established
+logbooks_written:
+- TODO
+reports_created:
+- TODO
+human_review_required_for:
+- weaken security policies without approval
+- Human Review Requirements
+depends_on:
+- TODO
+cannot_do:
+- Secret Safe does not trust anyone by default
+- Ownership does not grant access
+- Trust is never assumed
+- Previous success does not automatically authorize future requests
+- Actors never permanently own credentials
+- Secret Safe never stores secrets in plain text
+- CoDriver never directly accesses protected information
+- That does not mean you automatically receive it
+architecture_source: moonrust/actors/secret_safe/ARCHITECTURE.md

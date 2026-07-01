@@ -1,0 +1,31 @@
+agent_id: infra.volume-manager
+name: Volume Manager
+category: infra
+capability_domain: create, attach, detach, resize, and snapshot storage volumes
+mission: I create, attach, detach, resize, and snapshot storage volumes.
+inputs:
+- '{op: create|attach|detach|snapshot|resize|mount, volume, size?} / out: {ok, volume_id, device?, mount_point?}'
+outputs:
+- '{ok, volume_id, device?, mount_point?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- backup-manager, docker-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/volume-manager/ARCHITECTURE.md

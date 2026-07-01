@@ -1,0 +1,38 @@
+actor_id: unit_usage
+name: Unit Usage
+category: hwy_actor
+ownership_domain: identity protection, privacy mediation, controlled disclosure, permission leasing, and secure access to personal information
+mission: Should this person, actor, or service receive this information?
+allowed_callers:
+- TODO
+allowed_callees:
+- TODO
+owned_flows:
+- TODO
+allowed_flows:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+truth_rules:
+- Ownership does not equal unrestricted access
+- Every request deserves verification
+- Every disclosure deserves a purpose
+logbooks_written:
+- Privacy Logbook
+reports_created:
+- TODO
+human_review_required_for:
+- Human Review Requirements
+- 'Human review is required when:'
+depends_on:
+- TODO
+cannot_do:
+- Ownership does not equal unrestricted access
+- Personal information should never be handed out simply because it exists
+- 'Unit Usage does NOT release:'
+- Unit Usage masks information whenever possible
+- Unit Usage never releases information without a documented reason
+- CoDriver never hands out protected information directly
+- In the HWY ecosystem, personal information is never simply handed over
+architecture_source: moonrust/actors/unit_usage/ARCHITECTURE.md

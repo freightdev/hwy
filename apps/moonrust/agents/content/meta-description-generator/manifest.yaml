@@ -1,0 +1,31 @@
+agent_id: content.meta-description-generator
+name: Meta Description Generator
+category: content
+capability_domain: analyze content and generate optimized meta descriptions with keywords, length optimization, and CTR tuning
+mission: I analyze content and generate optimized meta descriptions with keywords, length optimization, and CTR tuning.
+inputs:
+- '{content, title, keywords?, max_length?} / out: {description, score, keyword_density, suggestions}'
+outputs:
+- '{description, score, keyword_density, suggestions}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- llm-request, slug-generator, readability-analyzer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/content/meta-description-generator/ARCHITECTURE.md

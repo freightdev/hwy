@@ -1,0 +1,35 @@
+agent_id: advanced.forecaster
+name: Forecaster
+category: advanced
+capability_domain: forecasts future values from time series data
+mission: I forecast trends, seasonality, and future values using statistical methods (ARIMA, exponential smoothing), ML models (Prophet, LSTM), and ensemble approaches.
+inputs:
+- '{data: [{ds, y}], horizon: int, method?: arima|prophet|lstm|ensemble, seasonality?: daily|weekly|monthly|yearly, confidence_interval?: float, features?: object}'
+outputs:
+- '{forecast: [{ds, yhat, yhat_lower, yhat_upper}], metrics: {mae, rmse, mape}, components?: {trend, seasonal, residual}}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- pattern-learner for pattern discovery
+- anomaly-detector for outlier handling
+- metrics-collector for input data
+workers_needed:
+- TODO
+truth_rules:
+- 'in: {data: [{ds, y}], horizon: int, method?: arima|prophet|lstm|ensemble, seasonality?: daily|weekly|monthly|yearly, confidence_interval?: float, features?: object}'
+- 'confidence_interval: default confidence (0.8-0.99)'
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/forecaster/ARCHITECTURE.md

@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Conley Logistics LLC",
+    "mc": "MC-1234567",
+    "dot": "3456789",
+    "scac": "CONL",
+    "type": "For-Hire Carrier",
+    "role_type": "carrier",
+    "founded": "2018-05-18",
+    "address": "123 Logistics Way",
+    "city": "Dallas",
+    "state": "TX",
+    "zip": "75001",
+    "phone": "(214) 555-0196",
+    "email": "info@conleylogistics.com",
+    "website": "conleylogistics.com",
+    "fleet_size": 32,
+    "trailer_types": ["Dry Van", "Flatbed", "Reefer"],
+    "operating_states": ["TX", "OK", "LA", "AR", "TN", "GA", "FL", "AL", "MS", "NM", "AZ", "CA", "IL", "IN", "OH", "KY", "MO", "KS", "NE", "CO", "UT", "NV", "OR", "WA"],
+    "description": "Full service logistics and transportation company specializing in dry van, flatbed, and reefer freight across 48 states.",
+    "score": 9.4,
+    "score_factors": {
+      "safety_compliance": 9.8,
+      "on_time_performance": 9.3,
+      "driver_satisfaction": 9.3,
+      "load_completion_rate": 9.5,
+      "document_accuracy": 9.2,
+      "claims_incidents": 8.7,
+      "communication": 9.0
+    },
+    "safety": {
+      "preventable_accidents": 1,
+      "non_preventable_accidents": 1,
+      "cargo_claims": 0,
+      "claim_amount": "$3,250",
+      "injuries": 0,
+      "oos_vehicles": 2
+    },
+    "safety_programs": ["Drug & Alcohol Program", "Driver Training Program", "Vehicle Maintenance Program", "Safety Meetings"],
+    "authority": {
+      "usdot": "11284969",
+      "issued": "2018-05-15",
+      "status": "Active",
+      "sms_score": "0.62",
+      "oos_rate": "0.45",
+      "driver_time": "0.14",
+      "dangerous_goods": "0.0%"
+    },
+    "rating": 4.8,
+    "review_count": 126
+  }
+]

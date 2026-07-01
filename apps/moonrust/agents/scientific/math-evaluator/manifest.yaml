@@ -1,0 +1,31 @@
+agent_id: scientific.math-evaluator
+name: Math Evaluator
+category: scientific
+capability_domain: parse and evaluate mathematical expressions with variables, functions, and constants
+mission: I parse and evaluate mathematical expressions with variables, functions, and constants.
+inputs:
+- '{expression, variables?, precision?, symbolic?} / out: {result, steps?, format}'
+outputs:
+- '{result, steps?, format}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- stats-calculator, regression-analyzer, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/scientific/math-evaluator/ARCHITECTURE.md

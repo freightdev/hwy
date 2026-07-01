@@ -1,0 +1,33 @@
+agent_id: generic.file-manager
+name: File Manager
+category: generic
+capability_domain: read, write, move, copy, delete, and list files and directories
+mission: I read, write, move, copy, delete, and list files and directories.
+inputs:
+- '{op: read|write|move|copy|delete|list, path, content?, mode?, recursive?}'
+outputs:
+- '{ok: bool, data?, error?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- config-loader for loading allowed path config
+- OS file system APIs
+workers_needed:
+- TODO
+truth_rules:
+- I read, write, move, copy, delete, and list files and directories. I handle permissions, symlinks, and atomic writes. I never follow symlinks outside allowed roots and I validate all paths against a sandbox
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- I read, write, move, copy, delete, and list files and directories. I handle permissions, symlinks, and atomic writes. I never follow symlinks outside allowed roots and I validate all paths against a sandbox
+architecture_source: moonrust/agents/generic/file-manager/ARCHITECTURE.md

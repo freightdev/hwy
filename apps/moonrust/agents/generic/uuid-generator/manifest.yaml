@@ -1,0 +1,31 @@
+agent_id: generic.uuid-generator
+name: Uuid Generator
+category: generic
+capability_domain: generates unique identifiers
+mission: I generate UUIDs (v4, v7), ULIDs, NanoIDs, Snowflake IDs, and custom-formatted unique IDs.
+inputs:
+- '{format?: uuid-v4|uuid-v7|ulid|nanoid|custom, count?: int, seed?: string, prefix?: string}'
+outputs:
+- '{ids: [string], format: string, count: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- No internal dependencies
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/uuid-generator/ARCHITECTURE.md

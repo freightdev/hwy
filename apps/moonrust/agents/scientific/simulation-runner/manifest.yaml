@@ -1,0 +1,31 @@
+agent_id: scientific.simulation-runner
+name: Simulation Runner
+category: scientific
+capability_domain: execute discrete-event, agent-based, system dynamics, and physical simulations with configurable parameters
+mission: I execute discrete-event, agent-based, system dynamics, and physical simulations with configurable parameters.
+inputs:
+- '{model, parameters, duration?, output_vars?} / out: {results: {trajectory: [{t, variables}]}, summary, metrics}'
+outputs:
+- '{results: {trajectory: [{t, variables}]}, summary, metrics}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- monte-carlo, resource-optimizer, report-generator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/scientific/simulation-runner/ARCHITECTURE.md

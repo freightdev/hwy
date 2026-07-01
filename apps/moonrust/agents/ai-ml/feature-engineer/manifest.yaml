@@ -1,0 +1,31 @@
+agent_id: ai-ml.feature-engineer
+name: Feature Engineer
+category: ai-ml
+capability_domain: create, transform, and select features from raw data
+mission: I create, transform, and select features from raw data.
+inputs:
+- '{data, features?: [], method?: auto|manual, target?} / out: {features: [{name, type, importance, cardinality}], transformed_data}'
+outputs:
+- '{features: [{name, type, importance, cardinality}], transformed_data}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- data-transformer, data-validator, knowledge-gleaner
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/ai-ml/feature-engineer/ARCHITECTURE.md

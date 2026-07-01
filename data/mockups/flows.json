@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "company_id": 1,
+    "name": "Post-Delivery Workflow",
+    "steps": 7,
+    "type": "Auto",
+    "enabled": true,
+    "icon": "📦",
+    "category": "Load Management",
+    "step_details": [
+      { "icon": "📥", "title": "Receive POD from Driver", "sub": "Trigger: Document Uploaded" },
+      { "icon": "✅", "title": "Validate POD", "sub": "Check document completeness" },
+      { "icon": "🔄", "title": "Update Load Status", "sub": "Mark as Delivered" },
+      { "icon": "📧", "title": "Notify Customer", "sub": "Send delivery notification" },
+      { "icon": "💰", "title": "Generate Invoice", "sub": "Create & send invoice" },
+      { "icon": "📁", "title": "Archive Documents", "sub": "Store in load folder" }
+    ]
+  },
+  {
+    "id": 2,
+    "company_id": 1,
+    "name": "Driver Check-In Flow",
+    "steps": 5,
+    "type": "Manual",
+    "enabled": false,
+    "icon": "🚛",
+    "category": "Driver Communication",
+    "step_details": [
+      { "icon": "👤", "title": "Driver Starts Check-In", "sub": "Manual Trigger" },
+      { "icon": "📍", "title": "Capture Location", "sub": "Get current GPS location" },
+      { "icon": "✅", "title": "Confirm Appointment", "sub": "Verify pickup details" },
+      { "icon": "📡", "title": "Notify Dispatcher", "sub": "Send check-in notification" },
+      { "icon": "🔄", "title": "Update Load", "sub": "Mark as Checked In" }
+    ]
+  },
+  {
+    "id": 3,
+    "company_id": 1,
+    "name": "Invoice & Docs Flow",
+    "steps": 6,
+    "type": "Auto",
+    "enabled": true,
+    "icon": "📄",
+    "category": "Billing & Invoicing",
+    "step_details": []
+  },
+  {
+    "id": 4,
+    "company_id": 1,
+    "name": "Emergency Call Flow",
+    "steps": 3,
+    "type": "Manual",
+    "enabled": false,
+    "icon": "🚨",
+    "category": "Safety & Alerts",
+    "step_details": []
+  },
+  {
+    "id": 5,
+    "company_id": 1,
+    "name": "POD Upload Flow",
+    "steps": 4,
+    "type": "Auto",
+    "enabled": true,
+    "icon": "📋",
+    "category": "Documents & Compliance",
+    "step_details": []
+  },
+  {
+    "id": 6,
+    "company_id": 1,
+    "name": "Load Assignment Flow",
+    "steps": 6,
+    "type": "Auto",
+    "enabled": true,
+    "icon": "🗂️",
+    "category": "Dispatch Operations",
+    "step_details": []
+  },
+  {
+    "id": 7,
+    "company_id": 1,
+    "name": "Broker Update Flow",
+    "steps": 4,
+    "type": "Auto",
+    "enabled": false,
+    "icon": "🤝",
+    "category": "Load Management",
+    "step_details": []
+  }
+]

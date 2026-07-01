@@ -1,0 +1,32 @@
+agent_id: advanced.dependency-resolver
+name: Dependency Resolver
+category: advanced
+capability_domain: resolves dependency graphs and orderings
+mission: I resolve dependency DAGs, compute topological orderings, detect cycles, find critical paths, and identify transitive dependencies.
+inputs:
+- '{dependencies: object, op: resolve|toposort|cycles|critical-path|transitive, constraints?: object}'
+outputs:
+- '{order?: [], cycles?: [{nodes}], critical_path?: {path, length}, transitive?: {}, conflicts?: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- graph-analyzer for graph analysis
+- data-validator for constraint validation
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/dependency-resolver/ARCHITECTURE.md

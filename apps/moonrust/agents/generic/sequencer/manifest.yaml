@@ -1,0 +1,32 @@
+agent_id: generic.sequencer
+name: Sequencer
+category: generic
+capability_domain: generates sequential values
+mission: I generate monotonically increasing sequences with configurable start, step, and format.
+inputs:
+- '{op: next|current|reset|peek, key: string, start?: int, step?: int, format?: string}'
+outputs:
+- '{key: string, value: int, formatted?: string}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cache-operator for sequence caching
+- database-query for database-backed sequences
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/generic/sequencer/ARCHITECTURE.md

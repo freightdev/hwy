@@ -1,0 +1,31 @@
+agent_id: geospatial.spatial-indexer
+name: Spatial Indexer
+category: geospatial
+capability_domain: build spatial indexes (R-tree, QuadTree, GeoHash, S2) for geospatial data to enable fast proximity and containment queries
+mission: I build spatial indexes (R-tree, QuadTree, GeoHash, S2) for geospatial data to enable fast proximity and containment queries.
+inputs:
+- '{op: index|query|nearby|within, data?, point, radius?, polygon?} / out: {ok, results: [{id, distance, geometry}], index_stats}'
+outputs:
+- '{ok, results: [{id, distance, geometry}], index_stats}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- geo-coder, proximity-searcher, map-renderer
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/geospatial/spatial-indexer/ARCHITECTURE.md

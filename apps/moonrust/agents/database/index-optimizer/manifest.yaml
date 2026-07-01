@@ -1,0 +1,31 @@
+agent_id: database.index-optimizer
+name: Index Optimizer
+category: database
+capability_domain: analyze query patterns, detect missing indexes, find redundant/unused indexes, and recommend optimizations
+mission: I analyze query patterns, detect missing indexes, find redundant/unused indexes, and recommend optimizations.
+inputs:
+- '{op: analyze|recommend|apply|reindex|status, database} / out: {current, recommendations, changes}'
+outputs:
+- '{current, recommendations, changes}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, query-analyzer, schema-validator
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/index-optimizer/ARCHITECTURE.md

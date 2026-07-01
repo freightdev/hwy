@@ -1,0 +1,31 @@
+agent_id: infra.pod-manager
+name: Pod Manager
+category: infra
+capability_domain: create, monitor, debug, and clean up pods
+mission: I create, monitor, debug, and clean up pods.
+inputs:
+- '{op: run|exec|logs|delete|describe, name, image?} / out: {ok, pod_status, phase, start_time?, node?}'
+outputs:
+- '{ok, pod_status, phase, start_time?, node?}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- kubernetes-manager, volume-manager, network-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/pod-manager/ARCHITECTURE.md

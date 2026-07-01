@@ -1,0 +1,31 @@
+agent_id: network.latency-analyzer
+name: Latency Analyzer
+category: network
+capability_domain: measure RTT, jitter, packet loss, and throughput between endpoints
+mission: I measure RTT, jitter, packet loss, and throughput between endpoints.
+inputs:
+- '{target, duration?, interval?, packet_size?, protocol?} / out: {target, latency, jitter, loss, throughput}'
+outputs:
+- '{target, latency, jitter, loss, throughput}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- bandwidth-monitor, ping-agent, network-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/network/latency-analyzer/ARCHITECTURE.md

@@ -1,0 +1,32 @@
+agent_id: specialized.rate-guard
+name: Rate Guard
+category: specialized
+capability_domain: enforces rate limits
+mission: I track request rates per key (IP, user, API key) and enforce limits using token bucket, leaky bucket, or sliding window algorithms.
+inputs:
+- '{key: string, cost?: int, limits?: [{window, max}]}'
+outputs:
+- '{allowed: bool, remaining: int, reset_at: string, retry_after?: int, limit: int}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cache-operator for rate limit state
+- config-loader for limit definitions
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/specialized/rate-guard/ARCHITECTURE.md

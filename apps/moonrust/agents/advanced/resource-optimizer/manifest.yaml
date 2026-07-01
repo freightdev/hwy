@@ -1,0 +1,33 @@
+agent_id: advanced.resource-optimizer
+name: Resource Optimizer
+category: advanced
+capability_domain: optimizes resource allocation and utilization
+mission: I analyze resource usage patterns, constraints, and costs to recommend optimal resource allocation.
+inputs:
+- '{op: optimize|simulate|recommend, resources: [{type, capacity, cost}], demands: [{id, requirements, priority}], constraints: object, objective: cost|utilization|latency}'
+outputs:
+- '{allocation: [{resource, demand, amount}], metrics: {cost, utilization, satisfaction}, alternatives: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- pattern-learner for usage pattern discovery
+- anomaly-detector for resource anomaly detection
+- metrics-collector for resource metrics
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/resource-optimizer/ARCHITECTURE.md

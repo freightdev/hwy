@@ -1,0 +1,31 @@
+agent_id: infra.scaling-agent
+name: Scaling Agent
+category: infra
+capability_domain: define scaling policies based on metrics, schedules, or predictions
+mission: I define scaling policies based on metrics, schedules, or predictions.
+inputs:
+- '{op: define|execute|status|optimize, policy} / out: {ok, current_capacity, desired_capacity, events}'
+outputs:
+- '{ok, current_capacity, desired_capacity, events}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- cluster-manager, metrics-collector, forecaster
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/scaling-agent/ARCHITECTURE.md

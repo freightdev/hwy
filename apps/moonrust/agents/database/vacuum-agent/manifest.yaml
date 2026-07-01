@@ -1,0 +1,31 @@
+agent_id: database.vacuum-agent
+name: Vacuum Agent
+category: database
+capability_domain: run VACUUM, ANALYZE, and maintenance operations
+mission: I run VACUUM, ANALYZE, and maintenance operations.
+inputs:
+- '{op: vacuum|analyze|maintain|bloat, database} / out: {ok, operations, bloat_report}'
+outputs:
+- '{ok, operations, bloat_report}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- database-query, disk-cleaner, metrics-collector
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/database/vacuum-agent/ARCHITECTURE.md

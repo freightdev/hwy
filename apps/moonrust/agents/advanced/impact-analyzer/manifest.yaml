@@ -1,0 +1,33 @@
+agent_id: advanced.impact-analyzer
+name: Impact Analyzer
+category: advanced
+capability_domain: analyzes the impact of changes and failures
+mission: I assess the blast radius of changes, failures, or incidents.
+inputs:
+- '{change?: object, failure?: object, scope: string, depth?: int, include_metrics?: bool}'
+outputs:
+- '{impact_level: none|low|medium|high|critical, affected_services: [{name, severity, dependencies}], users_affected?: int, metrics_impact?: object, recommendations: []}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- dependency-resolver for dependency chains
+- health-prober for service health
+- notification-dispatcher for escalation
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/advanced/impact-analyzer/ARCHITECTURE.md

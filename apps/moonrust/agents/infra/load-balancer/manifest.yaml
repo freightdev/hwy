@@ -1,0 +1,31 @@
+agent_id: infra.load-balancer
+name: Load Balancer
+category: infra
+capability_domain: configure and manage load balancer pools, health checks, session persistence, SSL termination, and traffic routing rules
+mission: I configure and manage load balancer pools, health checks, session persistence, SSL termination, and traffic routing rules.
+inputs:
+- '{op: configure|health|routing|ssl, pool?, backends?} / out: {ok, pool_status, endpoints}'
+outputs:
+- '{ok, pool_status, endpoints}'
+allowed_callers:
+- TODO
+allowed_actors:
+- TODO
+required_permissions:
+- TODO
+risk_level: TODO
+tools_needed:
+- health-prober, certificate-manager, dns-manager
+workers_needed:
+- TODO
+truth_rules:
+- On wake, I load my configuration, verify my dependencies are available, register my capabilities with the orchestrator, and await instructions
+logbooks_written:
+- TODO
+reports_contributed_to:
+- TODO
+human_review_required_for:
+- TODO
+cannot_do:
+- TODO
+architecture_source: moonrust/agents/infra/load-balancer/ARCHITECTURE.md
