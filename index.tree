@@ -1,0 +1,1766 @@
+.
+├── AGENTS.md
+├── apps
+│   ├── backend
+│   │   ├── app
+│   │   │   ├── config.py
+│   │   │   ├── database.py
+│   │   │   ├── __init__.py
+│   │   │   ├── main.py
+│   │   │   ├── models
+│   │   │   │   ├── broker.py
+│   │   │   │   ├── company.py
+│   │   │   │   ├── document.py
+│   │   │   │   ├── driver.py
+│   │   │   │   ├── flow.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── invoice.py
+│   │   │   │   ├── load.py
+│   │   │   │   ├── payment.py
+│   │   │   │   ├── permission.py
+│   │   │   │   └── user.py
+│   │   │   ├── routers
+│   │   │   │   ├── admin.py
+│   │   │   │   ├── auth.py
+│   │   │   │   ├── brokers.py
+│   │   │   │   ├── codriver.py
+│   │   │   │   ├── company.py
+│   │   │   │   ├── documents.py
+│   │   │   │   ├── drivers.py
+│   │   │   │   ├── flows.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── invoices.py
+│   │   │   │   └── loads.py
+│   │   │   ├── schemas
+│   │   │   │   ├── admin.py
+│   │   │   │   ├── auth.py
+│   │   │   │   ├── broker.py
+│   │   │   │   ├── company.py
+│   │   │   │   ├── document.py
+│   │   │   │   ├── driver.py
+│   │   │   │   ├── flow.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── invoice.py
+│   │   │   │   ├── load.py
+│   │   │   │   ├── payment.py
+│   │   │   │   └── user.py
+│   │   │   └── services
+│   │   │       ├── auth.py
+│   │   │       ├── codriver_client.py
+│   │   │       ├── __init__.py
+│   │   │       ├── permissions.py
+│   │   │       └── seed.py
+│   │   ├── Dockerfile
+│   │   ├── .env
+│   │   ├── .env.dev
+│   │   ├── README.md
+│   │   └── requirements.txt
+│   ├── codriver
+│   │   ├── actors
+│   │   │   ├── __init__.py
+│   │   │   ├── legal_logger.py
+│   │   │   ├── memory_mark.py
+│   │   │   └── packet_pilot.py
+│   │   ├── api.py
+│   │   ├── bootstrap.py
+│   │   ├── .codriver-dev
+│   │   │   ├── execution_reports.jsonl
+│   │   │   ├── flow_profiles.json
+│   │   │   ├── flow_reports.jsonl
+│   │   │   ├── logbook.jsonl
+│   │   │   └── telemetry.jsonl
+│   │   ├── core.py
+│   │   ├── demo.py
+│   │   ├── direct_dispatch.py
+│   │   ├── __init__.py
+│   │   ├── logbook.py
+│   │   ├── models.py
+│   │   ├── README.md
+│   │   ├── registry
+│   │   │   ├── actor_manifest_schema.py
+│   │   │   ├── agent_manifest_schema.py
+│   │   │   ├── __init__.py
+│   │   │   ├── load_agent_manifests.py
+│   │   │   └── load_manifests.py
+│   │   ├── runtime
+│   │   │   ├── actor_runtime.py
+│   │   │   ├── event_bus.py
+│   │   │   ├── events.py
+│   │   │   ├── execution.py
+│   │   │   ├── health.py
+│   │   │   ├── __init__.py
+│   │   │   └── timeline.py
+│   │   ├── storage.py
+│   │   ├── telemetry.py
+│   │   └── timeline.py
+│   ├── frontend
+│   │   ├── build
+│   │   │   ├── _app
+│   │   │   │   ├── immutable
+│   │   │   │   │   ├── assets
+│   │   │   │   │   ├── chunks
+│   │   │   │   │   ├── entry
+│   │   │   │   │   └── nodes
+│   │   │   │   └── version.json
+│   │   │   ├── hwy-config.js
+│   │   │   └── index.html
+│   │   ├── Dockerfile
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── app.html
+│   │   │   ├── lib
+│   │   │   │   ├── api.js
+│   │   │   │   ├── components
+│   │   │   │   │   ├── BottomNav.svelte
+│   │   │   │   │   └── Toast.svelte
+│   │   │   │   ├── config
+│   │   │   │   │   └── runtime.js
+│   │   │   │   └── stores
+│   │   │   │       ├── app.js
+│   │   │   │       └── toast.js
+│   │   │   └── routes
+│   │   │       ├── app
+│   │   │       │   ├── admin
+│   │   │       │   ├── ai
+│   │   │       │   ├── connect
+│   │   │       │   ├── dashboard
+│   │   │       │   ├── flows
+│   │   │       │   ├── +layout.svelte
+│   │   │       │   ├── logbook
+│   │   │       │   └── more
+│   │   │       ├── +layout.svelte
+│   │   │       ├── login
+│   │   │       │   └── +page.svelte
+│   │   │       ├── onboarding
+│   │   │       │   └── +page.svelte
+│   │   │       ├── +page.svelte
+│   │   │       └── signup
+│   │   │           └── +page.svelte
+│   │   ├── static
+│   │   │   └── hwy-config.js
+│   │   ├── svelte.config.js
+│   │   ├── .svelte-kit
+│   │   │   ├── ambient.d.ts
+│   │   │   ├── env.d.ts
+│   │   │   ├── generated
+│   │   │   │   ├── client
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── matchers.js
+│   │   │   │   │   └── nodes
+│   │   │   │   ├── client-optimized
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── matchers.js
+│   │   │   │   │   └── nodes
+│   │   │   │   ├── root.js
+│   │   │   │   ├── root.svelte
+│   │   │   │   ├── server
+│   │   │   │   │   └── internal.js
+│   │   │   │   └── shared
+│   │   │   │       └── error-template.js
+│   │   │   ├── non-ambient.d.ts
+│   │   │   ├── output
+│   │   │   │   ├── client
+│   │   │   │   │   ├── _app
+│   │   │   │   │   ├── hwy-config.js
+│   │   │   │   │   └── .vite
+│   │   │   │   └── server
+│   │   │   │       ├── _app
+│   │   │   │       ├── chunks
+│   │   │   │       ├── entries
+│   │   │   │       ├── env.js
+│   │   │   │       ├── index.js
+│   │   │   │       ├── internal.js
+│   │   │   │       ├── manifest-full.js
+│   │   │   │       ├── manifest.js
+│   │   │   │       ├── nodes
+│   │   │   │       ├── remote-entry.js
+│   │   │   │       ├── stylesheets
+│   │   │   │       └── .vite
+│   │   │   └── tsconfig.json
+│   │   ├── test-results
+│   │   │   └── .last-run.json
+│   │   ├── tests
+│   │   │   ├── auth.spec.js
+│   │   │   ├── dashboard.spec.js
+│   │   │   ├── onboarding.spec.js
+│   │   │   ├── product-auth-admin.spec.js
+│   │   │   └── routing.spec.js
+│   │   └── vite.config.js
+│   ├── moonrust
+│   │   ├── actors
+│   │   │   ├── auto_assist
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── big_bear
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── cargo_connect
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── direct_dispatch
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── error_echo
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── fuel_factor
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── ghost_guard
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── highway_helper
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── iron_insight
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── jackknife_jailer
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── key_keeper
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── legal_logger
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── memory_mark
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── night_nexus
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── oversize_overseer
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── packet_pilot
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── quick_quote
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── radar_ranch
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── secret_safe
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── trucker_tales
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── unit_usage
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── voice_validator
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── whisper_witness
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── xeno_xeno
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   ├── yes_yes
+│   │   │   │   ├── agents
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── manifest.yaml
+│   │   │   └── zone_zipper
+│   │   │       ├── agents
+│   │   │       │   └── .gitkeep
+│   │   │       ├── ARCHITECTURE.md
+│   │   │       └── manifest.yaml
+│   │   ├── agents
+│   │   │   ├── advanced
+│   │   │   │   ├── agent-synthesizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── anomaly-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── capability-registry
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── compliance-auditor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── decision-engine
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── dependency-resolver
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── forecaster
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── impact-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── intent-classifier
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── knowledge-gleaner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── language-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── model-servicer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pattern-learner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── resource-optimizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── risk-assessor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── root-cause-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sentiment-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── state-coordinator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── test-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── translator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── workflow-orchestrator
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── ai-ml
+│   │   │   │   ├── bias-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── content-filter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── context-builder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── cost-tracker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-labeler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── drift-monitor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── experiment-tracker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── feature-engineer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── hallucination-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── hyperparameter-tuner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── model-deployer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── model-ensemble
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── model-monitor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── model-router
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── prompt-cacher
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── prompt-engineer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── rag-retriever
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── response-validator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── token-counter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── toxicity-checker
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── business
+│   │   │   │   ├── a-b-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── cohort-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── conversion-optimizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── customer-segmenter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── feature-flag-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── funnel-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── nps-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pricing-engine
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── retention-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── user-analytics
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── cicd
+│   │   │   │   ├── artifact-storer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── benchmark-runner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── build-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── canary-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── changelog-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── code-quality-checker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── coverage-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── dependency-updater
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── deployment-verifier
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── integration-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── lint-runner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pipeline-runner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── release-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── smoke-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── version-bumper
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── communication
+│   │   │   │   ├── chat-bot
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── event-bus
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── graphql-client
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── grpc-client
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── message-queue-consumer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── message-queue-producer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pubsub-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── push-notifier
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── rpc-caller
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sms-sender
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sse-pusher
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── voice-assistant
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── webhook-forwarder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── webhook-handler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── websocket-manager
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── content
+│   │   │   │   ├── content-spinner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── grammar-checker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── html-sanitizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── image-alt-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── link-checker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── markdown-renderer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── meta-description-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── readability-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── spell-checker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── table-of-contents-generator
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── data
+│   │   │   │   ├── data-anonymizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-cataloger
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-exporter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-importer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-lineage
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-normalizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-pipeline
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-profiler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-quality-checker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-sampler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── data-splitter
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── database
+│   │   │   │   ├── archive-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── backup-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── connection-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── database-syncer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── deadlock-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── index-optimizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── migration-runner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── purge-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── query-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── replication-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── restore-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── schema-validator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── seed-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sharding-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── vacuum-agent
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── developer-tools
+│   │   │   │   ├── api-doc-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── blocker-tracker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── branch-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── code-documenter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── code-linter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── code-ownership-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── code-reviewer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── commit-formatter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── git-hook-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── issue-labeler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── project-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pr-summarizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sprint-planner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── task-estimator
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── devops
+│   │   │   │   ├── ansible-executor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── cloud-cost-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── config-syncer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── drift-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── environment-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── helm-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── iac-validator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── incident-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── kustomize-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── oncall-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── resource-tagger
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── runbook-executor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── secret-injector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sla-tracker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── terraform-runner
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── finance
+│   │   │   │   ├── billing-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── budget-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── expense-tracker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── invoice-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── ledger-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── payment-processor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── reconciliation-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── refund-processor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── subscription-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── tax-calculator
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── generic
+│   │   │   │   ├── archiver
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── batcher
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── circuit-breaker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── code-formatter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── config-loader
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── counter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-transformer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-validator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── debouncer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── diff-engine
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── file-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── filterer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── grepper
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── hasher
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── http-client
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── merger
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── report-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── retry-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── scheduler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sequencer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sorter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── streamer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── template-engine
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── timer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── uuid-generator
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── geospatial
+│   │   │   │   ├── elevation-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── map-renderer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── proximity-searcher
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── spatial-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── spatial-indexer
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── infra
+│   │   │   │   ├── certificate-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── cluster-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── config-map-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── container-orchestrator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── deployment-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── dns-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── docker-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── firewall-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── image-builder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── kubernetes-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── load-balancer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── node-provisioner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pod-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── proxy-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── rollback-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── scaling-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── secret-syncer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── service-mesh
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── volume-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── vpn-manager
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── network
+│   │   │   │   ├── bandwidth-monitor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── connection-pooler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── dns-resolver
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── firewall-rule-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── ip-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── latency-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── load-test-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── mtu-optimizer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── packet-capturer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── ping-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── port-scanner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── proxy-rotator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── routing-table-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── subnet-calculator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── traceroute-agent
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── scientific
+│   │   │   │   ├── correlation-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── distribution-fitter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── hypothesis-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── math-evaluator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── monte-carlo
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── optimization-solver
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── probability-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── regression-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── simulation-runner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── stats-calculator
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── security
+│   │   │   │   ├── access-auditor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── certificate-authority
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── csrf-protector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── encryption-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── forensics-collector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── identity-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── incident-responder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── intrusion-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── key-rotator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── malware-analyzer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── mfa-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── policy-enforcer
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── security-header-checker
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── session-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── signing-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sql-injection-detector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── sso-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── threat-intel
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── vulnerability-scanner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── xss-detector
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── specialized
+│   │   │   │   ├── address-validator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── api-gateway
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── audit-recorder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── cache-operator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── color-processor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── csv-handler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── currency-converter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── database-query
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── data-extractor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── document-parser
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── email-sender
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── encoding-agent
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── excel-handler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── geo-coder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── health-prober
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── image-processor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── llm-request
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── metrics-collector
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── notification-dispatcher
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── otp-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── password-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── pdf-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── rate-guard
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── secret-keeper
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── slug-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── text-embedder
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── timezone-converter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── token-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── unit-converter
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── web-scraper
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── system
+│   │   │   │   ├── cpu-profiler
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── cron-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── disk-cleaner
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── init-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── kernel-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── log-rotator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── memory-monitor
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── mount-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── package-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── permission-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── process-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── service-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── swap-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── system-updater
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── user-manager
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   ├── testing
+│   │   │   │   ├── mock-creator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── mock-server
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── performance-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── soak-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── spy-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── stress-tester
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── stub-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── test-data-generator
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   ├── test-fixture-manager
+│   │   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   │   └── manifest.yaml
+│   │   │   │   └── test-runner
+│   │   │   │       ├── ARCHITECTURE.md
+│   │   │   │       └── manifest.yaml
+│   │   │   └── utility
+│   │   │       ├── amortization-calculator
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── bmi-calculator
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── dead-letter-queue
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── discount-calculator
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── interest-calculator
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── percentage-calculator
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── progress-tracker
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── rate-calculator
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       ├── retry-queue
+│   │   │       │   ├── ARCHITECTURE.md
+│   │   │       │   └── manifest.yaml
+│   │   │       └── tip-calculator
+│   │   │           ├── ARCHITECTURE.md
+│   │   │           └── manifest.yaml
+│   │   ├── apps
+│   │   │   ├── cli
+│   │   │   ├── desktop
+│   │   │   ├── email
+│   │   │   ├── mobile
+│   │   │   └── web
+│   │   ├── Cargo.toml
+│   │   ├── .config
+│   │   │   ├── defualt
+│   │   │   ├── development
+│   │   │   ├── production
+│   │   │   ├── staging
+│   │   │   └── testing
+│   │   ├── crates
+│   │   │   ├── ai
+│   │   │   ├── app
+│   │   │   │   └── .gitkeep
+│   │   │   ├── config
+│   │   │   ├── core
+│   │   │   │   └── .gitkeep
+│   │   │   ├── engine
+│   │   │   │   └── .gitkeep
+│   │   │   ├── logger
+│   │   │   ├── mark
+│   │   │   ├── marker
+│   │   │   ├── planner
+│   │   │   ├── runtime
+│   │   │   ├── storage
+│   │   │   ├── system
+│   │   │   │   └── .gitkeep
+│   │   │   ├── telemetry
+│   │   │   ├── types
+│   │   │   │   └── .gitkeep
+│   │   │   ├── ui
+│   │   │   │   └── .gitkeep
+│   │   │   ├── utils
+│   │   │   └── workflow
+│   │   ├── docs
+│   │   │   ├── API.md
+│   │   │   ├── ARCHITECTURE.md
+│   │   │   ├── CONSEPTS.md
+│   │   │   ├── MARKERS.md
+│   │   │   ├── MARKS.md
+│   │   │   ├── TUTORIALS.md
+│   │   │   └── WORKFLOWS.md
+│   │   ├── domains
+│   │   │   ├── dyerevents.com
+│   │   │   │   └── .gitkeep
+│   │   │   ├── hwydriver.com
+│   │   │   │   └── .gitkeep
+│   │   │   ├── hwytms.com
+│   │   │   │   └── .gitkeep
+│   │   │   ├── hwytrucking.com
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   └── .gitkeep
+│   │   │   ├── magicmarker.dev
+│   │   │   │   └── .gitkeep
+│   │   │   ├── markatear.com
+│   │   │   │   └── .gitkeep
+│   │   │   ├── nabrith.com
+│   │   │   │   └── .gitkeep
+│   │   │   └── trakapay.app
+│   │   │       └── .gitkeep
+│   │   ├── examples
+│   │   ├── index.tree
+│   │   ├── knowledge
+│   │   │   ├── documents
+│   │   │   ├── examples
+│   │   │   ├── flows
+│   │   │   ├── marker
+│   │   │   ├── playbooks
+│   │   │   ├── policies
+│   │   │   └── prompts
+│   │   ├── markers
+│   │   │   ├── aspot
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── marks
+│   │   │   │   │   ├── BOOTSTRAP.mrk
+│   │   │   │   │   ├── IDENTITY.mrk
+│   │   │   │   │   ├── PERSONA.mrk
+│   │   │   │   │   ├── SKILLS.mrk
+│   │   │   │   │   └── TOOLS.mrk
+│   │   │   │   └── src
+│   │   │   │       └── main.rs
+│   │   │   ├── codriver
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── marks
+│   │   │   │   │   ├── BOOTSTRAP.mrk
+│   │   │   │   │   ├── IDENTITY.mrk
+│   │   │   │   │   ├── PERSONA.mrk
+│   │   │   │   │   ├── SKILLS.mrk
+│   │   │   │   │   └── TOOLS.mrk
+│   │   │   │   └── src
+│   │   │   │       └── main.rs
+│   │   │   ├── jester
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── marks
+│   │   │   │   │   ├── BOOTSTRAP.mrk
+│   │   │   │   │   ├── IDENTITY.mrk
+│   │   │   │   │   ├── PERSONA.mrk
+│   │   │   │   │   ├── SKILLS.mrk
+│   │   │   │   │   └── TOOLS.mrk
+│   │   │   │   └── src
+│   │   │   │       └── main.rs
+│   │   │   ├── nabrith
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── marks
+│   │   │   │   │   ├── BOOTSTRAP.mrk
+│   │   │   │   │   ├── IDENTITY.mrk
+│   │   │   │   │   ├── PERSONA.mrk
+│   │   │   │   │   ├── SKILLS.mrk
+│   │   │   │   │   └── TOOLS.mrk
+│   │   │   │   └── src
+│   │   │   │       └── main.rs
+│   │   │   ├── wolfblood
+│   │   │   │   ├── ARCHITECTURE.md
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── marks
+│   │   │   │   │   ├── BOOTSTRAP.mrk
+│   │   │   │   │   ├── IDENTITY.mrk
+│   │   │   │   │   ├── PERSONA.mrk
+│   │   │   │   │   ├── SKILLS.mrk
+│   │   │   │   │   └── TOOLS.mrk
+│   │   │   │   └── src
+│   │   │   │       └── main.rs
+│   │   │   └── yarddog
+│   │   │       ├── ARCHIECTURE.md
+│   │   │       ├── Cargo.toml
+│   │   │       ├── marks
+│   │   │       │   ├── BOOTSTRAP.mrk
+│   │   │       │   ├── IDENTITY.mrk
+│   │   │       │   ├── PERSONA.mrk
+│   │   │       │   ├── SKILLS.mrk
+│   │   │       │   └── TOOLS.mrk
+│   │   │       └── src
+│   │   │           └── main.rs
+│   │   ├── pluggins
+│   │   │   ├── dropbox
+│   │   │   ├── eld
+│   │   │   ├── gmail
+│   │   │   ├── google-driver
+│   │   │   ├── motive
+│   │   │   ├── outlook
+│   │   │   ├── samsara
+│   │   │   ├── stripe
+│   │   │   ├── tms
+│   │   │   └── twilio
+│   │   ├── profiles
+│   │   ├── protocols
+│   │   │   ├── mark
+│   │   │   ├── marker
+│   │   │   ├── packet
+│   │   │   ├── profile
+│   │   │   ├── transport
+│   │   │   └── workflow
+│   │   ├── README.md
+│   │   ├── scripts
+│   │   ├── .sdk
+│   │   │   ├── c
+│   │   │   ├── c++
+│   │   │   ├── flutter
+│   │   │   ├── haskell
+│   │   │   ├── javascript
+│   │   │   ├── php
+│   │   │   ├── python
+│   │   │   ├── rust
+│   │   │   ├── typescript
+│   │   │   └── zig
+│   │   ├── services
+│   │   │   ├── auth
+│   │   │   ├── browser
+│   │   │   ├── cache
+│   │   │   ├── email
+│   │   │   ├── embeddings
+│   │   │   ├── llm
+│   │   │   ├── mpc
+│   │   │   ├── permissions
+│   │   │   ├── profiles
+│   │   │   ├── queue
+│   │   │   ├── rag
+│   │   │   ├── scheduler
+│   │   │   ├── search
+│   │   │   └── storage
+│   │   ├── spots
+│   │   │   ├── aflow.spot
+│   │   │   │   ├── board
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── crates
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   └── runtime
+│   │   │   │       └── .gitkeep
+│   │   │   ├── dropa.spot
+│   │   │   │   ├── board
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── crates
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   └── runtime
+│   │   │   │       └── .gitkeep
+│   │   │   ├── infra.spot
+│   │   │   │   ├── board
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── crates
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   └── runtime
+│   │   │   │       └── .gitkeep
+│   │   │   ├── jesta.spot
+│   │   │   │   ├── board
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── crates
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   └── runtime
+│   │   │   │       └── .gitkeep
+│   │   │   ├── keepa.spot
+│   │   │   │   ├── board
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── crates
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   └── runtime
+│   │   │   │       └── .gitkeep
+│   │   │   ├── marka.spot
+│   │   │   │   ├── board
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   ├── Cargo.toml
+│   │   │   │   ├── crates
+│   │   │   │   │   └── .gitkeep
+│   │   │   │   └── runtime
+│   │   │   │       └── .gitkeep
+│   │   │   └── viewa.spot
+│   │   │       ├── board
+│   │   │       │   └── .gitkeep
+│   │   │       ├── Cargo.toml
+│   │   │       ├── crates
+│   │   │       └── runtime
+│   │   │           └── .gitkeep
+│   │   └── tests
+│   ├── outreach
+│   │   ├── AGENTS.md
+│   │   ├── build
+│   │   │   ├── client
+│   │   │   │   └── _app
+│   │   │   │       ├── immutable
+│   │   │   │       ├── version.json
+│   │   │   │       ├── version.json.br
+│   │   │   │       └── version.json.gz
+│   │   │   ├── env.js
+│   │   │   ├── env.js.map
+│   │   │   ├── handler.js
+│   │   │   ├── handler.js.map
+│   │   │   ├── index.js
+│   │   │   ├── index.js.map
+│   │   │   ├── server
+│   │   │   │   └── chunks
+│   │   │   │       ├── chunks
+│   │   │   │       ├── entries
+│   │   │   │       ├── handler-CDsDYm3E.js
+│   │   │   │       ├── handler-CDsDYm3E.js.map
+│   │   │   │       ├── index.js-BmrC0fev.js
+│   │   │   │       ├── index.js-BmrC0fev.js.map
+│   │   │   │       ├── manifest.js-DqjMoMDj.js
+│   │   │   │       ├── manifest.js-DqjMoMDj.js.map
+│   │   │   │       └── nodes
+│   │   │   ├── shims.js
+│   │   │   └── shims.js.map
+│   │   ├── docs
+│   │   │   ├── OFFER.md
+│   │   │   └── ROADMAP.md
+│   │   ├── .env.example
+│   │   ├── .env.secrets
+│   │   ├── .gitignore
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── README.md
+│   │   ├── SECRETS.md
+│   │   ├── src
+│   │   │   ├── app.d.ts
+│   │   │   ├── app.html
+│   │   │   └── routes
+│   │   │       ├── api
+│   │   │       │   └── inquiries
+│   │   │       ├── +layout.svelte
+│   │   │       ├── +page.server.ts
+│   │   │       └── +page.svelte
+│   │   ├── svelte.config.js
+│   │   ├── .svelte-kit
+│   │   │   ├── adapter-node
+│   │   │   │   └── entries
+│   │   │   │       ├── chunks
+│   │   │   │       ├── env.js
+│   │   │   │       ├── handler.js
+│   │   │   │       ├── index.js
+│   │   │   │       ├── shims.js
+│   │   │   │       └── utils.js
+│   │   │   ├── ambient.d.ts
+│   │   │   ├── env.d.ts
+│   │   │   ├── generated
+│   │   │   │   ├── client
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── matchers.js
+│   │   │   │   │   └── nodes
+│   │   │   │   ├── client-optimized
+│   │   │   │   │   ├── app.js
+│   │   │   │   │   ├── matchers.js
+│   │   │   │   │   └── nodes
+│   │   │   │   ├── root.js
+│   │   │   │   ├── root.svelte
+│   │   │   │   ├── server
+│   │   │   │   │   └── internal.js
+│   │   │   │   └── shared
+│   │   │   │       └── error-template.js
+│   │   │   ├── non-ambient.d.ts
+│   │   │   ├── output
+│   │   │   │   ├── client
+│   │   │   │   │   ├── _app
+│   │   │   │   │   └── .vite
+│   │   │   │   └── server
+│   │   │   │       ├── _app
+│   │   │   │       ├── chunks
+│   │   │   │       ├── entries
+│   │   │   │       ├── env.js
+│   │   │   │       ├── index.js
+│   │   │   │       ├── internal.js
+│   │   │   │       ├── manifest-full.js
+│   │   │   │       ├── manifest.js
+│   │   │   │       ├── nodes
+│   │   │   │       ├── remote-entry.js
+│   │   │   │       ├── stylesheets
+│   │   │   │       └── .vite
+│   │   │   ├── tsconfig.json
+│   │   │   └── types
+│   │   │       ├── route_meta_data.json
+│   │   │       └── src
+│   │   │           └── routes
+│   │   ├── tsconfig.json
+│   │   └── vite.config.ts
+│   └── package.json
+├── .config
+│   ├── env
+│   │   ├── hwy.dev.env
+│   │   └── hwy.dev.env.example
+│   ├── frontend
+│   │   └── app.config.js
+│   ├── README.md
+│   └── testing
+│       └── playwright.config.js
+├── data
+│   ├── migrations
+│   │   ├── 001_initial.sql
+│   │   ├── 002_seed_data.sql
+│   │   ├── 003_add_password_hash.sql
+│   │   ├── 003_device_and_mock.sql
+│   │   └── 004_terms_accepted.sql
+│   └── mockups
+│       ├── brokers.json
+│       ├── companies.json
+│       ├── documents.json
+│       ├── drivers.json
+│       ├── flows.json
+│       ├── invoices.json
+│       ├── loads.json
+│       ├── payments.json
+│       └── users.json
+├── docs
+│   ├── ARCHITECTURE
+│   │   ├── ACTOR_MANIFESTS.md
+│   │   ├── ACTORS.md
+│   │   ├── AGENT_BUILDER.md
+│   │   ├── AGENT_MANIFESTS.md
+│   │   ├── AGENTS.md
+│   │   ├── CODRIVER_DEV_INTEGRATION.md
+│   │   ├── EXECUTION.md
+│   │   ├── FLOWS.md
+│   │   ├── KNOWLEDGE.md
+│   │   ├── LOGBOOKS.md
+│   │   ├── README.md
+│   │   ├── RUNTIME.md
+│   │   ├── SECURITY.md
+│   │   ├── TELEMETRY.md
+│   │   ├── UI.md
+│   │   └── WORKERS.md
+│   └── GLOSSARY.md
+├── .gitignore
+├── index.tree
+├── infra
+│   ├── caddy
+│   │   └── Caddyfile
+│   ├── cloudflared
+│   │   └── config.yaml
+│   └── docker
+│       ├── docker-compose.prod.yml
+│       ├── docker-compose.yml
+│       └── Dockerfile.codriver
+├── packages
+│   ├── auth
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   ├── codriver-contracts
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   ├── compliance
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   ├── payments
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   ├── permissions
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   ├── profiles
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   ├── README.md
+│   ├── shared
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       └── index.js
+│   └── ui
+│       ├── package.json
+│       ├── README.md
+│       └── src
+│           └── index.js
+├── scripts
+│   ├── generate_agent_manifests.py
+│   ├── generate_dev_env.py
+│   └── setup_cloudflare_dev_dns.py
+├── TASKS.md
+├── tests
+│   ├── test_actor_manifest_registry.py
+│   ├── test_admin_auth_permissions.py
+│   ├── test_agent_manifest_registry.py
+│   ├── test_backend_codriver_client.py
+│   ├── test_codriver_api_service.py
+│   ├── test_execution_runtime.py
+│   └── test-results
+│       └── .last-run.json
+└── vault
+    ├── cloudflare
+    │   ├── cloudflare-secrets.json
+    │   └── credentials.json
+    ├── email
+    │   ├── imap-secrets.json
+    │   └── smtp-secrets.json
+    ├── google
+    │   └── google-secrets.json
+    ├── resend
+    │   └── resend-secrets.json
+    └── twilio
+        └── twilio-secrets.json
+
+676 directories, 1088 files
